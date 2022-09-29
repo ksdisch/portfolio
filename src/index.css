@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  font-family: "Quicksand";
+}
+
+.headline {
+  background-color: #B7C4CF;
+  color: #403F3B;
+  box-shadow: 0 0 0 100vmax #B7C4CF;
+  clip-path: inset(0 -100vmax); 
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.intro {
+  background-color: #EEE3CB;
+  box-shadow: 0 0 0 100vmax #EEE3CB;
+  color: #403F3B;
+  clip-path: inset(0 -100vmax);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+
+
+
+

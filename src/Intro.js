@@ -7,7 +7,7 @@ const Intro = () => {
         <div className="intro">
             <header>
                 <h1>Kyle Disch.</h1>
-                <ColoredLine color='#403F3B'/>
+                <ColoredLine color='#212529'/>
                 <p style={{fontSize: 24 }}>Data Analyst - React & Python Enthusiast</p>
             </header>
         </div>

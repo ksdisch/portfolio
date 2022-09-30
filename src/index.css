@@ -5,22 +5,84 @@
   font-family: "Quicksand";
 }
 
-.headline {
-  background-color: #B7C4CF;
-  color: #403F3B;
-  box-shadow: 0 0 0 100vmax #B7C4CF;
+.brand-statement {
+  background-color: #967E76;
+  box-shadow: 0 0 0 100vmax #967E76;
+  clip-path: inset(0 -100vmax);
+  color: #212529;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.call-to-action {
+  background-color: #EEE3CB;
+  box-shadow: 0 0 0 100vmax #EEE3CB;
   clip-path: inset(0 -100vmax); 
+  color: #212529;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact-info {
+  background-color: #B7C4CF;
+  box-shadow: 0 0 0 100vmax #B7C4CF;
+  color: #212529;
+  clip-path: inset(0 -100vmax);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.contact-button {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.copyright {
+  background-color: #B7C4CF;
+  box-shadow: 0 0 0 100vmax #B7C4CF;
+  color: #212529;
+  clip-path: inset(0 -100vmax);
+  padding-bottom: 3rem;
+}
+
+.education {
+  background-color: #D7C0AE;
+  box-shadow: 0 0 0 100vmax #D7C0AE;
+  clip-path: inset(0 -100vmax);
+  color: #212529;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.headline {
+  background-color: #EEE3CB;
+  box-shadow: 0 0 0 100vmax #EEE3CB;
+  clip-path: inset(0 -100vmax); 
+  color: #212529;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 .intro {
-  background-color: #EEE3CB;
-  box-shadow: 0 0 0 100vmax #EEE3CB;
-  color: #403F3B;
+  background-color: #B7C4CF;
+  box-shadow: 0 0 0 100vmax #B7C4CF;
+  color: #212529;
   clip-path: inset(0 -100vmax);
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+.project-list {
+  background-color: #D7C0AE;
+  box-shadow: 0 0 0 100vmax #D7C0AE;
+  clip-path: inset(0 -100vmax);
+  color: #403F3B;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.project-link {
+  padding-bottom: 1rem;
 }
 
 

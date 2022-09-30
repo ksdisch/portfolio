@@ -16,7 +16,7 @@ const Home = () => {
     const [projects, setProjects] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:8000/projects")
+        fetch("https://github.com/ksdisch/portfolio/blob/[main|master]/db.json")
             .then(res => {
                 return res.json();
             })

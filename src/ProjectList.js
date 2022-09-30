@@ -1,25 +1,33 @@
 import { useState, useEffect } from "react";
 import ColoredLine from "./ColoredLine";
-
+import * as data from './db.json'
 const ProjectList = () => {
 
-    const [projects, setProjects] = useState([])
-    useEffect(() => {
-        fetch("https://github.com/ksdisch/portfolio/blob/[main|master]/db.json")
-            .then(res => {
-                return res.json();
-            })
-            .then(data => {
-                setProjects(data)
-            })
-    }, [])
+    // const [projects, setProjects] = useState([])
+    // useEffect(() => {
+    //     fetch("https://github.com/ksdisch/portfolio/blob/[main|master]/db.json")
+    //         .then(res => {
+    //             return res.json();
+    //         })
+    //         .then(data => {
+    //             setProjects(data)
+    //         })
+    // }, [])
+    
+    // let projList = setProjects
 
+
+    const resp = data;
+    console.log(resp);
+    const projList = resp.projects;
+    console.log(projList);
+    
     return (  
         <div className="project-list">
             <h2>My Projects</h2>
             <p style={{fontSize: 24 }}>These are just a few of the many projects I have completed.</p>
             <ColoredLine color='#212529'/>
-            {projects.map((project) => (
+            {projList.map((project) => (
                 <>
                     <div className="row" key={project.id}>
                         <h4>{project.title}</h4>

@@ -1,0 +1,44 @@
+{
+    "projects": [
+      {
+        "title": "Movie Ratings ETL",
+        "description": "This project was an extract, transform, and load data pipeline process. Pandas was used to take in, transform, merge data from three datasets (two csv files and one JSON file) and then create tables and send the clean data to those tables in PostgreSQL.",
+        "tools": "Python, Jupyter Notebook, PostgreSQL, pgAdmin4",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/Movies-ETL",
+        "id": 1
+      },
+      {
+        "title": "SQL Pewlett Hackard Analysis",
+        "description": "The dataset of this analysis simulated a company with many incoming retirees. pgAdmin was used to conduct various queries to gather information into tables to prepare for these retirements. Once the relevant tables were prepared, they were exported as csv files for management to view and analyze further",
+        "tools": "Postgre SQL, pgAdmin4",
+        "primary_tool": "SQL",
+        "link": "https://github.com/ksdisch/Pewlett-Hackard-Analysis",
+        "id": 2
+      },
+      {
+        "title": "Belly Button Biodiversity",
+        "description": "This project used D3.js to listen to user input and filter data from a JSON file accordingly to obtain demographic information and bacteria levels for an anonymous subject. Then, Plotly was used to create dynamic charts displaying this information, which were published on a website hosted by GitHub Pages.",
+        "tools": "JavaScript, HTML, CSS, Plotly, D3.js",
+        "primary_tool": "JavaScript",
+        "link": "https://ksdisch.github.io/Belly_Button_Biodiversity/",
+        "id": 3
+      },
+      {
+        "title": "PlanMyTrip",
+        "description": "This project used various APIs to collect, explore, and visualize weather and travel data. This data was then used to create a travel app that suggests cities to travel to and hotels to stay in.",
+        "tools": "Python, Pandas, Matplotlib, OpenWeatherMap API, Google’s Maps API, Jupyter Notebook",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/World_Weather_Analysis",
+        "id": 4
+      },
+      {
+        "title": "Python PyBer Analysis",
+        "description": "The purpose of this project was to use Jupyter Notebook, Python Pandas, and Python Matplotlib libraries to find and visualize trends within the dataset of a ridesharing company.",
+        "tools": "Python, Pandas, Matplotlib, Jupyter Notebook",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/PyBer_Analysis",
+        "id": 5
+      }
+    ]
+  }

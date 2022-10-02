@@ -3,24 +3,8 @@ import ColoredLine from "./ColoredLine";
 import * as data from './db.json'
 const ProjectList = () => {
 
-    // const [projects, setProjects] = useState([])
-    // useEffect(() => {
-    //     fetch("https://github.com/ksdisch/portfolio/blob/[main|master]/db.json")
-    //         .then(res => {
-    //             return res.json();
-    //         })
-    //         .then(data => {
-    //             setProjects(data)
-    //         })
-    // }, [])
-    
-    // let projList = setProjects
-
-
     const resp = data;
-    console.log(resp);
     const projList = resp.projects;
-    console.log(projList);
     
     return (  
         <div className="project-list">

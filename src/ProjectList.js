@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ColoredLine from "./ColoredLine";
-import * as data from '/db.json'
+import * as data from './db.json'
 const ProjectList = () => {
 
     const resp = data;

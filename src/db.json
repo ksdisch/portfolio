@@ -39,6 +39,78 @@
         "primary_tool": "Python",
         "link": "https://github.com/ksdisch/PyBer_Analysis",
         "id": 5
+      },
+      {
+        "title": "Earthquake Mapping",
+        "description": "This project used JavaScript, Leaflet.js, and geoJSON data to create visualizations of earthquake data and to map tectonic plates on a wolrd map. The visualizations included linestrings of the tectonic plates, and the magnitudes of the earthquakes being reflected by the radius and color of their corresponding markers.",
+        "tools": "JavaScript, Leaflet.js",
+        "primary_tool": "JavaScript",
+        "link": "https://github.com/ksdisch/Mapping_Earthquakes",
+        "id": 6
+      },
+      {
+        "title": "School District Analysis",
+        "description": "The purpose of this project was to analyze data on student funding and student standardized test scores. Specifically, my task was to aggregate the data and showcase trends in school performance. The findings should assist the school board and superintendent in making decisions regarding school budgets and priorities.",
+        "tools": "Python, Jupyter Notebook",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/School_District_Analysis",
+        "id": 7
+      },
+      {
+        "title": "UFO Sightings",
+        "description": "The purpose of this project was to create a website wherein users could learn about UFOs. The main feature of this website is a dynamic table presenting the data from data.js, which contains information on many different UFO sightings across the United States. What makes the table dynamic is that it can filter the occurrences by multiple user inputted criteria. The project is also capable of automatically generating directions between 4 cities.",
+        "tools": "JavaScript, Bootstrap, D3.js",
+        "primary_tool": "JavaScript",
+        "link": "https://ksdisch.github.io/UFOs/",
+        "id": 8
+      },
+      {
+        "title": "World Weather Analysis",
+        "description": "This project uses OpenWeatherMap and GoogleMaps APIs to collect, explore, and visualize weather and travel data. This data was then used to create a travel app that suggests cities to travel to and hotels to stay in based on user input.",
+        "tools": "Python, Pandas, Jupyter Notebook, OpenWeatherMap API, Google Maps API",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/World_Weather_Analysis",
+        "id": 9
+      },
+      {
+        "title": "ongressional Election Analysis",
+        "description": "This project uses Python to analyze a csv file of congressional votes for the state of Colorado. The tasks were to calculate the total number of votes cast, get a complete list of candidates who received votes, calculate the total number of votes each candidate received, calculate the percentage of votes each candidate won, and determine the winner of the election based on popular vote.",
+        "tools": "Python",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/Election_Analysis",
+        "id": 10
+      },
+      {
+        "title": "Kickstarter Analysis",
+        "description": "The purpose of this analysis was to use Microsoft Excel to analyze a information on fundraising campaings from Kickstarter, a crowdfunding platform. By comparing launch date and funding goals to success rate, I was able to generate visualizations to help a client make decisions on her campaign.",
+        "tools": "Microsoft Excel",
+        "primary_tool": "Excel",
+        "link": "https://github.com/ksdisch/kickstarter-analysis",
+        "id": 11
+      },
+      {
+        "title": "",
+        "description": "The purpose of this project was to obtain and summarize temperature data for the months of June and December in Oahu, Hawaii, to assess the viability of a surf and ice cream shop in the area. SQLAlchemy was used to filter data into a pandas dataframe, where summary statistics were calculated and displayed.",
+        "tools": "Python, Pandas, SQLAlchemy, Jupyter Notebook",
+        "primary_tool": "SQL",
+        "link": "https://github.com/ksdisch/surfs_up",
+        "id": 12
+      },
+      {
+        "title": "Mission to Mars",
+        "description": "The purpose of this project was to create a web app that displayed news articles, facts, and various images about Mars. Splinter, Web-driver manager, hrml5lib, and BeautifulSoup were used to web scrape various websites to gather the information and images. MongoDB was used to store the information. Flask-PyMongo was then used to pass the information from MongoDB to Flask. Finally, Flask, HTML, and Bootstrap were used to create and style the web app.",
+        "tools": "Python, Jupyter Notebook, Splinter, Web-Driver Manager, BeautifulSoup4, MongoDB, FLask-PyMongo, html5lib",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/Mission-to-Mars",
+        "id": 13
+      },
+      {
+        "title": "CitiBike Bike Sharing",
+        "description": "The purpose of this analysis was to entice investors into bringing a bike-sharing program to Des Moine Iowa. To accomplish this, I used Tableau Public to create data visualizations that show different aspects of how the bike sharing business, CitiBike, performed in New York City in August of 2019.",
+        "tools": "Tableau, Python, Pandas, Jupyter Notebook",
+        "primary_tool": "Python",
+        "link": "https://github.com/ksdisch/bikesharing",
+        "id": 14
       }
     ]
   }

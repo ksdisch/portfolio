@@ -73,7 +73,7 @@
         "id": 9
       },
       {
-        "title": "ongressional Election Analysis",
+        "title": "Congressional Election Analysis",
         "description": "This project uses Python to analyze a csv file of congressional votes for the state of Colorado. The tasks were to calculate the total number of votes cast, get a complete list of candidates who received votes, calculate the total number of votes each candidate received, calculate the percentage of votes each candidate won, and determine the winner of the election based on popular vote.",
         "tools": "Python",
         "primary_tool": "Python",
@@ -89,7 +89,7 @@
         "id": 11
       },
       {
-        "title": "",
+        "title": "Surfs Up",
         "description": "The purpose of this project was to obtain and summarize temperature data for the months of June and December in Oahu, Hawaii, to assess the viability of a surf and ice cream shop in the area. SQLAlchemy was used to filter data into a pandas dataframe, where summary statistics were calculated and displayed.",
         "tools": "Python, Pandas, SQLAlchemy, Jupyter Notebook",
         "primary_tool": "SQL",
@@ -111,6 +111,15 @@
         "primary_tool": "Python",
         "link": "https://github.com/ksdisch/bikesharing",
         "id": 14
+      },
+      {
+        "title": "VBA Stock Analysis",
+        "description": "The purpose of the first part of this analysis was write a script in VBA that would generate an analysis of a few green energy stocks. The purpose of the second part of the analysis was refactoring the code to eliminate inefficiencies so that it could be fast enough to analyze the entire stock market over multiple years.",
+        "tools": "Microsoft Excel",
+        "primary_tool": "Excel",
+        "link": "https://github.com/ksdisch/stock-analysis",
+        "id": 15
       }
+
     ]
   }

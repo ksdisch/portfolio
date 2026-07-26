@@ -81,3 +81,7 @@ Judge-free verification, pre-registration, Wilson/Newcombe intervals, tiny budge
 *Repo visibility: **all six repos are public.** Every card links out to the real repo; no code is
 copied into this folder. (`reclaim-eval` and `jacobian-lens` are the paper authors' reference packages
 used as cross-check oracles — not my work, so not carded.)*
+
+---
+
+📚 **Project wiki:** [PROJECT.md](PROJECT.md) — status, scope, and next actions · [Wiki/_index.md](Wiki/_index.md) — topic pages and history

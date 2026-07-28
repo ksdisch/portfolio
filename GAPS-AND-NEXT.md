@@ -7,8 +7,10 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ## Do before sharing
 
-- ✅ **`blind-cite` is now public** (flipped 2026-07-21) — all six repos open cleanly for an outside
-  reader. **Nothing is blocking.**
+- ✅ **Nothing is blocking.** Six of the seven repos open cleanly for an outside reader.
+- ⏸️ **`blind-cite` is parked private** (2026-07-28) — its README claimed "M0 not yet started" while
+  its own `PROJECT.md` reported M0 complete, and it referenced `m1.py`–`m3.py` that don't exist.
+  Kept private until the M1 decision lands and the README tells one story.
 
 ---
 
@@ -22,6 +24,7 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 | **decay-pin** | Strategy variants (summarize / head-tail) ran on **one model × one scenario**. Widening that grid would turn "specific to this config" into a general claim. Push N toward ~50 where CIs are wide. |
 | **forge-gap** | A **live capability-ladder sweep** and a **self-hosted endpoint** are the two documented "roads not taken" — either would extend the story beyond the injected testbed. |
 | **lossy-wall** | Undirected corrections and non-arithmetic families beyond the logic set; push the third-model slot back to the paper's exact roster if a stable small model is available. |
+| **mute-map** | The v1 chain (M0–M3) is closed. Two optional stretches remain: **S1** extends the specificity-emergence curve to 7B, **S2** asks whether the switch is lexical or semantic (token mute button vs concept mute button). Also unresolved: collateral concentrates on a few fragile *probes* rather than damaging *primes* — worth a dedicated pass. |
 
 ---
 
@@ -39,12 +42,17 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 - **Reference clones (not mine, excluded from cards).** `reclaim-eval` (`collapseindex`) and
   `jacobian-lens` (`anthropics`) are the *paper authors'* packages, cloned locally as cross-check
   oracles for `lossy-wall` and `dim-stage` respectively. They are correctly **not** presented as my
-  work — the same way I'd expect a skeptic to want that line drawn cleanly.
+  work — the same way I'd expect a skeptic to want that line drawn cleanly. Neither is published under
+  my account: the `jacobian-lens` study copy (their code plus my plain-English rewrite of the paper)
+  is private, precisely so it is never mistaken for my own work.
 
 ---
 
-## Repo visibility (verified 2026-07-21)
+## Repo visibility (verified 2026-07-28)
 
 | Repo | Visibility |
 |------|-----------|
-| dim-stage, forge-gap, decay-pin, lossy-wall, ghost-patch, blind-cite | ✅ Public |
+| dim-stage, forge-gap, decay-pin, lossy-wall, ghost-patch, mute-map | ✅ Public |
+| blind-cite | ⏸️ Private — parked at M0 pending the M1 decision |
+| portfolio-prep (fluency curriculum) | 🔒 Private by design — study material about my own gaps |
+| jacobian-lens-study (Anthropic's code + my paper rewrite) | 🔒 Private by design — not my work |

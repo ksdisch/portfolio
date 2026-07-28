@@ -65,5 +65,3 @@ Where my third model tripped a trigger I swapped to a same-family larger one and
 - [ ] Explain the padded-note control (content vs. length) in one sentence.
 - [ ] Defend the qwen-7b→72b substitution as honest, not a fudge.
 - [ ] Say what the cross-check with the author's harness proves — and what it doesn't.
-
-*Study this project inside-and-out → [learn/lossy-wall.md](../learn/lossy-wall.md)*

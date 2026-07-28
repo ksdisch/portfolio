@@ -88,5 +88,3 @@ honest result is a measured null with one real positive signal."
 - [ ] Explain the AGREE gate and why using Anthropic's code as an *oracle* is a strength, not borrowing.
 - [ ] Answer the band-transplant skeptic without notes.
 - [ ] Describe the 1.5B introspection dose–response and why it's the strongest signal.
-
-*Study this project inside-and-out → [learn/dim-stage.md](../learn/dim-stage.md)*

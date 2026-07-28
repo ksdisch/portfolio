@@ -79,4 +79,4 @@ statistical honesty, at a scale small enough that one person can own every numbe
 *is* the point: not one project, but a **repeatable reproduce-and-measure engine** run across a
 growing set of papers.
 
-*Read the [portfolio index](README.md) · study path in [LEARNING-ROADMAP.md](LEARNING-ROADMAP.md).*
+*Read the [portfolio index](README.md).*

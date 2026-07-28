@@ -7,9 +7,10 @@
 | decay-pin repo | https://github.com/ksdisch/decay-pin | project repo | All decay-pin card stats (0/20 → 20/20 → 0/40; Newcombe [+77.2, +100] on 3 models; v2 replication) |
 | lossy-wall repo | https://github.com/ksdisch/lossy-wall | project repo | All lossy-wall card stats (≤1/290 vs 240/240; "worse than empty" +58% [+44.2, +67.5]; author-harness AGREE) |
 | ghost-patch repo | https://github.com/ksdisch/ghost-patch | project repo | All ghost-patch card stats (two headline nulls; $1.42/$5 budget) |
-| blind-cite repo | https://github.com/ksdisch/blind-cite | project repo | All blind-cite card stats (M0: 0/36, detectors 16/16; M1 pending) |
+| blind-cite repo | https://github.com/ksdisch/blind-cite (**private** — parked at M0) | project repo | All blind-cite card stats (M0: 0/36, detectors 16/16; M1 pending) |
+| mute-map repo | https://github.com/ksdisch/mute-map | project repo | All mute-map card stats (M0–M3; the 12 × 12 matrix, localization, dose) |
 | reclaim-eval clone | local clone (author: collapseindex) | reference oracle | Cross-check oracle for lossy-wall — the paper authors' package, **not Kyle's work**, excluded from cards |
-| jacobian-lens clone | local clone (author: anthropics) | reference oracle | Cross-check oracle for dim-stage — Anthropic's reference package, **not Kyle's work**, excluded from cards |
+| jacobian-lens clone | local clone; private study copy at https://github.com/ksdisch/jacobian-lens-study | reference oracle | Cross-check oracle for dim-stage — Anthropic's reference package, **not Kyle's work**, excluded from cards |
 | METHODOLOGY.md | METHODOLOGY.md | charter | The shared five-point method (recent paper → cheap-model slice → pre-committed stats → judge-free oracles → honest delta) all cards link back to |
 
-_Note: this folder is the compiled presentation layer. README.md, the `projects/` cards, and the `learn/` guides derive from the repos above; when a card and its repo disagree, the repo wins._
+_Note: this folder is the compiled presentation layer. README.md and the `projects/` cards derive from the repos above; when a card and its repo disagree, the repo wins. The private [portfolio-prep](https://github.com/ksdisch/portfolio-prep) repo holds the study curriculum and derives from the same sources._

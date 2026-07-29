@@ -13,10 +13,13 @@
 
 ## The honest framing (read this first)
 
-This is **not** a paper reproduction — it is the one project here with no paper behind it. The anchor
-is `dim-stage`'s *own recorded result* (stage S4b), not somebody's published claim. That cuts both
-ways and I state it plainly: there is no external oracle to check me against, so the entire burden
-falls on pre-registration and on re-certifying the instrument bit-for-bit on every run.
+This is **not** a paper reproduction. `forge-gap` also reproduces a technique with no arXiv paper, but
+this one goes further: it is the only project here with **no outside claim behind it at all**. The
+anchor is `dim-stage`'s *own recorded result* (stage S4b). That cuts both ways and I state it plainly:
+there is no external oracle to check me against, so the entire burden falls on pre-registration and on
+re-certifying the instrument bit-for-bit — the parent's cells reproduced exactly (**840/840** on all
+three subjects at M0), plus a **108/108** re-check of this project's own earlier cells before any new
+cell is read.
 
 ## The claim being characterized
 

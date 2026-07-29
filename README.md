@@ -63,10 +63,11 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
   the cent). That's the stated scope: mechanical reliability of small models, not frontier capability.
 - **Several papers ship no code** — these are independent rebuilds, cross-checked against reference
   implementations only where one exists (`lossy-wall`, `dim-stage`).
-- **`mute-map` has no paper at all** — it characterizes an effect found during `dim-stage`, so its
+- **`mute-map` has no outside claim behind it at all** — `forge-gap` reproduces a technique with no
+  arXiv paper, but `mute-map` goes further: it characterizes an effect found during `dim-stage`, so its
   anchor is my own recorded result and there is **no external oracle**. Stated on its card, not buried:
-  pre-registration and bit-for-bit re-certification are what stand in, and that's a weaker guarantee
-  than someone else's number.
+  pre-registration and bit-for-bit re-certification of the parent's cells are what stand in, and that's
+  a weaker guarantee than someone else's number.
 
 Judge-free verification, pre-registration, Wilson/Newcombe intervals, tiny budgets with hard guards —
 [the charter](METHODOLOGY.md) states all five once.

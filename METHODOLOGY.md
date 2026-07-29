@@ -31,6 +31,13 @@ reference implementation is harder — and more credible — than re-running som
 papers describe a *primitive*: a specific, nameable way a model breaks (a rule decays, a memory welds
 in an error, a repair instruction compounds corruption, a citation check goes blind).
 
+**Two projects don't start from a paper, in different ways.** `forge-gap` reproduces a *technique*
+with no arXiv paper behind it — still an external target, just not a published one. `mute-map` goes
+further: it anchors on my own prior recorded result (`dim-stage`'s S4b stage), so it has **no external
+anchor of any kind** — nobody else's number to check mine against. That makes it the only project here
+with no outside claim behind it, and the whole burden falls on pre-registration and on re-certifying
+the instrument bit-for-bit on every run. Everything else in this charter applies to both unchanged.
+
 ### 2. Reproduce a narrow slice on cheap models, at hobby scale
 Small open models (GLM, DeepSeek, Qwen, Qwen2.5 0.5–3B) via OpenRouter, or tiny local models on a
 laptop GPU. **Hard budget guard, typically < $5 of API spend**, tracked to the cent. The point is the
@@ -68,6 +75,7 @@ projects here headline nulls on purpose, and that is a feature, not a failure.
 | *"Hobby scale / cheap models."* | That's the **stated scope** — mechanical reliability of small models under a < $5 guard, disclosed on every card. Owning it reads as maturity, not weakness. |
 | *"One project's gap is injected."* (forge-gap) | Correct, and the chart caption says so. It's a **controlled fault-recovery testbed** by design — the fault rate is disclosed, no thumb on the scale. It never rounds up to "reproduced the paper's natural gap." |
 | *"Some headlines are nulls."* (ghost-patch, dim-stage) | Intentional and **pre-registered**. A null reported honestly is the credibility flex — provided it's *presented* as a null, not buried. Both are. |
+| *"One project has no outside claim behind it — you're grading your own homework."* (mute-map) | The sharpest poke here, and the card says it before you do: the anchor is `dim-stage`'s own recorded result, so there is **no external oracle**. What replaces it is pre-registration (gates frozen as code before any run) and bit-for-bit re-certification at two levels — the **parent** anchor reproduced exactly (`840/840` cells on all three subjects at M0, including every `concept_mass` float, re-anchored on later runs), plus an internal `108/108` re-check of the project's own earlier cells before any new cell is read. Both are weaker than an independent number, and they're labelled as what they are. |
 
 ---
 
@@ -79,4 +87,4 @@ statistical honesty, at a scale small enough that one person can own every numbe
 *is* the point: not one project, but a **repeatable reproduce-and-measure engine** run across a
 growing set of papers.
 
-*Read the [portfolio index](README.md) · study path in [LEARNING-ROADMAP.md](LEARNING-ROADMAP.md).*
+*Read the [portfolio index](README.md).*

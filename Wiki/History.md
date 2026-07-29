@@ -47,6 +47,31 @@ later. No content revisions in between.
   additive only — no existing files touched)"; no portfolio content changed
   [Fact — PR #1 body]
 
+## Era: Audience correction (2026-07)
+
+The first real revision since assembly. The portfolio was authored as a personal
+artifact that happened to be public; this era separated what belongs to a reader
+from what belongs to me.
+
+### Fluency curriculum un-published; index refreshed — 2026-07-28
+- **Landed:** LEARNING-ROADMAP.md, PRACTICE.md, and the six `learn/` guides
+  moved to the new private `ksdisch/portfolio-prep`; a `mute-map` card added;
+  `blind-cite` re-framed as parked with its repo private; the "all six repos are
+  public" claim corrected — see D5–D7 in `Decisions.md`
+- **Why:** a GitHub-wide recruiter-facing audit found the curriculum opened by
+  stating which parts of my own work I could not yet defend, in the root of the
+  repo I steer readers toward — the opposite signal from the calibrated
+  confidence the rest of the portfolio earns [Fact — audit findings]
+- **Also found:** the index silently omitted `mute-map` (public and complete at
+  M0–M3) and asserted a repo count that was wrong in two directions
+  [Fact — README.md:81 vs `gh repo list`]
+- **Tradeoff:** the study material is now a repo I have to keep in sync by hand
+  rather than one directory away; cross-links from the moved files back to the
+  public charter were rewritten to absolute URLs so they don't rot
+  [Inference — the alternative, deleting it, was rejected outright]
+- **Note:** the moved files remain in this repo's public git history. Removing
+  them there needs a history rewrite, which was not run [Fact — declined]
+
 ---
 
 ## Mining coverage

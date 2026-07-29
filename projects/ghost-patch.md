@@ -67,5 +67,3 @@ underpowered label honest. Whole thing ran for $1.42."
 - [ ] Distinguish "blindness" from "blind obedience" (why NULL ① reframes the paper's story).
 - [ ] Read the obedience-drop CIs and explain why crossing zero = null.
 - [ ] Explain "underpowered by the funnel" — why N shrank and why you still reported descriptively.
-
-*Study this project inside-and-out → [learn/ghost-patch.md](../learn/ghost-patch.md)*

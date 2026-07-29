@@ -63,5 +63,3 @@ LLM-summarize leaks it about 5% of the time. Cheap models, pre-registered gates,
 - [ ] Say what "equivalent to the floor within a +10% margin" means and why it's the right test for the fix.
 - [ ] Defend claiming the *gap*, not the paper's point estimate.
 - [ ] Explain the v2 strategy finding (head-tail free; summarize's 5% leak as a tail risk).
-
-*Study this project inside-and-out → [learn/decay-pin.md](../learn/decay-pin.md)*

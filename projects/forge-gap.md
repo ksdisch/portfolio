@@ -68,5 +68,3 @@ still statistically honest under the hood."
 - [ ] Explain the difference between the injected S4 gap and the natural mistral/llama gaps.
 - [ ] Explain why validation is a *self-consistency* check and how it can be fooled.
 - [ ] Read a Newcombe interval aloud and say what it would mean if it crossed zero.
-
-*Study this project inside-and-out → [learn/forge-gap.md](../learn/forge-gap.md)*

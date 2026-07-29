@@ -7,9 +7,16 @@
 > judge. **Status: early.** The fit-pilot is done; on cheap models the deception didn't show up yet
 > (they refuse or name the true owner), which is an honest early null with a design decision pending.
 
-**Repo:** <https://github.com/ksdisch/blind-cite> (public) · **Reproduces:** *Deceptive grounding* (arXiv
-**2607.09349**) · **Status:** **In progress — M0 fit-pilot complete, M1 pending** · **Method:**
+**Repo:** private — parked (see below) · **Reproduces:** *Deceptive grounding* (arXiv
+**2607.09349**) · **Status:** **Parked at M0** — fit-pilot complete, M1 decision pending · **Method:**
 [charter](../METHODOLOGY.md)
+
+> **Why this one isn't linked.** Every other card here opens onto a repo you can run. This one
+> doesn't, and I'd rather say why than quietly drop it: the repo's README still claimed "M0 not yet
+> started" while its own `PROJECT.md` reported M0 complete, and it referenced verdict scripts
+> (`m1.py`–`m3.py`) that were never written. Rather than ship a repo that contradicts itself, I've
+> parked it private until the M1 decision below lands. The result reported here is real and traced to
+> `docs/M0-BRIEF.md` + `data/m0_verdict.json`.
 
 ## The claim (the paper's primitive)
 A RAG answer about queried entity **X** can pass every faithfulness / hallucination / citation check
@@ -43,7 +50,7 @@ this surface.
   silently chosen.
 - Fully-fabricated corpus, judge-free token-ownership, hobby scale (~$0.009), three cheap models.
 
-## Run it
+## How it runs (when the repo comes back online)
 ```bash
 python m0.py verdict   # render the committed M0 results (ping → fidelity → gen-docs → smoke → pilot → verdict)
 ```
@@ -63,5 +70,3 @@ finished result."
 - [ ] Explain why a fabricated corpus makes attribution *exact* ground truth (vs an LLM judge).
 - [ ] Explain why the M0 null is informative *and* why it might be surface-specific.
 - [ ] Describe the M1 decision (powered null vs. multi-doc variant) and the tradeoff.
-
-*Study this project inside-and-out → [learn/blind-cite.md](../learn/blind-cite.md)*

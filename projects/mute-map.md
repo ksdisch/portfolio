@@ -31,7 +31,7 @@ specifically, with specificity emerging across 0.5B → 3B.
 
 | Milestone | Question | Result |
 |---|---|---|
-| **M0** | Does the ported instrument reproduce `dim-stage`'s S4b cells exactly? | **PASSED** — re-certified bit-for-bit on every later run (108/108 cells exact, ×3 subjects) |
+| **M0** | Does the ported instrument reproduce `dim-stage`'s S4b cells exactly? | **PASSED** — **840/840** cells exact on all three subjects (60 items × 2 instructions × 7 conditions), `concept_mass` floats included; re-anchored on every later run |
 | **M1** | How much of the vocabulary has an off-switch? | **PASSED** — concept-specific at 1.5B (+0.656 [+0.517, +0.763]) and 3B (+0.636 [+0.443, +0.759]) over a frozen 60-concept battery |
 | **M2** | Where does it live, and how much removal does it take? | **PASSED** — localized to the late third (early − late naming +0.853 [+0.668, +0.936] at 1.5B); removal is a **dimmer, not a step function** (half-mute λ ≈ 0.23 / 0.29 / 0.36) |
 | **M3** | Does muting one concept damage the others? | **PASSED** — at 1.5B the diagonal names **0/34** while the pooled off-diagonal names **363/374** (+0.971 [+0.867, +0.983]); at 3B 3/32 vs 343/352 (+0.881 [+0.731, +0.943]) |

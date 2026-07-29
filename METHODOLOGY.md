@@ -31,6 +31,12 @@ reference implementation is harder — and more credible — than re-running som
 papers describe a *primitive*: a specific, nameable way a model breaks (a rule decays, a memory welds
 in an error, a repair instruction compounds corruption, a citation check goes blind).
 
+**One exception, flagged on its own card:** `mute-map` anchors on my own prior recorded result
+(`dim-stage`'s S4b stage) rather than a published claim. That means it has **no external oracle** —
+nobody else's number to check mine against — so the whole burden falls on pre-registration and on
+re-certifying the instrument bit-for-bit on every run. Everything else in this charter applies to it
+unchanged.
+
 ### 2. Reproduce a narrow slice on cheap models, at hobby scale
 Small open models (GLM, DeepSeek, Qwen, Qwen2.5 0.5–3B) via OpenRouter, or tiny local models on a
 laptop GPU. **Hard budget guard, typically < $5 of API spend**, tracked to the cent. The point is the
@@ -68,6 +74,7 @@ projects here headline nulls on purpose, and that is a feature, not a failure.
 | *"Hobby scale / cheap models."* | That's the **stated scope** — mechanical reliability of small models under a < $5 guard, disclosed on every card. Owning it reads as maturity, not weakness. |
 | *"One project's gap is injected."* (forge-gap) | Correct, and the chart caption says so. It's a **controlled fault-recovery testbed** by design — the fault rate is disclosed, no thumb on the scale. It never rounds up to "reproduced the paper's natural gap." |
 | *"Some headlines are nulls."* (ghost-patch, dim-stage) | Intentional and **pre-registered**. A null reported honestly is the credibility flex — provided it's *presented* as a null, not buried. Both are. |
+| *"One project has no paper — you're grading your own homework."* (mute-map) | The sharpest poke here, and the card says it before you do: the anchor is `dim-stage`'s own recorded result, so there is **no external oracle**. What replaces it is pre-registration (gates frozen as code before any run) and re-certifying the parent's cells bit-for-bit on every later run — 108/108 exact, ×3 subjects. It's a weaker guarantee than an independent number, and it's labelled as one. |
 
 ---
 

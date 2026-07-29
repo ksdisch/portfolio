@@ -42,9 +42,11 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 - **Reference clones (not mine, excluded from cards).** `reclaim-eval` (`collapseindex`) and
   `jacobian-lens` (`anthropics`) are the *paper authors'* packages, cloned locally as cross-check
   oracles for `lossy-wall` and `dim-stage` respectively. They are correctly **not** presented as my
-  work — the same way I'd expect a skeptic to want that line drawn cleanly. Neither is published under
-  my account: the `jacobian-lens` study copy (their code plus my plain-English rewrite of the paper)
-  is private, precisely so it is never mistaken for my own work.
+  work — the same way I'd expect a skeptic to want that line drawn cleanly. **Neither is published
+  under my account** — verify it against the repo list. `reclaim-eval` exists only as a local clone.
+  Anthropic's `jacobian-lens` was briefly a public fork here, carrying my plain-English rewrite of
+  their paper on top of their code; it was **deleted on 2026-07-28** and the study copy moved to a
+  private repo, precisely so their package is never mistaken for my own work.
 
 ---
 

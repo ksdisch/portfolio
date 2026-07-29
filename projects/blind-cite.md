@@ -50,7 +50,7 @@ this surface.
   silently chosen.
 - Fully-fabricated corpus, judge-free token-ownership, hobby scale (~$0.009), three cheap models.
 
-## Run it
+## How it runs (when the repo comes back online)
 ```bash
 python m0.py verdict   # render the committed M0 results (ping → fidelity → gen-docs → smoke → pilot → verdict)
 ```

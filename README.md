@@ -3,8 +3,8 @@
 **What this is:** a growing set of small, rigorous projects where I take a *recent research paper*
 that claims an AI system fails in some specific way, **reproduce that failure on cheap models**, and
 **measure it honestly** — pre-committed statistics, no AI judges, real confidence intervals, and
-nulls reported as headlines. Each project links out to its own repo; a hiring manager can
-open, run, and poke any of them.
+nulls reported as headlines. Each project links out to its own repo — six of the seven are
+public, and a hiring manager can open, run, and poke any of those.
 
 > **The one-sentence version:** *I built a repeatable reproduce-and-measure engine and ran it on
 > half a dozen recent agent-reliability and interpretability papers — each an honest, pre-registered,
@@ -36,7 +36,8 @@ Together they show the range: **interpretability and agent reliability, one meth
 
 ## The full set
 
-Every stat below is traced to the linked repo (verified, not taken from notes). ★ = read first.
+Every stat below is traced to its project's repo (verified, not taken from notes). ★ = read first.
+`blind-cite` is the one row whose repo is currently private — its card says why.
 
 | Project | Reproduces | Claim in one line | Headline result | Status |
 |---------|-----------|-------------------|-----------------|--------|
@@ -62,6 +63,10 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
   the cent). That's the stated scope: mechanical reliability of small models, not frontier capability.
 - **Several papers ship no code** — these are independent rebuilds, cross-checked against reference
   implementations only where one exists (`lossy-wall`, `dim-stage`).
+- **`mute-map` has no paper at all** — it characterizes an effect found during `dim-stage`, so its
+  anchor is my own recorded result and there is **no external oracle**. Stated on its card, not buried:
+  pre-registration and bit-for-bit re-certification are what stand in, and that's a weaker guarantee
+  than someone else's number.
 
 Judge-free verification, pre-registration, Wilson/Newcombe intervals, tiny budgets with hard guards —
 [the charter](METHODOLOGY.md) states all five once.

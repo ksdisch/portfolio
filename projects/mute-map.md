@@ -2,9 +2,10 @@
 
 > **In plain words:** While replicating Anthropic's interpretability work I hit an effect that
 > survived every control I threw at it: **delete one concept's direction from a specific slice of the
-> model, and the model becomes unable to say that word** — while every other word it knows keeps
-> working. This project maps that switch properly: how much of the vocabulary has one, where it lives,
-> how much deletion it takes, and whether it damages anything else. **The v1 chain is complete.**
+> model, and the model becomes unable to say that word** — while the other eleven concepts in the grid
+> keep working (363/374). This project maps that switch properly: how much of the vocabulary has one,
+> where it lives, how much deletion it takes, and whether it damages anything else. **The v1 chain is
+> complete.**
 
 **Repo:** <https://github.com/ksdisch/mute-map> (public) · **Follow-on to:**
 [`dim-stage`](dim-stage.md) · **Status:** **Complete (M0–M3); two optional stretches open** ·

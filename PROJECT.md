@@ -6,7 +6,7 @@ Public-facing portfolio that presents seven reproduce-and-measure AI-failure pro
 ## Scope
 **In scope (current phase):**
 - Curating the index (README.md), the Methodology & Honesty Charter, and the seven project cards (`projects/`)
-- Keeping every stat on a card traceable to its linked public repo
+- Keeping every stat on a card traceable to its project's repo (public, except `blind-cite` while it is parked)
 - GAPS-AND-NEXT.md as the living-edges doc
 
 **Moved out (2026-07-28):** the fluency curriculum — LEARNING-ROADMAP.md (learn), PRACTICE.md (drill), and the `learn/` guides — now lives in the private [ksdisch/portfolio-prep](https://github.com/ksdisch/portfolio-prep). It is study material about my own gaps: useful to me, misleading to a reader who lands on it without context (Decision: Decisions.md D5).

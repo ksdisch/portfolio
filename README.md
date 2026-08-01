@@ -99,8 +99,9 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
   and bit-for-bit re-certification of the instrument are what stand in, and that's a weaker
   guarantee than someone else's number.
 - **`hush-gauge` is carded mid-flight** — the first in-progress card here. Only its M0 gate (G0)
-  has decided anything; the later gates (G1–G4) are frozen as code and undecided, and the card
-  claims nothing a decided gate hasn't earned.
+  has decided anything; the later gates (G1–G4) are pre-registered and undecided — each is frozen
+  as code before its own stage runs, and G0 is the only one there today — and the card claims
+  nothing a decided gate hasn't earned.
 
 Judge-free verification, pre-registration, Wilson/Newcombe intervals, tiny budgets with hard
 guards — [the charter](METHODOLOGY.md) states all five once.

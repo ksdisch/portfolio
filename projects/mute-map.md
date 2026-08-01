@@ -14,8 +14,9 @@
 ## The honest framing (read this first)
 
 This is **not** a paper reproduction. `forge-gap` also reproduces a technique with no arXiv paper, but
-this one goes further: it is the only project here with **no outside claim behind it at all**. The
-anchor is `dim-stage`'s *own recorded result* (stage S4b). That cuts both ways and I state it plainly:
+this one goes further: there is **no outside claim behind it at all**. The
+anchor is `dim-stage`'s *own recorded result* (stage S4b). (Only [`hush-gauge`](hush-gauge.md) sits
+further out on that ladder — it has no prior recorded result either.) That cuts both ways and I state it plainly:
 there is no external oracle to check me against, so the entire burden falls on pre-registration and on
 re-certifying the instrument bit-for-bit — the parent's cells reproduced exactly (**840/840** on all
 three subjects at M0), plus a **108/108** re-check of this project's own earlier cells before any new
@@ -47,7 +48,10 @@ Models: Qwen2.5-0.5B/1.5B/3B-Instruct, local MPS, forward-only. **Core chain cos
 - Collateral concentrates on a few fragile **probes**, not on damaging **primes** — `silver`'s
   direction damages nothing, yet `silver` is the most fragile probe in the grid. That **inverts** what
   the lineage's single control cell had suggested.
-- Category-block collateral is CI-clean at 0.5B and **dissolves by 1.5B**.
+- Category-block collateral is **real in the wider vocabulary and does not dissolve with scale**
+  (within 22/29 vs cross 769/823 at 1.5B; 35/53 vs 913/955 at 3B) — M4 **reversed** M3's "dissolves
+  by 1.5B" reading, which turned out to be an artifact of arm composition (M3's within-category arm
+  was 30 of 34 pairs countries; the M4 strip samples ten categories), not of scale.
 - The only imperfect mutes anywhere are `Egypt` and `October` at 3B — the two concepts pre-registered
   in advance as the leaky-switch stratum.
 - Ablating the direction *outside* the band is nearly free at 3B (~0–6% of naming) but costs ≈48% at

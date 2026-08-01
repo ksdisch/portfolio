@@ -41,10 +41,14 @@ every detection claim is *excess over a context-word yardstick*, never "the prob
 | Gate | Question | Status |
 |---|---|---|
 | **G0** (M0) | Does the pressure battery have dynamic range? | **PASSED, 2026-07-30, all three scales** — benign T0 sits at the floor; under multi-turn extraction all 25 held-out secrets leak; `T4 − T0` Newcombe-clean at every scale, and none `EXPOSURE-CONFOUNDED`: all four exposure-matched contrasts exclude zero (a T4 trial gets 3× the scored positions of a benign one, so this control is what would have caught an arithmetic-only pass) |
-| **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | Frozen as code; **undecided** — M1 brief proposed, awaiting approval |
-| **G2** (M2) | Silent leak: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | Frozen as code; **undecided** |
-| **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, and refusal-coherence hold — and a norm-matched random direction does not | Frozen as code; **undecided** |
-| **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | Frozen as code; **undecided** |
+| **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | **Bars frozen in the ledger** (decision K4, 2026-07-29); code freeze due at stage start; **undecided** — M1 brief proposed, awaiting approval |
+| **G2** (M2) | Silent leak: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
+| **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, and refusal-coherence hold — and a norm-matched random direction does not | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
+| **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
+
+Only **G0** is frozen as code today (`gates/g0.py`, decision D8) — that is the repo's discipline
+stated exactly: each gate is frozen as code and dry-run `INVALID` on wrong-arm input *before its own
+stage runs*, not all four up front.
 
 Subjects: Qwen2.5-0.5B / 1.5B / 3B-Instruct, local MPS, forward-only. **Cost: $0.** 412 offline
 tests; decisions K1–K6 and D1–D14 frozen in the repo's ledger.

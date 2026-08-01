@@ -41,7 +41,8 @@ gaps too**, so the story is bracketed at both ends.
   natural gap for a guardrail to recover; a *deterministic, seeded* transient 503 is injected at a
   disclosed rate to create the recovery scenario. Repo's own words: *"a controlled fault-recovery
   testbed, gap and rate disclosed, no hidden thumb on the scale."* Every figure states whether its gap
-  is **injected** or **natural**. This never rounds up to "reproduced the paper's natural gap."
+  is **injected** or **natural**. And since the target here is a technique with no paper behind it,
+  there is no "paper's gap" to claim — this never rounds up to a natural reproduction of anything.
 - **Validation is a self-consistency check, not an answer key** — it reads only the run's own tool
   results, so it can be *fooled* by a self-consistent-but-wrong retrieval (quantified: ~10% of
   llama-8b's misses were exactly this).

@@ -15,6 +15,12 @@ null as the headline** instead of dressing it up. Everything — every prompt, f
 disclosed. The claim is always *"I reproduced and measured a published paper's primitive; here's my
 narrow, honest delta,"* never *"I invented this."*
 
+That is the reproduction lane. A second, **model-internals lane** runs the same discipline
+pointed inward — rebuild a published instrument, validate it bit-for-bit against the authors'
+reference, then use it to map and audit what small models do from the inside. Where a project in
+that lane has no external claim to reproduce, the charter says so below rather than letting the
+framing round up.
+
 Why that's credible: it removes the three ways reproduction studies usually cheat — **self-graded
 homework** (I use no LLM judge), **moving the goalposts** (I pre-register the statistics), and
 **hiding the misses** (nulls are headlines). It's a small, disciplined loop run many times.
@@ -31,12 +37,15 @@ reference implementation is harder — and more credible — than re-running som
 papers describe a *primitive*: a specific, nameable way a model breaks (a rule decays, a memory welds
 in an error, a repair instruction compounds corruption, a citation check goes blind).
 
-**Two projects don't start from a paper, in different ways.** `forge-gap` reproduces a *technique*
-with no arXiv paper behind it — still an external target, just not a published one. `mute-map` goes
-further: it anchors on my own prior recorded result (`dim-stage`'s S4b stage), so it has **no external
-anchor of any kind** — nobody else's number to check mine against. That makes it the only project here
-with no outside claim behind it, and the whole burden falls on pre-registration and on re-certifying
-the instrument bit-for-bit on every run. Everything else in this charter applies to both unchanged.
+**Three projects don't start from a paper — each one step further from an external anchor.**
+`forge-gap` reproduces a *technique* with no arXiv paper behind it — still an external target,
+just not a published one. `mute-map` anchors on my own prior recorded result (`dim-stage`'s S4b
+stage) — no external anchor of any kind, nobody else's number to check mine against. `hush-gauge`
+goes furthest: an *original question* with no prior recorded result at all, asked with an
+instrument inherited (never refit) from `dim-stage` and a phenomenon mapped by `mute-map`. Down
+that ladder the external checks fall away one by one, and what replaces them is always the same
+pair: pre-registration (gates frozen as code before any run) and bit-for-bit re-certification of
+the instrument. Everything else in this charter applies to all three unchanged.
 
 ### 2. Reproduce a narrow slice on cheap models, at hobby scale
 Small open models (GLM, DeepSeek, Qwen, Qwen2.5 0.5–3B) via OpenRouter, or tiny local models on a
@@ -73,9 +82,10 @@ projects here headline nulls on purpose, and that is a feature, not a failure.
 | The poke | The honest answer |
 |----------|-------------------|
 | *"Hobby scale / cheap models."* | That's the **stated scope** — mechanical reliability of small models under a < $5 guard, disclosed on every card. Owning it reads as maturity, not weakness. |
-| *"One project's gap is injected."* (forge-gap) | Correct, and the chart caption says so. It's a **controlled fault-recovery testbed** by design — the fault rate is disclosed, no thumb on the scale. It never rounds up to "reproduced the paper's natural gap." |
+| *"One project's gap is injected."* (forge-gap) | Correct, and the chart caption says so. It's a **controlled fault-recovery testbed** by design — the fault rate is disclosed, no thumb on the scale. And since forge-gap's target is a technique with no paper behind it, there is no "paper's gap" to claim — it never rounds up to a natural reproduction of anything. |
 | *"Some headlines are nulls."* (ghost-patch, dim-stage) | Intentional and **pre-registered**. A null reported honestly is the credibility flex — provided it's *presented* as a null, not buried. Both are. |
-| *"One project has no outside claim behind it — you're grading your own homework."* (mute-map) | The sharpest poke here, and the card says it before you do: the anchor is `dim-stage`'s own recorded result, so there is **no external oracle**. What replaces it is pre-registration (gates frozen as code before any run) and bit-for-bit re-certification at two levels — the **parent** anchor reproduced exactly (`840/840` cells on all three subjects at M0, including every `concept_mass` float, re-anchored on later runs), plus an internal `108/108` re-check of the project's own earlier cells before any new cell is read. Both are weaker than an independent number, and they're labelled as what they are. |
+| *"mute-map has no outside claim behind it — you're grading your own homework."* | The sharpest poke here, and the card says it before you do: the anchor is `dim-stage`'s own recorded result, so there is **no external oracle**. What replaces it is pre-registration (gates frozen as code before any run) and bit-for-bit re-certification at two levels — the **parent** anchor reproduced exactly (`840/840` cells on all three subjects at M0, including every `concept_mass` float, re-anchored on later runs), plus an internal `108/108` re-check of the project's own earlier cells before any new cell is read. Both are weaker than an independent number, and they're labelled as what they are. |
+| *"One card is a work in progress."* (hush-gauge) | Deliberate, and marked. Only its M0 gate (G0) has decided anything; G1–G4 are pre-registered and undecided — the repo freezes each gate as code before its own stage runs, so G0 is the only one there today — and the card claims nothing a decided gate hasn't earned. Carding mid-flight is the build-in-public discipline — an undecided gate is reported as undecided, never rounded up. |
 
 ---
 

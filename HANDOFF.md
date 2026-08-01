@@ -1,26 +1,30 @@
 # HANDOFF.md
 
-_Last updated: 2026-07-28_
+_Last updated: 2026-08-01_
 
 ## What was just done
-- **Un-published the fluency curriculum** — LEARNING-ROADMAP.md, PRACTICE.md, and the six `learn/` guides moved to the new private [ksdisch/portfolio-prep](https://github.com/ksdisch/portfolio-prep). Cross-links from the moved files back to the public charter/index were rewritten to absolute URLs (Decision: Decisions.md D5)
-- **Added the `mute-map` card** — it was public and complete but absent from the index entirely
-- **Re-framed `blind-cite`** as parked at M0 with its repo private, and corrected the "all six repos are public" claim
-- Prior state (2026-07-26): project wiki initialized; (2026-07-21) portfolio built end-to-end
+- **Restructured the index into two lanes** — model internals (the J-lens lineage: `dim-stage` → `mute-map` → `hush-gauge`) and agent reliability (the behavioral reproductions). D1's method-first lead survives: one "read first" from each lane (Decision: Decisions.md D9)
+- **Carded `hush-gauge` in progress** — the first mid-flight card; it states only what G0 decided (Decision: D10)
+- **Refreshed `mute-map`'s card for M4** — the close-out landed 2026-07-29 (VOCAB-SPARING at 1.5B/3B, AS-SCORED ONLY); the S1/S2 stretches were declined for that repo and banked in the J-lens follow-on backlog
+- **Ledger repairs** — D3 marked `Superseded by D6`; the `jacobian-lens` fork deletion recorded as D8
+- **Charter repairs** — the forge-gap skeptic row no longer cites "the paper's natural gap" for a project the same table says has no paper; the anchor-ladder paragraph now covers all three non-paper projects; a skeptic row owns the in-progress card
+- Prior state (2026-07-28): fluency curriculum un-published to `portfolio-prep`; mute-map carded; blind-cite parked. (2026-07-21): portfolio built end-to-end
 
 ## Where things stand
-The public portfolio is the index, the charter, GAPS-AND-NEXT, and seven project cards. Every card stat traces to its repo, and the honesty caveats (forge-gap's injected gap, ghost-patch/dim-stage headline nulls, mute-map's no-external-oracle framing, hobby scale) are stated plainly. Six of seven repos are public.
+The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards. Every card stat traces to its repo, and the honesty caveats (injected gap, headline nulls, no-external-oracle framings, the in-progress card, hobby scale) are stated plainly. Seven of eight repos are public.
 
 ## Immediate next move
-Decide `blind-cite`'s M1 direction — well-powered null on the pre-committed design, or the documented multi-doc + filler variant. That decision unblocks re-publishing the repo and updating its card from "parked" back to a live status.
+Approve (or revise) `hush-gauge`'s M1 start-of-stage brief — hush-gauge PR #5 — and decide `blind-cite`'s M1 direction. Both cards follow whatever lands in their repos.
 
 ## Open questions / blockers
-- `blind-cite` M1 direction — decided in the blind-cite repo, not here; the card follows whatever lands (Unresolved)
-- `mute-map` S1 (7B) and S2 (lexical vs semantic scope) stretches are optional and uncommitted (Unresolved)
+- `blind-cite` M1 direction — decided in the blind-cite repo, not here; the card follows (Unresolved)
+- `hush-gauge` M1–M3 — in flight; refresh the card as each gate decides (Unresolved)
 - No blockers to sharing the portfolio as-is
 
-## Files touched recently
-- PROJECT.md — new: purpose/scope/status/next actions
-- HANDOFF.md — new: this file
-- Sources.md — new: authoritative sources (6 project repos + 2 reference-oracle clones)
-- Decisions.md — new: documented portfolio decisions (D1–D4)
+## Files touched recently (2026-08-01 pass)
+- README.md — two-lane restructure; recounted pull-quote and visibility note
+- projects/hush-gauge.md — new in-progress card
+- projects/mute-map.md — M4 close-out; status M0–M4
+- METHODOLOGY.md — internals-lane sentence; anchor-ladder paragraph; forge-gap row fix; hush-gauge skeptic row
+- Decisions.md — D3 status; D8–D10 appended
+- GAPS-AND-NEXT.md, Sources.md, PROJECT.md, Wiki/ — synced to the above

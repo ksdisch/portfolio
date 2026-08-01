@@ -7,7 +7,7 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ## Do before sharing
 
-- ✅ **Nothing is blocking.** Six of the seven repos open cleanly for an outside reader.
+- ✅ **Nothing is blocking.** Seven of the eight repos open cleanly for an outside reader.
 - ⏸️ **`blind-cite` is parked private** (2026-07-28) — its README claimed "M0 not yet started" while
   its own `PROJECT.md` reported M0 complete, and it referenced `m1.py`–`m3.py` that don't exist.
   Kept private until the M1 decision lands and the README tells one story.
@@ -24,7 +24,8 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 | **decay-pin** | Strategy variants (summarize / head-tail) ran on **one model × one scenario**. Widening that grid would turn "specific to this config" into a general claim. Push N toward ~50 where CIs are wide. |
 | **forge-gap** | A **live capability-ladder sweep** and a **self-hosted endpoint** are the two documented "roads not taken" — either would extend the story beyond the injected testbed. |
 | **lossy-wall** | Undirected corrections and non-arithmetic families beyond the logic set; push the third-model slot back to the paper's exact roster if a stable small model is available. |
-| **mute-map** | The v1 chain (M0–M3) is closed. Two optional stretches remain: **S1** extends the specificity-emergence curve to 7B, **S2** asks whether the switch is lexical or semantic (token mute button vs concept mute button). Also unresolved: collateral concentrates on a few fragile *probes* rather than damaging *primes* — worth a dedicated pass. |
+| **mute-map** | The v1 chain (M0–M3) closed 2026-07-28 and the **M4 close-out** landed 2026-07-29 (VOCAB-SPARING at 1.5B/3B, AS-SCORED ONLY). The S1 (7B) and S2 (lexical vs semantic) stretches were **declined for this repo** and banked as idea #13 in the J-lens follow-on backlog, where they compete in the seed-hunt on equal terms. Still open: collateral concentrates on a few fragile *probes* rather than damaging *primes* — worth a dedicated pass. |
+| **hush-gauge** | v1 is mid-flight: M1 (probe panel + detection, G1), M2 (silent leak + causal ablation, G2/G3), and the detachable M3 (off-switch unification, G4) are all ahead. The M1 start-of-stage brief is proposed and awaiting approval (hush-gauge PR #5). The card follows whatever each gate decides. |
 
 ---
 
@@ -50,11 +51,11 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ---
 
-## Repo visibility (verified 2026-07-28)
+## Repo visibility (verified 2026-08-01)
 
 | Repo | Visibility |
 |------|-----------|
-| dim-stage, forge-gap, decay-pin, lossy-wall, ghost-patch, mute-map | ✅ Public |
+| dim-stage, forge-gap, decay-pin, lossy-wall, ghost-patch, mute-map, hush-gauge | ✅ Public |
 | blind-cite | ⏸️ Private — parked at M0 pending the M1 decision |
 | portfolio-prep (fluency curriculum) | 🔒 Private by design — study material about my own gaps |
 | jacobian-lens-study (Anthropic's code + my paper rewrite) | 🔒 Private by design — not my work |

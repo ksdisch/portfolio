@@ -5,10 +5,10 @@
 > model, and the model becomes unable to say that word** — while the other eleven concepts in the grid
 > keep working (363/374). This project maps that switch properly: how much of the vocabulary has one,
 > where it lives, how much deletion it takes, and whether it damages anything else. **The v1 chain is
-> complete.**
+> complete, and a close-out stage (M4) measured the wider-vocabulary collateral.**
 
 **Repo:** <https://github.com/ksdisch/mute-map> (public) · **Follow-on to:**
-[`dim-stage`](dim-stage.md) · **Status:** **Complete (M0–M3); two optional stretches open** ·
+[`dim-stage`](dim-stage.md) · **Status:** **Complete (M0–M4; close-out landed 2026-07-29)** ·
 **Method:** [charter](../METHODOLOGY.md)
 
 ## The honest framing (read this first)
@@ -35,6 +35,7 @@ specifically, with specificity emerging across 0.5B → 3B.
 | **M1** | How much of the vocabulary has an off-switch? | **PASSED** — concept-specific at 1.5B (+0.656 [+0.517, +0.763]) and 3B (+0.636 [+0.443, +0.759]) over a frozen 60-concept battery |
 | **M2** | Where does it live, and how much removal does it take? | **PASSED** — localized to the late third (early − late naming +0.853 [+0.668, +0.936] at 1.5B); removal is a **dimmer, not a step function** (half-mute λ ≈ 0.23 / 0.29 / 0.36) |
 | **M3** | Does muting one concept damage the others? | **PASSED** — at 1.5B the diagonal names **0/34** while the pooled off-diagonal names **363/374** (+0.971 [+0.867, +0.983]); at 3B 3/32 vs 343/352 (+0.881 [+0.731, +0.943]) |
+| **M4** (close-out) | Does deleting one concept's direction damage the *other 48* vocabulary concepts? | **PASSED — VOCAB-SPARING at 1.5B and 3B, AS-SCORED ONLY** — over a 12-prime × 180-item strip, 51/71 = 0.718 [0.605, 0.810] of gated non-subset items survive all 12 deletions at 1.5B and 63/84 = 0.750 [0.648, 0.830] at 3B; the concept-level collapse sits below the bar (lower bounds 0.434 / 0.456), hence the pre-declared qualifier. M4 re-certifies two artifact sets at once (M1 255/255 and M3 468/468 cells, × 3 subjects) |
 
 **126 of the matrix's 132 ordered off-diagonal pairs had never been measured before** — the other 6
 are M1's country control cells, re-certified bit-for-bit before anything new is read.

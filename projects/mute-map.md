@@ -49,7 +49,9 @@ Models: Qwen2.5-0.5B/1.5B/3B-Instruct, local MPS, forward-only. **Core chain cos
   direction damages nothing, yet `silver` is the most fragile probe in the grid. That **inverts** what
   the lineage's single control cell had suggested.
 - Category-block collateral is **real in the wider vocabulary and does not dissolve with scale**
-  (within 22/29 vs cross 769/823 at 1.5B; 35/53 vs 913/955 at 3B) — M4 **reversed** M3's "dissolves
+  (within-category pairs **survive** 22/29 = 0.76 vs cross-category 769/823 = 0.93 at 1.5B; 35/53 =
+  0.66 vs 913/955 = 0.96 at 3B — lower survival inside the category means more collateral there) —
+  M4 **reversed** M3's "dissolves
   by 1.5B" reading, which turned out to be an artifact of arm composition (M3's within-category arm
   was 30 of 34 pairs countries; the M4 strip samples ten categories), not of scale.
 - The only imperfect mutes anywhere are `Egypt` and `October` at 3B — the two concepts pre-registered

@@ -10,11 +10,15 @@ _Last updated: 2026-08-01_
 - **Charter repairs** — the forge-gap skeptic row no longer cites "the paper's natural gap" for a project the same table says has no paper; the anchor-ladder paragraph now covers all three non-paper projects; a skeptic row owns the in-progress card
 - Prior state (2026-07-28): fluency curriculum un-published to `portfolio-prep`; mute-map carded; blind-cite parked. (2026-07-21): portfolio built end-to-end
 
+## Since that pass (same day)
+- `hush-gauge`'s M1 start-of-stage brief was approved and merged (its PR #5) — D15–D24 frozen, nothing in M1 run yet; this repo's hush-gauge status lines were refreshed to match
+- The three research-paper PRs (lossy-wall #34, decay-pin #24, forge-gap #22) were reviewed and merged by Kyle, so every lineage repo now carries its `docs/paper/`
+
 ## Where things stand
 The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards. Every card stat traces to its repo, and the honesty caveats (injected gap, headline nulls, no-external-oracle framings, the in-progress card, hobby scale) are stated plainly. Seven of eight repos are public.
 
 ## Immediate next move
-Approve (or revise) `hush-gauge`'s M1 start-of-stage brief — hush-gauge PR #5 — and decide `blind-cite`'s M1 direction. Both cards follow whatever lands in their repos.
+Run `hush-gauge`'s M1 build session — its brief froze 2026-08-01 (D15–D24, hush-gauge PR #5) and G1/G2 decide once at the end of it — and decide `blind-cite`'s M1 direction. Both cards follow whatever lands in their repos.
 
 ## Open questions / blockers
 - `blind-cite` M1 direction — decided in the blind-cite repo, not here; the card follows (Unresolved)

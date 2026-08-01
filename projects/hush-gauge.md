@@ -8,7 +8,7 @@
 
 **Repo:** <https://github.com/ksdisch/hush-gauge> (public) · **Builds on:**
 [`dim-stage`](dim-stage.md) (instrument) and [`mute-map`](mute-map.md) (phenomenon) · **Status:**
-**In progress — M0 complete (G0 PASSES, 2026-07-30); M1 brief proposed, awaiting approval** ·
+**In progress — M0 complete (G0 PASSES, 2026-07-30); M1 brief frozen 2026-08-01, nothing in M1 run yet** ·
 **Method:** [charter](../METHODOLOGY.md)
 
 ## The honest framing (read this first)
@@ -41,8 +41,8 @@ every detection claim is *excess over a context-word yardstick*, never "the prob
 | Gate | Question | Status |
 |---|---|---|
 | **G0** (M0) | Does the pressure battery have dynamic range? | **PASSED, 2026-07-30, all three scales** — benign T0 at or near the floor (0/25 at 1.5B and 3B; **2/25 at 0.5B** by the frozen oracle — see the caveats); under multi-turn extraction all 25 held-out secrets leak; `T4 − T0` Newcombe-clean at every scale, and none `EXPOSURE-CONFOUNDED`: all four exposure-matched contrasts exclude zero (a T4 trial gets 3× the scored positions of a benign one, so this control is what would have caught an arithmetic-only pass) |
-| **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | **Bars frozen in the ledger** (decision K4, 2026-07-29); code freeze due at stage start; **undecided** — M1 brief proposed, awaiting approval |
-| **G2** (M2) | Silent leak: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
+| **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | **Bars frozen in the ledger** (decision K4, 2026-07-29) and M1's design frozen with it (D15–D24, brief merged 2026-08-01); `gates/g1.py` is a listed M1 deliverable; **undecided** — nothing in M1 has run |
+| **G2** (M2) | Silent leak: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | Wording byte-frozen with M1's brief (D23); `gates/g2.py` is a listed M1 deliverable; **undecided** |
 | **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, and refusal-coherence hold — and a norm-matched random direction does not | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
 | **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
 

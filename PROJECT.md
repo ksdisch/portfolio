@@ -27,7 +27,7 @@ them.
 ## Next actions
 1. Decide `blind-cite`'s M1 direction (well-powered null on the pre-committed design vs. the multi-doc + filler variant), then re-publish the repo and update the card.
 2. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N re-run, dim-stage band re-derivation).
-3. Refresh `hush-gauge`'s card as each of M1–M3 decides (its M1 brief awaits approval — hush-gauge PR #5). mute-map's S1/S2 stretches were declined for that repo and banked in the J-lens follow-on backlog.
+3. Refresh `hush-gauge`'s card as each of M1–M3 decides (its M1 brief froze 2026-08-01 and the M1 build session is underway; G1 and G2 both decide once at the end of it, and no M1 result is committed yet). mute-map's S1/S2 stretches were declined for that repo and banked in the J-lens follow-on backlog.
 
 ## Boundaries
 - Docs-only folder: markdown, no runnable code

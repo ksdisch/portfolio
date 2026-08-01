@@ -74,6 +74,26 @@ from what belongs to me.
 
 ---
 
+## Era: Two lanes (2026-08)
+
+### Index restructured into two lanes; hush-gauge carded in progress — 2026-08-01
+- **What:** the flat seven-row index became two lane tables — model internals (the J-lens
+  lineage: `dim-stage` → `mute-map` → `hush-gauge`) and agent reliability (the behavioral
+  reproductions) — with `hush-gauge` as the portfolio's first in-progress card and `mute-map`
+  refreshed for its M4 close-out [Fact — README.md, Decisions.md D9–D10]
+- **Why:** the internals projects share one instrument, one arc (build it → map with it → audit
+  with it), and an epistemic profile distinct from paper reproductions; one flat table hid the
+  lane Kyle's research had actually grown [Fact — D9 rationale]
+- **Also:** ledger and charter repairs from the 2026-07-29 audit's follow-up list — D3 marked
+  superseded by D6 (F9), the `jacobian-lens` fork deletion recorded as D8 (F12), METHODOLOGY's
+  forge-gap contradiction fixed (F13), HANDOFF refreshed (F7), the pull-quote recounted (F8)
+  [Fact — Decisions.md, METHODOLOGY.md]
+- **Tradeoff:** an in-progress card must be kept in sync as gates decide, and it hands a skeptic
+  an "unfinished work" poke — owned with a dedicated skeptic-table row rather than hidden
+  [Inference — METHODOLOGY.md skeptic table]
+
+---
+
 ## Mining coverage
 _Backfilled 2026-07-26 by project-wiki BACKFILL. Entries after this date are
 appended live by MAINTAIN._

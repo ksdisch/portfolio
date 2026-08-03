@@ -72,8 +72,8 @@ the verdict is reproducible by anyone who runs the checker.
 
 ### 5. State the narrow, honest delta and build in public
 Every prompt, filter, model swap, and gate is disclosed in a `DECISIONS.md`. The framing is always
-*"reproduced and measured, here's my honest delta."* **A null is a reportable headline** — three of
-the projects here headline nulls on purpose, and that is a feature, not a failure.
+*"reproduced and measured, here's my honest delta."* **A null is a reportable headline** — nulls
+headline several of these projects on purpose, and that is a feature, not a failure.
 
 ---
 

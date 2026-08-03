@@ -56,7 +56,7 @@ Every stat below is traced to its project's repo (verified, not taken from notes
 |---------|--------|-------------------|-----------------|--------|
 | ★ **[dim-stage](projects/dim-stage.md)** | Anthropic *Global Workspace* (transformer-circuits, 2026-07-06) | A "Jacobian lens" reads a sparse mid-layer *workspace* where computation is verbally reported & steerable | **Pre-registered NULL** — not readable in Qwen2.5 0.5B/1.5B/3B (0/6 distributions each); 3 downstream properties measured descriptively; lens validated bitwise vs Anthropic's reference | **Complete** (M0–M3 + 4 stretch stages) |
 | **[mute-map](projects/mute-map.md)** | *`dim-stage`'s own recorded result (S4b) — no external oracle* | Deleting one concept's lens direction in the late third of the workspace band makes the model unable to say that word | On the full 12 × 12 prime × probe matrix at 1.5B the diagonal names **0/34** vs pooled off-diagonal **363/374** (+0.971 [+0.867, +0.983]); close-out **M4**: the switch is **VOCAB-SPARING** at 1.5B/3B (0.718 / 0.750 of gated wider-vocabulary items survive all 12 deletions), **AS-SCORED ONLY** | **Complete** (M0–M4) |
-| **[hush-gauge](projects/hush-gauge.md)** | *Original audit — no outside claim; instrument inherited from `dim-stage`, phenomenon from `mute-map`* | Activations reveal a model is about to leak an in-context secret it was ordered to keep — even on trials where it never says it | **M0 complete — G0 PASSES on all 3 scales**: the pressure battery has dynamic range (benign T0 at or near the floor — 0/25 at 1.5B and 3B, 2/25 at 0.5B by the frozen oracle; all 25 held-out secrets leak under multi-turn T4), exposure-matched contrasts Newcombe-clean at every scale | **In progress** (M0 done; M1 brief frozen 2026-08-01, no M1 gate decided) |
+| **[hush-gauge](projects/hush-gauge.md)** | *Original audit — no outside claim; instrument inherited from `dim-stage`, phenomenon from `mute-map`* | Activations reveal a model is about to leak an in-context secret it was ordered to keep — even on trials where it never says it | **M1 decided — G1 FAILS and G2 FAILS at all 3 scales, both pre-committed nulls** (a passing v1 per the repo's kickoff): the probe reads speech, not secrecy — recall 0.937 / 0.571 / 0.537 on emitting trials vs 0.103 / 0.068 / 0.088 on non-emitting, and on certified-silent trials the secret sits *below* the licensed-word yardstick, significantly at 3B (−0.455 [−0.654, −0.161]). M0's G0 passed on all 3 scales (battery has dynamic range) | **In progress** (M0–M1 decided; M2/G3 decided FAIL in the repo's open PR #10 — stats card when it merges; G4 detachable, undecided) |
 
 ---
 
@@ -98,10 +98,13 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
   question with no prior result of any kind. Stated on both cards, not buried: pre-registration
   and bit-for-bit re-certification of the instrument are what stand in, and that's a weaker
   guarantee than someone else's number.
-- **`hush-gauge` is carded mid-flight** — the first in-progress card here. Only its M0 gate (G0)
-  has decided anything; the later gates (G1–G4) are pre-registered and undecided — each is frozen
-  as code before its own stage runs, and G0 is the only one there today — and the card claims
-  nothing a decided gate hasn't earned.
+- **`hush-gauge` is carded mid-flight** — the first in-progress card here, and its first decided
+  measurement gates came back as **pre-committed nulls reported as headlines**: G1 and G2 both
+  FAIL at all three scales (the probe reads speech, not secrecy), which the repo's kickoff calls a
+  passing v1. G3 has decided in the repo's still-open PR #10 and is carried as status only — stats
+  enter these tables from merged results, never from an open review. G4 (detachable) is
+  pre-registered and undecided. Each gate is frozen as code before its own stage runs, and the
+  card claims nothing a decided gate hasn't earned.
 
 Judge-free verification, pre-registration, Wilson/Newcombe intervals, tiny budgets with hard
 guards — [the charter](METHODOLOGY.md) states all five once.

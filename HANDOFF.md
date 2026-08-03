@@ -17,25 +17,28 @@ _Last updated: 2026-08-03 (audit pass — second update this date)_
 
 ## Where things stand
 The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards.
-**All eight repos are public as of 2026-08-03** (blind-cite re-published by its own merged
-PR #8) — but the front matter (README, blind-cite card, PROJECT.md, Sources.md, GAPS-AND-NEXT)
-still asserts seven-of-eight/parked-private; the complete stale-surface list is enumerated in
-the audit report's state-change section. `hush-gauge`'s card states M0–M1 as decided and M2/G3
-as decided-in-open-PR, status only. The audit report is the authoritative findings surface until
-its items are triaged into GAPS-AND-NEXT (D12).
+**All eight repos are public as of 2026-08-03**, and the front matter now says so: the audit's
+#1 item landed — README, the blind-cite card, PROJECT.md, Sources.md and GAPS-AND-NEXT were
+refreshed for blind-cite's public-and-M1-complete flip, and the state-change flag GAPS carried
+mid-audit is resolved. blind-cite has moved past the M1 *decision* the audit caught: at its
+`e057c6d` (PR #9, after the audit's `1beb5ac` snapshot) **M1 is complete — a well-powered null at
+both surfaces, with the flagship blindness contrast rendered at n=2**. The audit report remains
+the authoritative findings surface for items not yet triaged into GAPS-AND-NEXT (D12).
+
+`hush-gauge` PR #10 **merged 2026-08-03**, so D11's trigger has fired: its card still states M2/G3
+as decided-in-open-PR, status only, and now needs the stats.
 
 ## Immediate next move
-Triage `docs/audit-2026-08-03.md` — starting with its #1 item: refresh this repo's front matter
-for blind-cite's public-and-M1-decided flip (single docs session, seven files enumerated in the
-report). The previously pending records gap stands unchanged behind it: when hush-gauge PR #10
-merges, card M2/G3's stats from `docs/M2-RESULTS.md` on its `main` (per D11).
+Card `hush-gauge`'s M2/G3 stats from `docs/M2-RESULTS.md` on its `main` (`a964878`), per D11 —
+the trigger condition is met and this is the one records gap now open. After that, the audit's
+remaining ranked items (#2–#5) are separate per-repo fix sessions.
 
 ## Open questions / blockers
-- hush-gauge PR #10 (M2/G3) — open; its merge triggers the M2 stats carding here (Unresolved)
-- `blind-cite` M1 direction — **Resolved 2026-08-03**: Option C, per the blind-cite repo's D6;
-  the card and front matter follow via the audit's #1 item (that refresh is Unresolved)
-- Sharing caveat: until the #1 item lands, the front page misstates blind-cite's visibility and
-  status — the audit graded this the portfolio's most urgent fix
+- hush-gauge M2/G3 stats not yet carded here — PR #10 merged, D11's trigger fired (Unresolved)
+- `blind-cite` v1 close — the repo's D11 proposes closing at M1 (M2 suppresses a rate already ~0;
+  M3 ablates a phenomenon that occurred twice). Logged **Proposed**, Kyle's call; the card states
+  it as open rather than pre-deciding it (Unresolved)
+- No sharing caveat outstanding — the front page and the repos now agree
 
 ## Files touched recently (2026-08-03 audit pass)
 - docs/audit-2026-08-03.md — the audit report (new; PR #9)

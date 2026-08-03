@@ -6,8 +6,8 @@ lanes**. The **agent-reliability lane** takes a *recent research paper* that cla
 fails in some specific way and **reproduces that failure on cheap models**. The **model-internals
 lane** rebuilt a mechanistic instrument from a paper, validated it bit-for-bit against the
 authors' reference, and now uses it to map and audit small models from the inside. Each project
-links out to its own repo — seven of the eight are public, and a hiring manager can open, run,
-and poke any of those.
+links out to its own repo — all eight are public, and a hiring manager can open, run, and poke
+any of them.
 
 > **The one-sentence version:** *I built a repeatable reproduce-and-measure engine and ran it in
 > two lanes — honest, judge-free reproductions of recent agent-reliability papers, and a
@@ -67,7 +67,8 @@ compounds corruption, a citation check goes blind — reproduced on cheap models
 the charter. One target (`forge-gap`) is a technique with no paper behind it; its card and
 [the charter](METHODOLOGY.md) both say so.
 
-`blind-cite` is the one row whose repo is currently private — its card says why.
+`blind-cite` is the newest row — M0 and M1 are both measured, and whether v1 closes there is the
+one call still open. Its card says where it stands.
 
 | Project | Reproduces | Claim in one line | Headline result | Status |
 |---------|-----------|-------------------|-----------------|--------|
@@ -75,7 +76,7 @@ the charter. One target (`forge-gap`) is a technique with no paper behind it; it
 | **[decay-pin](projects/decay-pin.md)** | Governance Decay / Constraint Pinning (arXiv 2606.22528) | An in-context safety rule silently decays when compaction evicts it; re-pinning restores compliance | Rule visible **0/20** → compaction **20/20** → re-pin **0/40**; gap Newcombe [+77.2, +100] on **all 3 models**; replicates on 2nd task family | **Complete** (v1 + v2) |
 | **[lossy-wall](projects/lossy-wall.md)** | Reclaim / Brittle Memory (arXiv 2606.25449) | At matched budget, a note keeping a *wrong conclusion* but dropping its source makes the error uncorrectable — worse than empty memory | Lossy reclaim **≤ 1/290** (Wilson UB ≤ 0.10) vs source-first **240/240**; "worse than empty" **+58%** [+44.2, +67.5]; cross-check vs author's harness **AGREE** | **Complete** |
 | **[ghost-patch](projects/ghost-patch.md)** | Obey, Diverge, Collapse (arXiv 2607.04537) | Code LLMs follow a wrong-location repair instruction, compound "ghost" errors, and land in an unrecoverable state | **Two NULLS reported as headlines**: awareness doesn't reproduce (0/6 models); single-pass obedience drop ≈ 0 (CIs cross zero). Back half measured where powered | **v1 Complete** ($1.42 / $5) |
-| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv 2607.09349) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **M0 fit-pilot:** the deception **doesn't manifest** on cheap models (0/36 — they refuse or name the true entity); detectors sound (16/16). An honest early null | **Parked** at M0 — repo private pending the M1 decision |
+| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv 2607.09349) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **Well-powered null at both surfaces** — 20/20 clean in every gated cell, DG 0/20 except one cell at 2/20 (Newcombe +0.100 [−0.077, +0.301], straddles 0). On those 2 answers the **flagship contrast rendered**: faithfulness PASS 2/2 and citation PASS 2/2 while ownership flags both | **M0 + M1 complete** ($0.027 / $5) |
 
 ---
 
@@ -86,7 +87,8 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
 - **`forge-gap`'s headline gap is injected** — a controlled fault-recovery testbed, disclosed on
   the chart, never sold as a natural reproduction.
 - **`ghost-patch`, `dim-stage`, and `hush-gauge` headline nulls** — pre-registered, reported as
-  headlines, not buried. (Parked `blind-cite`'s M0 adds an honest early null — see its card.)
+  headlines, not buried. (`blind-cite` adds a fourth: a well-powered null at both surfaces, with
+  the blindness contrast rendered at n=2 and reported as an existence proof, not a rate.)
 - **Everything is hobby-scale** — cheap/tiny models under a hard budget guard (often < $5,
   tracked to the cent). That's the stated scope: mechanical reliability of small models, not
   frontier capability.
@@ -120,9 +122,8 @@ guards — [the charter](METHODOLOGY.md) states all five once.
 
 ---
 
-*Repo visibility: **seven of the eight repos are public** — `blind-cite` is parked at M0 and kept
-private until the M1 decision lands. Every other card links out to the real repo; no code is
-copied into this folder. (The paper authors' own reference packages are used as cross-check
+*Repo visibility: **all eight repos are public** (as of 2026-08-03). Every card links out to the
+real repo; no code is copied into this folder. (The paper authors' own reference packages are used as cross-check
 oracles where one exists — not my work, so not carded.)*
 
 ---

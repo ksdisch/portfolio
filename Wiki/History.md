@@ -115,6 +115,20 @@ from what belongs to me.
   commissioning handoff), so the portfolio's own front matter stays stale until the report's #1
   item is triaged — flagged in GAPS-AND-NEXT rather than silently fixed [Fact — D12 rationale]
 
+### blind-cite's park ends; front matter refreshed for the public-and-M1-complete flip — 2026-08-03
+- **What:** the audit's #1 ranked item landed — `README.md`, `projects/blind-cite.md`,
+  `PROJECT.md`, `Sources.md` and `GAPS-AND-NEXT.md` refreshed across the 22 spots that still told
+  the parked-private story, and GAPS' mid-audit state-change flag resolved [Fact — D13]
+- **Why it outranked everything:** the front page asserted seven-of-eight-public and "M1 decision
+  pending" while the repo itself was public with M1 measured — the exact defect class the charter
+  calls out, on the most visible pages here [Fact — audit report BC-1, graded critical]
+- **What changed since the audit:** blind-cite moved past the M1 *decision* the audit caught. At
+  `e057c6d` (its PR #9, after the audit's `1beb5ac` pin) M1 is **complete** — well-powered NULL at
+  both surfaces, blindness contrast rendered at n=2 [Fact — blind-cite `docs/M1-BRIEF.md`, D10]
+- **Tradeoff:** the repo proposes closing v1 at M1 but logs it *Proposed*; the card states the
+  close as the open call rather than pre-deciding Kyle's decision [Fact — blind-cite D11]
+
+
 ---
 
 ## Mining coverage

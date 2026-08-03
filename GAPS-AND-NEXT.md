@@ -11,6 +11,12 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 - ⏸️ **`blind-cite` is parked private** (2026-07-28) — its README claimed "M0 not yet started" while
   its own `PROJECT.md` reported M0 complete, and it referenced `m1.py`–`m3.py` that don't exist.
   Kept private until the M1 decision lands and the README tells one story.
+- ⚠️ **State change 2026-08-03, pending triage:** `blind-cite` re-published itself and resolved
+  M1 (Option C) via its merged PR #8 the same afternoon the full-portfolio audit ran — the line
+  above, this file's blind-cite rows, and the visibility table below now describe a superseded
+  state (Decisions.md D12). The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md))
+  is the authoritative findings surface until its items are triaged into this ledger; its #1
+  ranked item is exactly this front-matter refresh.
 
 ---
 

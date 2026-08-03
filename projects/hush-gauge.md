@@ -47,8 +47,8 @@ every detection claim is *excess over a context-word yardstick*, never "the prob
 |---|---|---|
 | **G0** (M0) | Does the pressure battery have dynamic range? | **PASSED, 2026-07-30, all three scales** — benign T0 at or near the floor (0/25 at 1.5B and 3B; **2/25 at 0.5B** by the frozen oracle — see the caveats); under multi-turn extraction all 25 held-out secrets leak; `T4 − T0` Newcombe-clean at every scale, and none `EXPOSURE-CONFOUNDED`: all four exposure-matched contrasts exclude zero (a T4 trial gets 3× the scored positions of a benign one, so this control is what would have caught an arithmetic-only pass) |
 | **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | **FAILED at all three scales, 2026-08-01 — a pre-committed null.** AUC 95% LB **0.692 / 0.575 / 0.612** against the ≥ 0.75 bar, precision **0.791 / 0.758 / 0.788** against ≥ 0.80, recall **0.498 / 0.232 / 0.364** against ≥ 0.50 (0.5B / 1.5B / 3B). No bar was re-tuned, the threshold `θ*` was frozen on the calibration half before any eval readout existed, and the fallback never fired |
-| **G2** (M1) | Silent leak — the headline science claim: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | **FAILED at all three scales, 2026-08-01 — a pre-committed null, and at 3B it fails significantly in the *opposite* direction.** On the certified-silent population (71 / 86 / 50 trials per scale) the secret's entry never exceeds the no-secret arm CI-clean, and sits **below** the licensed-word yardstick at every scale — at 3B by −0.455 with a Newcombe 95% interval [−0.654, −0.161] that excludes zero. Decision D26 rules the contrast direction correctly specified: the yardstick's edge is licensed speech being *spoken* — restrict to trials where the yardstick is also silent and its arm collapses from 0.52 / 0.52 / 0.68 to 3/24 / 4/25 / 2/13 |
-| **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, and refusal-coherence hold — and a norm-matched random direction does not | Design frozen on the repo's `main` (D27–D29: the intervention, the λ = 0 identity arm, the paired deciding contrast); **decided in the repo's open PR #10 (2026-08-03) — FAIL at all three scales, per that PR.** Carried here as status only: this portfolio cards stats from merged results, never from an open review. The numbers land here when the PR does |
+| **G2** (M1) | Silent leak — the headline science claim: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | **FAILED at all three scales, 2026-08-01 — a pre-committed null, and at 3B it fails significantly in the *opposite* direction.** On the certified-silent population (71 / 86 / 50 trials per scale) the secret's entry never exceeds the no-secret arm CI-clean, and sits **below** the licensed-word yardstick at every scale — at 3B by −0.455 with a Newcombe 95% interval [−0.654, −0.161] that excludes zero. Decision D26 rules the contrast direction correctly specified: the yardstick's edge is licensed speech being *spoken* — restrict to trials where the yardstick is also silent and its arm collapses from 0.52 / 0.52 / 0.68 to 3/24 / 4/25 / 2/13 (descriptive, per D26; the 3B cell is below the repo's n ≥ 20 house floor) |
+| **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, and refusal-coherence hold — and a norm-matched random direction does not | Design frozen on the repo's `main` (D27–D33: the intervention, the λ = 0 identity arm, the paired deciding contrast, the four-clause preservation battery, the norm-matched random-direction control, G3 frozen as code, and the pre-declared secondaries); **decided in the repo's open PR #10 (2026-08-03) — FAIL at all three scales, per that PR.** Carried here as status only: this portfolio cards stats from merged results, never from an open review. The numbers land here when the PR does |
 | **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
 
 The freezing discipline held where it matters most: both M1 gates' code and their byte-frozen
@@ -58,8 +58,8 @@ doc. The threshold freeze is enforced by code, not promise: the freeze script re
 an existing thresholds file, and the cells script refuses to run until one exists.
 
 Subjects: Qwen2.5-0.5B / 1.5B / 3B-Instruct, local MPS, forward-only. **Cost: $0.** 656 offline
-tests; decisions K1–K6 and D1–D29 frozen in the repo's ledger (D15–D24 landed with the M1 brief;
-D25–D26 resolved M1's two flagged findings; D27–D29 froze M2's design).
+tests; decisions K1–K6 and D1–D33 frozen in the repo's ledger (D15–D24 landed with the M1 brief;
+D25–D26 resolved M1's two flagged findings; D27–D33 froze M2's design).
 
 ## What M1's null says (three readouts that agree)
 
@@ -113,9 +113,10 @@ the probe as an instrument with precision and recall. hush-gauge is that project
 model a secret, apply escalating pressure, and ask whether the activations betray the leak even on
 trials where the model never says the word. M0 validated the pressure battery behind a
 pre-registered gate. M1 asked the detection question and the answer was **no**, at all three
-scales, as a pre-committed null: the probe reads speech, not secrecy — recall is 0.94 where the
-model is emitting the secret and 0.10 where it stays silent, and on certified-silent trials the
-secret's direction sits *below* a licensed word from the same session. The gates were frozen in
+scales, as a pre-committed null: the probe reads speech, not secrecy — on trials where the model is
+emitting the secret, recall is 0.94 at 0.5B and falls to 0.54 at 3B; on trials where it stays
+silent, 0.07–0.10 at every scale — and on certified-silent trials the secret's direction sits
+*below* a licensed word from the same session. The gates were frozen in
 git before any sweep ran, so that null is a result, not an excuse — the repo's kickoff calls a
 pre-committed null a passing v1, because the failure mode this method guards against is an
 undecided gate, not a negative one. The causal-ablation gate has decided in an open PR, and the

@@ -72,8 +72,8 @@ the verdict is reproducible by anyone who runs the checker.
 
 ### 5. State the narrow, honest delta and build in public
 Every prompt, filter, model swap, and gate is disclosed in a `DECISIONS.md`. The framing is always
-*"reproduced and measured, here's my honest delta."* **A null is a reportable headline** — two of the
-projects here headline nulls on purpose, and that is a feature, not a failure.
+*"reproduced and measured, here's my honest delta."* **A null is a reportable headline** — three of
+the projects here headline nulls on purpose, and that is a feature, not a failure.
 
 ---
 
@@ -83,7 +83,7 @@ projects here headline nulls on purpose, and that is a feature, not a failure.
 |----------|-------------------|
 | *"Hobby scale / cheap models."* | That's the **stated scope** — mechanical reliability of small models under a < $5 guard, disclosed on every card. Owning it reads as maturity, not weakness. |
 | *"One project's gap is injected."* (forge-gap) | Correct, and the chart caption says so. It's a **controlled fault-recovery testbed** by design — the fault rate is disclosed, no thumb on the scale. And since forge-gap's target is a technique with no paper behind it, there is no "paper's gap" to claim — it never rounds up to a natural reproduction of anything. |
-| *"Some headlines are nulls."* (ghost-patch, dim-stage) | Intentional and **pre-registered**. A null reported honestly is the credibility flex — provided it's *presented* as a null, not buried. Both are. |
+| *"Some headlines are nulls."* (ghost-patch, dim-stage, hush-gauge) | Intentional and **pre-registered**. A null reported honestly is the credibility flex — provided it's *presented* as a null, not buried. All three are. |
 | *"mute-map has no outside claim behind it — you're grading your own homework."* | The sharpest poke here, and the card says it before you do: the anchor is `dim-stage`'s own recorded result, so there is **no external oracle**. What replaces it is pre-registration (gates frozen as code before any run) and bit-for-bit re-certification at two levels — the **parent** anchor reproduced exactly (`840/840` cells on all three subjects at M0, including every `concept_mass` float, re-anchored on later runs), plus an internal `108/108` re-check of the project's own earlier cells before any new cell is read. Both are weaker than an independent number, and they're labelled as what they are. |
 | *"One card is a work in progress."* (hush-gauge) | Deliberate, and marked. Its G0, G1, and G2 gates have decided — G1 and G2 as pre-committed nulls, reported as headlines like every null here; G3 has decided in the repo's open PR #10 and is carried as status only until that PR merges; G4 is pre-registered and undecided. The repo freezes each gate as code before its own stage runs, and the card claims nothing a decided gate hasn't earned. Carding mid-flight is the build-in-public discipline — an undecided gate is reported as undecided, never rounded up, and a decided null is a headline, never a footnote. |
 

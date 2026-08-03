@@ -85,8 +85,8 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
 
 - **`forge-gap`'s headline gap is injected** — a controlled fault-recovery testbed, disclosed on
   the chart, never sold as a natural reproduction.
-- **`ghost-patch` and `dim-stage` headline nulls** — pre-registered, reported as headlines, not
-  buried.
+- **`ghost-patch`, `dim-stage`, and `hush-gauge` headline nulls** — pre-registered, reported as
+  headlines, not buried.
 - **Everything is hobby-scale** — cheap/tiny models under a hard budget guard (often < $5,
   tracked to the cent). That's the stated scope: mechanical reliability of small models, not
   frontier capability.

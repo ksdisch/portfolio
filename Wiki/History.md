@@ -103,6 +103,18 @@ from what belongs to me.
 - **Tradeoff:** the portfolio briefly shows a decided-but-uncarded M2, traded for keeping D4's
   verified-against-merged-results bar intact [Fact — D11 rationale]
 
+### Full-portfolio audit delivered — 78 graded findings, 48 banked ideas — 2026-08-03
+- **What:** all eight carded repos plus the `trajectory-otel` scaffold audited at pinned
+  `origin/main` snapshots (17-agent fan-out: per-repo auditor + adversarial verifier; 35
+  CONFIRMED / 2 DOWNGRADED / 0 refuted on the 37 serious findings), delivered as the ranked
+  decision brief `docs/audit-2026-08-03.md` (PR #9) [Fact — docs/audit-2026-08-03.md]
+- **Also:** `blind-cite` re-published itself and resolved M1 as Option C via its own merged
+  PR #8 while the audit ran — recorded as D12, which also marks D6's park ended — see D12 in
+  `../Decisions.md` [Fact — GitHub API, blind-cite PR #8]
+- **Tradeoff:** the report deliberately changes no project repo (decision brief only, per the
+  commissioning handoff), so the portfolio's own front matter stays stale until the report's #1
+  item is triaged — flagged in GAPS-AND-NEXT rather than silently fixed [Fact — D12 rationale]
+
 ---
 
 ## Mining coverage

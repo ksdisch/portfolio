@@ -92,6 +92,17 @@ from what belongs to me.
   an "unfinished work" poke — owned with a dedicated skeptic-table row rather than hidden
   [Inference — METHODOLOGY.md skeptic table]
 
+### hush-gauge M1 carded — the first decided nulls on the in-progress card — 2026-08-03
+- **What:** the hush-gauge card, README lane row, METHODOLOGY skeptic row, and GAPS-AND-NEXT
+  updated for M1's decision: G1 FAILS and G2 FAILS at all three scales, both pre-committed nulls
+  ("the probe reads speech, not secrecy"), merged in hush-gauge PR #6 on 2026-08-02; every carded
+  stat verified against `docs/M1-RESULTS.md` on that repo's `main` [Fact — projects/hush-gauge.md,
+  README.md]
+- **Why held back:** M2/G3 also decided — FAIL at all three scales — but in hush-gauge's still-open
+  PR #10, so it is carried as status only until that PR merges — see D11 in `../Decisions.md`
+- **Tradeoff:** the portfolio briefly shows a decided-but-uncarded M2, traded for keeping D4's
+  verified-against-merged-results bar intact [Fact — D11 rationale]
+
 ---
 
 ## Mining coverage

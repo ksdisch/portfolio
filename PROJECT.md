@@ -19,15 +19,15 @@ Public-facing portfolio that presents eight reproduce-and-measure AI-failure pro
 
 ## Current status
 Active — built 2026-07-21; refreshed 2026-07-28; restructured into two lanes with `hush-gauge`
-carded in progress 2026-08-01. Seven of eight linked repos are public; `blind-cite` is parked at
-M0 and private pending its M1 decision. The portfolio is complete as a shareable artifact; the
-open work is keeping cards in sync as the underlying projects advance — `hush-gauge` first among
-them.
+carded in progress 2026-08-01; `hush-gauge`'s M1 results (G1/G2 pre-committed nulls) carded
+2026-08-03. Seven of eight linked repos are public; `blind-cite` is parked at M0 and private
+pending its M1 decision. The portfolio is complete as a shareable artifact; the open work is
+keeping cards in sync as the underlying projects advance — `hush-gauge` first among them.
 
 ## Next actions
 1. Decide `blind-cite`'s M1 direction (well-powered null on the pre-committed design vs. the multi-doc + filler variant), then re-publish the repo and update the card.
 2. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N re-run, dim-stage band re-derivation).
-3. Refresh `hush-gauge`'s card as each of M1–M3 decides (its M1 brief froze 2026-08-01 and the M1 build session is underway; G1 and G2 both decide once at the end of it, and no M1 result is committed yet). mute-map's S1/S2 stretches were declined for that repo and banked in the J-lens follow-on backlog.
+3. Card `hush-gauge`'s M2/G3 stats when its PR #10 merges (G3 decided FAIL at all three scales in that open PR; the card carries it as status only until then — Decision: Decisions.md D11). M1's G1/G2 nulls were carded 2026-08-03. After M2 lands, the card follows the detachable M3/G4 if it runs. mute-map's S1/S2 stretches were declined for that repo and banked in the J-lens follow-on backlog.
 
 ## Boundaries
 - Docs-only folder: markdown, no runnable code

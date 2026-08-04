@@ -30,10 +30,14 @@ the repo's D6, not slipped in.
 
 **The null:** every model held **20/20 clean trials in both gated cells on both arms** — 240/240
 trials ok, zero vague, zero confabulation, detector fidelity 288/288. Deceptive grounding was **0/20
-everywhere** except `qwen-2.5-7b` at the camouflaged adversarial cell (**2/20**). The cross-surface
-delta is Newcombe **+0.100 [−0.077, +0.301]** — it straddles 0, so camouflage is *not* demonstrated to
-matter. Per-model Wilson 95% upper bound on DG is **16.1%** on every 0/20 cell; that one exception is
-**[2.8%, 30.1%]**.
+everywhere** except `qwen-2.5-7b` at the camouflaged adversarial cell (**2/20**). That cell is what
+the pre-committed gate tests: 2/20 against 0/20 at its own control, Newcombe **+0.100 [−0.077,
++0.301]** — the interval straddles 0, so the gate renders **NULL**. Per-model Wilson 95% upper bound
+on DG is **16.1%** on every 0/20 cell; that one exception is **[2.8%, 30.1%]**.
+
+Comparing the two *surfaces* to each other is deliberately **not** a gated claim — the arms ran
+sequentially on the same pairs, not randomized between — so the repo publishes that contrast as
+per-surface bounds with no delta, and I report it the same way: texture, not a finding.
 
 **The flagship contrast:** on those two answers, mechanical **faithfulness PASS 2/2 and citation
 PASS 2/2** — while token ownership flags both. Y's evidence is attributed to X *by name*, Y is never
@@ -50,8 +54,8 @@ M1 spend **$0.0177** against a $0.45 cap; **project total ≈$0.027**.
   grounding essentially does not occur. The pre-committed design (M1a) rendered that verdict
   untouched; the camouflage arm was tested *beside* it, never *instead of* it.
 - **The contrast is an existence proof at n = 2.** It demonstrates the mechanism is real and that the
-  standard checks are blind to it. It does **not** establish a rate, and the camouflage effect that
-  produced it has a CI straddling zero.
+  standard checks are blind to it. It does **not** establish a rate: the gate interval on that cell
+  straddles zero, which is exactly why the verdict is a null.
 - **Every DG in the project (n = 2) appeared only at the camouflage surface and only on the paper's own
   kin model.** That is texture worth stating, not a claim I can defend as a finding.
 - Fully-fabricated corpus, judge-free token ownership, hobby scale (≈$0.027), three cheap models,
@@ -59,10 +63,12 @@ M1 spend **$0.0177** against a $0.45 cap; **project total ≈$0.027**.
 
 ## How it runs
 ```bash
-python m0.py verdict            # M0 fit-pilot verdict
-python m1.py verdict --arm a    # M1a — stark surface (the pre-committed design)
-python m1.py verdict --arm b    # M1b — camouflaged surface (labeled extension)
+uv run python m0.py verdict            # M0 fit-pilot verdict
+uv run python m1.py verdict --arm a    # M1a — stark surface (the pre-committed design)
+uv run python m1.py verdict --arm b    # M1b — camouflaged surface (labeled extension)
 ```
+Each `verdict` re-renders its committed JSON in place — read-only against the API, but it will
+touch your clone's `data/`.
 Results of record: `docs/M0-BRIEF.md`, `docs/M1-BRIEF.md` ("M1 outcome" addendum), `Wiki/Results.md`,
 and the machine-rendered `data/m0_verdict.json` / `data/m1a_verdict.json` / `data/m1b_verdict.json`.
 

@@ -18,44 +18,6 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ---
 
-## Proposed next steps (2026-08-03 audit)
-
-**Status: proposed, not triaged.** D12 reserves triage of the audit's items to Kyle. The report
-([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) is the authoritative list — its findings and
-its own ranked top-10 — and nothing here reorders, closes, or replaces any of them. This is a
-pointer to the two things that are actionable now, not a plan of record.
-
-**Next session — hush-gauge M2/G3 stats carding.** D11's trigger fired: hush-gauge PR #10 merged
-2026-08-03; source `docs/M2-RESULTS.md` on that repo's `main`. Fold in **HG-1** while there —
-hush-gauge's `docs/M1-RESULTS.md`:52 sources its freeze-provenance claim to `4b77cf8`, which the
-squash merge left **unreachable from `main`**. That commit is alive on `origin/feat/m1-probe-panel`
-(`3d4419e → 4b77cf8 → 5c9f916`), and the card echoes the claim. **The discipline held — only the
-pointer is broken**, so repoint it; never soften the claim.
-
-**Wrong on this repo's own cards.** These audit findings have a *portfolio card* as their subject,
-so they are fixable here in a docs-only pass without touching any project repo — worth separating
-out, because the ranked list files them under their projects:
-- `projects/dim-stage.md`:69 — "118 analytic tests" against a suite that collects **86** (DS-2,
-  graded **critical**; it is the first command the card hands a stranger).
-- `projects/dim-stage.md`:63-65 — says per-layer diagnostics are "reported alongside"; they were
-  pre-declared but never computed (DS-3, graded **critical**).
-- `projects/forge-gap.md`:12 — "(11 stages, S0–S11)", which enumerates twelve (FG-2).
-- `projects/forge-gap.md`:47-48 — "~10% of llama-8b's misses" where the share-of-misses is **~18%**
-  (4/22), *understating* a disclosed blind spot (FG-3).
-- `docs/audit-2026-08-03.md` — the report's own hygiene: HG-3's quoted evidence cites a
-  squash-orphaned portfolio SHA (F6 from PR #9's review), and the citation-convention block near
-  the top now runs longer than the finding it prefaces (F12, placement only).
-
-Everything else in the audit's ranked top-10 — repo-side CI, README runnability, the staleness
-sweep — changes files in the project repos and stays in the report, un-triaged.
-
-**Needs Kyle, not a session:**
-- **blind-cite v1 close** — its D11 proposes closing at M1; logged *Proposed*, his call.
-- **The `1e82eb5` commit body** says "22 spots" where the durable record says 18. Correcting a
-  pushed commit message needs a force-push, which he reserves to himself.
-
----
-
 ## Per-project next steps
 
 | Project | What's unfinished / would strengthen it |

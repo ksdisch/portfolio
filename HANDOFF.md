@@ -36,7 +36,9 @@ and carries M2/G3 as status only, pending the stats pass that is the next sessio
 ## Immediate next move
 Card `hush-gauge`'s M2/G3 stats from `docs/M2-RESULTS.md` on its `main` (`a964878`), per D11 —
 the trigger condition is met and this is the one records gap now open. After that, the audit's
-remaining ranked items (#2–#5) are separate per-repo fix sessions.
+remaining ranked items (#2–#8 and #10) are separate per-repo fix sessions — sequenced as a
+*proposed* queue in GAPS-AND-NEXT, which is an agent draft awaiting Kyle's triage (D12 reserves
+that triage to him), not a decided plan.
 
 ## Open questions / blockers
 - hush-gauge M2/G3 stats not yet carded here — PR #10 merged, D11's trigger fired (Unresolved)
@@ -52,7 +54,8 @@ remaining ranked items (#2–#5) are separate per-repo fix sessions.
 - README.md — intro, lane note, blind-cite row, honesty bullet, footer
 - PROJECT.md — traceability line, status, next actions
 - Sources.md — blind-cite row + M1 provenance
-- GAPS-AND-NEXT.md — "Do before sharing" resolved, blind-cite row, visibility table
+- GAPS-AND-NEXT.md — "Do before sharing" resolved, blind-cite row, visibility table; proposed
+  follow-up queue added (agent-drafted sequencing, pending Kyle's triage per D12)
 - METHODOLOGY.md, projects/hush-gauge.md — hush-gauge PR #10 merge-status wording
 - docs/audit-2026-08-03.md — F4 path/link hygiene
 - Decisions.md — D13 appended · Wiki/History.md — milestone appended · HANDOFF.md — this refresh

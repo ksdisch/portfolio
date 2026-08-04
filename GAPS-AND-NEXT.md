@@ -18,39 +18,54 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ---
 
-## Queued next sessions (from the 2026-08-03 audit + its review loops)
+## Proposed queue (2026-08-03 audit + its review loops)
 
-**Next up — hush-gauge M2/G3 stats carding** (D11's trigger fired: PR #10 merged 2026-08-03;
-source `docs/M2-RESULTS.md` on `main`, `a964878`). Two audit follow-ups ride along, same repo,
-same class:
-- **HG-1** (should-fix) — the load-bearing freeze-discipline claim ("both gates' code and their
-  byte-frozen GATE_WORDING were committed at `4b77cf8` before any sweep produced a result … git
-  says so independently of this document") is not verifiable from `main`: the SHA was orphaned by
-  a squash merge. Echoed on the card as "the repo's history says so independently of its results
-  doc", so the card inherits the unverifiable claim.
-- **F6 from PR #9's review** (nice-to-have) — HG-3's quoted evidence cites a squash-orphaned
-  *portfolio* SHA. Same defect, other direction; fix both while the repo is open.
+**Status: proposed, not triaged.** D12 reserves triage of the audit's items to Kyle; this section
+is an agent-drafted *sequencing* for him to accept, reorder, or reject, and nothing in it has been
+decided. The report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) stays the authoritative
+list.
 
-**Then, as separate per-repo fix sessions** (audit top-10 #2–#5; #1 landed as PR #10):
+**Next up — hush-gauge M2/G3 stats carding** (D11's trigger fired: **hush-gauge** PR #10 merged
+2026-08-03; source `docs/M2-RESULTS.md` on its `main`, `a964878`). Two follow-ups ride along, same
+repo:
+- **HG-1 / top-10 #9** (should-fix) — hush-gauge's `docs/M1-RESULTS.md`:52 sources its
+  freeze-provenance claim to `4b77cf8`, which the squash merge left **unreachable from `main`**.
+  The commit is alive on `origin/feat/m1-probe-panel` (`3d4419e → 4b77cf8 → 5c9f916`), and the card
+  echoes the claim. **The discipline held — only the pointer is broken**, so the fix is to repoint
+  at that branch, never to soften the claim.
+- **F6 from this repo's PR #9 review** (nice-to-have) — HG-3's quoted evidence cites a
+  squash-orphaned *portfolio* SHA. Same defect, other direction; cheapest while the repo is open.
+
+**Remaining ranked items** (audit top-10; #1 landed as *this repo's* PR #10):
 2. **Make CI real in dim-stage and ghost-patch** (S; DS-1, GP-1) — both workflows loop
    `uv run "$f"` over test files as plain scripts, so every file imports, exits 0, and **zero
    tests execute** under a green badge. Fix: `uv run pytest` plus an assert on collected count.
-3. **dim-stage carded test count 118 → 86** (S; DS-2) — hand-verified by AST count; pairs with
-   #2's collected-count guard so it can't drift again.
+3. **dim-stage carded test count 118 → 86** (S; DS-2) — pairs with #2's collected-count guard.
 4. **dim-stage band-transplant rebuttal reworded** (S; DS-3) — the card cites per-layer
    diagnostics that were pre-declared but never computed; GAPS' phrasing is the honest one.
 5. **lossy-wall "2/350 padded reclaims" → 2/340** (S; LW-1) — hand-recounted from the trial log.
+6. **Runnability pass on four READMEs** (M; MM-1, LW-4, GP-2, BC-4, plus FG-1 and HG-4) —
+   mute-map, lossy-wall, ghost-patch and blind-cite ship no setup or run instructions, against
+   this README's "open, run, and poke any of them" promise.
+7. **dim-stage's README brought up to the whole repo** (M; DS-4, DS-5) — the four stretch stages
+   are invisible from it, and its ledger row says "D1–D14" against an actual D1–D31.
+8. **Staleness sweep across the six repos the paper-landing wave outran** (S–M; MM-4, FG-4, DP-1,
+   LW-2, GP-3, TO-1, plus DP-2/LW-3's "fresh scaffold" CLAUDE.md files).
+10. **forge-gap accuracy trio** (S; FG-2, FG-3, FG-5) — note **FG-3 is wrong in *this* repo**:
+    `projects/forge-gap.md`'s blind-spot caveat says "~10% of llama-8b's misses" where the
+    share-of-misses is **~18% (4/22)**. It *understates* a disclosed blind spot, so it is a
+    one-line correction here rather than a per-repo session.
 
-Note: #2–#4 all touch dim-stage, so #2's dim-stage half can absorb #3 and #4 in one pass;
-ghost-patch's half of #2 stands alone.
+#2–#4 all touch dim-stage and can share a pass; ghost-patch's half of #2 stands alone.
 
-**Also open, not queued** (needs Kyle, not a session):
+**Rides along on any portfolio-docs session:** F12 from this repo's PR #9 review — the audit
+report's citation-convention block (`docs/audit-2026-08-03.md`:51-71, grown to 21 lines across
+four revisions) now runs longer than the finding it prefaces. Placement only; every sentence true.
+
+**Needs Kyle, not a session:**
 - **blind-cite v1 close** — its D11 proposes closing at M1; logged *Proposed*, his call.
-- **F3 residue from PR #10's review** — the `1e82eb5` commit message says "22 spots" where the
-  durable record now says 18. Correcting a pushed commit needs a force-push, which is his call.
-- **F12 from PR #9's review** — the audit report's citation-convention block (21 lines across
-  four revisions) now runs longer than the finding it prefaces; placement only, every sentence
-  true.
+- **The `1e82eb5` commit body** says "22 spots" where the durable record says 18. Correcting a
+  pushed commit message needs a force-push, which he reserves to himself.
 
 ---
 

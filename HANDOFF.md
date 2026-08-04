@@ -30,8 +30,8 @@ mid-audit is resolved. blind-cite has moved past the M1 *decision* the audit cau
 both surfaces, with the flagship blindness contrast rendered at n=2**. The audit report remains
 the authoritative findings surface for items not yet triaged into GAPS-AND-NEXT (D12).
 
-`hush-gauge` PR #10 **merged 2026-08-03**, so D11's trigger has fired: its card still states M2/G3
-as decided-in-open-PR, status only, and now needs the stats.
+`hush-gauge` PR #10 **merged 2026-08-03**, so D11's trigger has fired: its card now reads merged
+and carries M2/G3 as status only, pending the stats pass that is the next session's job.
 
 ## Immediate next move
 Card `hush-gauge`'s M2/G3 stats from `docs/M2-RESULTS.md` on its `main` (`a964878`), per D11 —

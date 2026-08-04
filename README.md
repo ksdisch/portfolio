@@ -103,8 +103,9 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
 - **`hush-gauge` is carded mid-flight** — the first in-progress card here, and its first decided
   measurement gates came back as **pre-committed nulls reported as headlines**: G1 and G2 both
   FAIL at all three scales (the probe reads speech, not secrecy), which the repo's kickoff calls a
-  passing v1. G3 has decided and its PR #10 merged 2026-08-03; it is carried as status only — stats
-  enter these tables from merged results, never from an open review. G4 (detachable) is
+  passing v1. G3 has decided and its PR #10 merged 2026-08-03; it is carried as status only until
+  the next carding pass — stats enter these tables from merged results, and now that they are
+  merged those numbers are due here (D11). G4 (detachable) is
   pre-registered and undecided. Each gate is frozen as code before its own stage runs, and the
   card claims nothing a decided gate hasn't earned.
 

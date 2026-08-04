@@ -94,4 +94,5 @@ That's an existence proof of the blind spot, not a rate, and I report it as two.
 - [ ] Explain why a fabricated corpus makes attribution *exact* ground truth (vs an LLM judge).
 - [ ] Say why a well-powered null is a real result here, and what it would take to overturn it.
 - [ ] Explain Option C: why both surfaces ran, and why that isn't moving the goalposts.
-- [ ] State that the cross-surface CI straddles zero — camouflage is untested, not proven.
+- [ ] State that the *gate* interval on the one DG cell straddles zero — that's why the verdict is
+      a null — and that comparing the two surfaces is descriptive by design, never a gated claim.

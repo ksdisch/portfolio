@@ -18,6 +18,42 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ---
 
+## Queued next sessions (from the 2026-08-03 audit + its review loops)
+
+**Next up — hush-gauge M2/G3 stats carding** (D11's trigger fired: PR #10 merged 2026-08-03;
+source `docs/M2-RESULTS.md` on `main`, `a964878`). Two audit follow-ups ride along, same repo,
+same class:
+- **HG-1** (should-fix) — the load-bearing freeze-discipline claim ("both gates' code and their
+  byte-frozen GATE_WORDING were committed at `4b77cf8` before any sweep produced a result … git
+  says so independently of this document") is not verifiable from `main`: the SHA was orphaned by
+  a squash merge. Echoed on the card as "the repo's history says so independently of its results
+  doc", so the card inherits the unverifiable claim.
+- **F6 from PR #9's review** (nice-to-have) — HG-3's quoted evidence cites a squash-orphaned
+  *portfolio* SHA. Same defect, other direction; fix both while the repo is open.
+
+**Then, as separate per-repo fix sessions** (audit top-10 #2–#5; #1 landed as PR #10):
+2. **Make CI real in dim-stage and ghost-patch** (S; DS-1, GP-1) — both workflows loop
+   `uv run "$f"` over test files as plain scripts, so every file imports, exits 0, and **zero
+   tests execute** under a green badge. Fix: `uv run pytest` plus an assert on collected count.
+3. **dim-stage carded test count 118 → 86** (S; DS-2) — hand-verified by AST count; pairs with
+   #2's collected-count guard so it can't drift again.
+4. **dim-stage band-transplant rebuttal reworded** (S; DS-3) — the card cites per-layer
+   diagnostics that were pre-declared but never computed; GAPS' phrasing is the honest one.
+5. **lossy-wall "2/350 padded reclaims" → 2/340** (S; LW-1) — hand-recounted from the trial log.
+
+Note: #2–#4 all touch dim-stage, so #2's dim-stage half can absorb #3 and #4 in one pass;
+ghost-patch's half of #2 stands alone.
+
+**Also open, not queued** (needs Kyle, not a session):
+- **blind-cite v1 close** — its D11 proposes closing at M1; logged *Proposed*, his call.
+- **F3 residue from PR #10's review** — the `1e82eb5` commit message says "22 spots" where the
+  durable record now says 18. Correcting a pushed commit needs a force-push, which is his call.
+- **F12 from PR #9's review** — the audit report's citation-convention block (21 lines across
+  four revisions) now runs longer than the finding it prefaces; placement only, every sentence
+  true.
+
+---
+
 ## Per-project next steps
 
 | Project | What's unfinished / would strengthen it |

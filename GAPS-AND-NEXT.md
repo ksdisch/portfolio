@@ -7,16 +7,14 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ## Do before sharing
 
-- ✅ **Nothing is blocking.** Seven of the eight repos open cleanly for an outside reader.
-- ⏸️ **`blind-cite` is parked private** (2026-07-28) — its README claimed "M0 not yet started" while
-  its own `PROJECT.md` reported M0 complete, and it referenced `m1.py`–`m3.py` that don't exist.
-  Kept private until the M1 decision lands and the README tells one story.
-- ⚠️ **State change 2026-08-03, pending triage:** `blind-cite` re-published itself and resolved
-  M1 (Option C) via its merged PR #8 the same afternoon the full-portfolio audit ran — the line
-  above, this file's blind-cite rows, and the visibility table below now describe a superseded
-  state (Decisions.md D12). The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md))
-  is the authoritative findings surface until its items are triaged into this ledger; its #1
-  ranked item is exactly this front-matter refresh.
+- ✅ **Nothing is blocking.** All eight repos open cleanly for an outside reader.
+- ✅ **`blind-cite`'s park has ended** (2026-08-03) — the repo re-published itself, resolved M1 as
+  Option C, then ran it to a well-powered null at both surfaces; its README now tells one story
+  and the `m1.py` it once referenced exists and renders the verdict. The 2026-07-28 park (D6) and
+  the state-change flag raised mid-audit are both resolved (Decisions.md D12), and this file, the
+  card, `README.md`, `PROJECT.md` and `Sources.md` were refreshed to match.
+- The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) remains the
+  authoritative findings surface for the items not yet triaged into this ledger.
 
 ---
 
@@ -24,14 +22,14 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 | Project | What's unfinished / would strengthen it |
 |---------|------------------------------------------|
-| **blind-cite** | Decide **M1**: run the pre-committed design for a *well-powered* null, or adopt the documented **multi-doc + filler** variant where the paper says the deception hides. Then scale N ≥ 20/cell. |
+| **blind-cite** | M1 ran both surfaces at N=20/cell and returned a **well-powered null**; the open call is whether v1 closes there (the repo's D11, *Proposed*) — M2 would suppress a rate already ~0 and M3 would ablate a phenomenon that occurred twice. To push the null instead, two escalations are pre-named and each needs its own argued addendum: a frozen title pool assigned by post-shuffle doc *position*, and same-theme filler generation under a new verifier contract. The n=2 contrast is an existence proof; a rate would need a surface where DG actually occurs. |
 | **ghost-patch** | The final irrecoverability gate is **underpowered** (≤16 clean pairs/model). A higher-N re-run — or a stronger model where awareness actually exists — would let the back half be *resolved*, not just descriptive. |
 | **dim-stage** | The workspace **band was transplanted by percentile**, not re-derived at small scale. Re-deriving the band from small-model diagnostics would close the top skeptic line. More scales (7B+) would map where/if readability switches on. |
 | **decay-pin** | Strategy variants (summarize / head-tail) ran on **one model × one scenario**. Widening that grid would turn "specific to this config" into a general claim. Push N toward ~50 where CIs are wide. |
 | **forge-gap** | A **live capability-ladder sweep** and a **self-hosted endpoint** are the two documented "roads not taken" — either would extend the story beyond the injected testbed. |
 | **lossy-wall** | Undirected corrections and non-arithmetic families beyond the logic set; push the third-model slot back to the paper's exact roster if a stable small model is available. |
 | **mute-map** | The v1 chain (M0–M3) closed 2026-07-28 and the **M4 close-out** landed 2026-07-29 (VOCAB-SPARING at 1.5B/3B, AS-SCORED ONLY). The S1 (7B) and S2 (lexical vs semantic) stretches were **declined for this repo** and banked as idea #13 in the J-lens follow-on backlog, where they compete in the seed-hunt on equal terms. Still open: collateral concentrates on a few fragile *probes* rather than damaging *primes* — worth a dedicated pass. |
-| **hush-gauge** | v1's measurement chain has decided. M1 (probe panel + detection + silent leak) merged 2026-08-02 (hush-gauge PR #6): **G1 and G2 both FAIL at all three scales, pre-committed nulls** — a passing v1 per the repo's kickoff. M2 (causal ablation) is decided in the repo's **open PR #10** — G3 FAIL at all three scales per that PR; its stats card here when it merges, and that carding is the immediate next step. After that, the detachable M3 (off-switch unification, G4) is the one undecided gate. The card follows whatever each gate decides. |
+| **hush-gauge** | v1's measurement chain has decided. M1 (probe panel + detection + silent leak) merged 2026-08-02 (hush-gauge PR #6): **G1 and G2 both FAIL at all three scales, pre-committed nulls** — a passing v1 per the repo's kickoff. M2 (causal ablation) is decided — G3 FAIL at all three scales — and its **PR #10 merged 2026-08-03**, so the stats are ready to card here from `docs/M2-RESULTS.md` on `main`; that carding is the immediate next step. After that, the detachable M3 (off-switch unification, G4) is the one undecided gate. The card follows whatever each gate decides. |
 
 ---
 
@@ -57,11 +55,10 @@ kept honest so a skeptic sees I know exactly where the edges are.*
 
 ---
 
-## Repo visibility (verified 2026-08-01)
+## Repo visibility (verified 2026-08-03)
 
 | Repo | Visibility |
 |------|-----------|
-| dim-stage, forge-gap, decay-pin, lossy-wall, ghost-patch, mute-map, hush-gauge | ✅ Public |
-| blind-cite | ⏸️ Private — parked at M0 pending the M1 decision |
+| dim-stage, forge-gap, decay-pin, lossy-wall, ghost-patch, mute-map, hush-gauge, blind-cite | ✅ Public |
 | portfolio-prep (fluency curriculum) | 🔒 Private by design — study material about my own gaps |
 | jacobian-lens-study (Anthropic's code + my paper rewrite) | 🔒 Private by design — not my work |

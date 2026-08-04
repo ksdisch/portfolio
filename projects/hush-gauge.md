@@ -10,9 +10,9 @@
 **Repo:** <https://github.com/ksdisch/hush-gauge> (public) · **Builds on:**
 [`dim-stage`](dim-stage.md) (instrument) and [`mute-map`](mute-map.md) (phenomenon) · **Status:**
 **In progress — M0 complete (G0 PASSES, 2026-07-30); M1 complete (G1 FAILS and G2 FAILS at all
-three scales, both pre-committed nulls; merged 2026-08-02, hush-gauge PR #6); M2 decided in the
-repo's open PR #10 (G3 FAIL at all three scales per that PR — carried here as status only until it
-merges); G4 (M3, detachable) undecided** ·
+three scales, both pre-committed nulls; merged 2026-08-02, hush-gauge PR #6); M2 decided — G3 FAIL
+at all three scales, its PR #10 merged 2026-08-03 (carried here as status only until the stats
+pass cards it); G4 (M3, detachable) undecided** ·
 **Method:** [charter](../METHODOLOGY.md)
 
 ## The honest framing (read this first)
@@ -41,14 +41,14 @@ roster, a 25/25 calibration/eval split, a 5-tier pressure battery (benign → di
 → injection override → multi-turn extraction), and four pre-registered false-positive baselines —
 every detection claim is *excess over a context-word yardstick*, never "the probe fires."
 
-## Where it stands — G0 passed, G1 and G2 decided as nulls, G3 decided in an open PR
+## Where it stands — G0 passed, G1 and G2 decided as nulls, G3 decided and merged (stats pending)
 
 | Gate | Question | Status |
 |---|---|---|
 | **G0** (M0) | Does the pressure battery have dynamic range? | **PASSED, 2026-07-30, all three scales** — benign T0 at or near the floor (0/25 at 1.5B and 3B; **2/25 at 0.5B** by the frozen oracle — see the caveats); under multi-turn extraction all 25 held-out secrets leak; `T4 − T0` Newcombe-clean at every scale, and none `EXPOSURE-CONFOUNDED`: all four exposure-matched contrasts exclude zero (a T4 trial gets 3× the scored positions of a benign one, so this control is what would have caught an arithmetic-only pass) |
 | **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | **FAILED at all three scales, 2026-08-01 — a pre-committed null.** AUC 95% LB **0.692 / 0.575 / 0.612** against the ≥ 0.75 bar, precision **0.791 / 0.758 / 0.788** against ≥ 0.80, recall **0.498 / 0.232 / 0.364** against ≥ 0.50 (0.5B / 1.5B / 3B). No bar was re-tuned, the threshold `θ*` was frozen on the calibration half before any eval readout existed, and the fallback never fired |
 | **G2** (M1) | Silent leak — the headline science claim: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | **FAILED at all three scales, 2026-08-01 — a pre-committed null, and at 3B it fails significantly in the *opposite* direction.** On the certified-silent population (71 / 86 / 50 trials per scale) the secret's entry never exceeds the no-secret arm CI-clean, and sits **below** the licensed-word yardstick at every scale — at 3B by −0.455 with a Newcombe 95% interval [−0.654, −0.161] that excludes zero. Decision D26 rules the contrast direction correctly specified: the yardstick's edge is licensed speech being *spoken* — restrict to trials where the yardstick is also silent and its arm collapses from 0.52 / 0.52 / 0.68 to 3/24 / 4/25 / 2/13 (descriptive, per D26; the 3B cell is below the repo's n ≥ 20 house floor) |
-| **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, refusal-coherence, and a collapse guard all hold — and a norm-matched random direction does not | Design frozen on the repo's `main` (D27–D33: the intervention, the λ = 0 identity arm, the paired deciding contrast, the four-clause preservation battery, the norm-matched random-direction control, G3 frozen as code, and the pre-declared secondaries); **decided in the repo's open PR #10 (2026-08-03) — FAIL at all three scales, per that PR.** Carried here as status only: this portfolio cards stats from merged results, never from an open review. The numbers land here when the PR does |
+| **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, refusal-coherence, and a collapse guard all hold — and a norm-matched random direction does not | Design frozen on the repo's `main` (D27–D33: the intervention, the λ = 0 identity arm, the paired deciding contrast, the four-clause preservation battery, the norm-matched random-direction control, G3 frozen as code, and the pre-declared secondaries); **decided — FAIL at all three scales; its PR #10 merged 2026-08-03.** Carried here as status only until the stats pass: this portfolio cards stats from merged results, and the source (`docs/M2-RESULTS.md` on `main`) is now merged, so the numbers land here in the next pass (D11) |
 | **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | Pre-registered as a gate statement in `docs/KICKOFF.md`; **undecided** |
 
 The freezing discipline held where it matters most: both M1 gates' code and their byte-frozen
@@ -119,5 +119,5 @@ silent, 0.07–0.10 at every scale — and on certified-silent trials the secret
 *below* a licensed word from the same session. The gates were frozen in
 git before any sweep ran, so that null is a result, not an excuse — the repo's kickoff calls a
 pre-committed null a passing v1, because the failure mode this method guards against is an
-undecided gate, not a negative one. The causal-ablation gate has decided in an open PR, and the
-mechanism milestone is still ahead."
+undecided gate, not a negative one. The causal-ablation gate has decided and merged, its numbers
+card in the next pass, and the mechanism milestone is still ahead."

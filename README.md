@@ -6,8 +6,8 @@ lanes**. The **agent-reliability lane** takes a *recent research paper* that cla
 fails in some specific way and **reproduces that failure on cheap models**. The **model-internals
 lane** rebuilt a mechanistic instrument from a paper, validated it bit-for-bit against the
 authors' reference, and now uses it to map and audit small models from the inside. Each project
-links out to its own repo — seven of the eight are public, and a hiring manager can open, run,
-and poke any of those.
+links out to its own repo — all eight are public, and a hiring manager can open, run, and poke
+any of them.
 
 > **The one-sentence version:** *I built a repeatable reproduce-and-measure engine and ran it in
 > two lanes — honest, judge-free reproductions of recent agent-reliability papers, and a
@@ -56,7 +56,7 @@ Every stat below is traced to its project's repo (verified, not taken from notes
 |---------|--------|-------------------|-----------------|--------|
 | ★ **[dim-stage](projects/dim-stage.md)** | Anthropic *Global Workspace* (transformer-circuits, 2026-07-06) | A "Jacobian lens" reads a sparse mid-layer *workspace* where computation is verbally reported & steerable | **Pre-registered NULL** — not readable in Qwen2.5 0.5B/1.5B/3B (0/6 distributions each); 3 downstream properties measured descriptively; lens validated bitwise vs Anthropic's reference | **Complete** (M0–M3 + 4 stretch stages) |
 | **[mute-map](projects/mute-map.md)** | *`dim-stage`'s own recorded result (S4b) — no external oracle* | Deleting one concept's lens direction in the late third of the workspace band makes the model unable to say that word | On the full 12 × 12 prime × probe matrix at 1.5B the diagonal names **0/34** vs pooled off-diagonal **363/374** (+0.971 [+0.867, +0.983]); close-out **M4**: the switch is **VOCAB-SPARING** at 1.5B/3B (0.718 / 0.750 of gated wider-vocabulary items survive all 12 deletions), **AS-SCORED ONLY** | **Complete** (M0–M4) |
-| **[hush-gauge](projects/hush-gauge.md)** | *Original audit — no outside claim; instrument inherited from `dim-stage`, phenomenon from `mute-map`* | Activations reveal a model is about to leak an in-context secret it was ordered to keep — even on trials where it never says it | **M1 decided — G1 FAILS and G2 FAILS at all 3 scales, both pre-committed nulls** (a passing v1 per the repo's kickoff): the probe reads speech, not secrecy — recall 0.937 / 0.571 / 0.537 on emitting trials vs 0.103 / 0.068 / 0.088 on non-emitting, and on certified-silent trials the secret sits *below* the licensed-word yardstick, significantly at 3B (−0.455 [−0.654, −0.161]). M0's G0 passed on all 3 scales (battery has dynamic range) | **In progress** (M0–M1 decided; M2/G3 decided FAIL in the repo's open PR #10 — stats card when it merges; G4 detachable, undecided) |
+| **[hush-gauge](projects/hush-gauge.md)** | *Original audit — no outside claim; instrument inherited from `dim-stage`, phenomenon from `mute-map`* | Activations reveal a model is about to leak an in-context secret it was ordered to keep — even on trials where it never says it | **M1 decided — G1 FAILS and G2 FAILS at all 3 scales, both pre-committed nulls** (a passing v1 per the repo's kickoff): the probe reads speech, not secrecy — recall 0.937 / 0.571 / 0.537 on emitting trials vs 0.103 / 0.068 / 0.088 on non-emitting, and on certified-silent trials the secret sits *below* the licensed-word yardstick, significantly at 3B (−0.455 [−0.654, −0.161]). M0's G0 passed on all 3 scales (battery has dynamic range) | **In progress** (M0–M1 decided; M2/G3 decided FAIL — its PR #10 merged 2026-08-03, stats card in the next pass; G4 detachable, undecided) |
 
 ---
 
@@ -67,7 +67,8 @@ compounds corruption, a citation check goes blind — reproduced on cheap models
 the charter. One target (`forge-gap`) is a technique with no paper behind it; its card and
 [the charter](METHODOLOGY.md) both say so.
 
-`blind-cite` is the one row whose repo is currently private — its card says why.
+`blind-cite` is the newest row — M0 and M1 are both measured, and whether v1 closes there is the
+one call still open. Its card says where it stands.
 
 | Project | Reproduces | Claim in one line | Headline result | Status |
 |---------|-----------|-------------------|-----------------|--------|
@@ -75,7 +76,7 @@ the charter. One target (`forge-gap`) is a technique with no paper behind it; it
 | **[decay-pin](projects/decay-pin.md)** | Governance Decay / Constraint Pinning (arXiv 2606.22528) | An in-context safety rule silently decays when compaction evicts it; re-pinning restores compliance | Rule visible **0/20** → compaction **20/20** → re-pin **0/40**; gap Newcombe [+77.2, +100] on **all 3 models**; replicates on 2nd task family | **Complete** (v1 + v2) |
 | **[lossy-wall](projects/lossy-wall.md)** | Reclaim / Brittle Memory (arXiv 2606.25449) | At matched budget, a note keeping a *wrong conclusion* but dropping its source makes the error uncorrectable — worse than empty memory | Lossy reclaim **≤ 1/290** (Wilson UB ≤ 0.10) vs source-first **240/240**; "worse than empty" **+58%** [+44.2, +67.5]; cross-check vs author's harness **AGREE** | **Complete** |
 | **[ghost-patch](projects/ghost-patch.md)** | Obey, Diverge, Collapse (arXiv 2607.04537) | Code LLMs follow a wrong-location repair instruction, compound "ghost" errors, and land in an unrecoverable state | **Two NULLS reported as headlines**: awareness doesn't reproduce (0/6 models); single-pass obedience drop ≈ 0 (CIs cross zero). Back half measured where powered | **v1 Complete** ($1.42 / $5) |
-| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv 2607.09349) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **M0 fit-pilot:** the deception **doesn't manifest** on cheap models (0/36 — they refuse or name the true entity); detectors sound (16/16). An honest early null | **Parked** at M0 — repo private pending the M1 decision |
+| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv 2607.09349) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **Well-powered null at both surfaces** — 20/20 clean in every gated cell, DG 0/20 except one cell at 2/20 (Newcombe +0.100 [−0.077, +0.301], straddles 0). On those 2 answers the **flagship contrast rendered**: faithfulness PASS 2/2 and citation PASS 2/2 while ownership flags both | **M0 + M1 complete** ($0.027 / $5) |
 
 ---
 
@@ -86,7 +87,8 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
 - **`forge-gap`'s headline gap is injected** — a controlled fault-recovery testbed, disclosed on
   the chart, never sold as a natural reproduction.
 - **`ghost-patch`, `dim-stage`, and `hush-gauge` headline nulls** — pre-registered, reported as
-  headlines, not buried. (Parked `blind-cite`'s M0 adds an honest early null — see its card.)
+  headlines, not buried. (`blind-cite` adds a fourth: a well-powered null at both surfaces, with
+  the blindness contrast rendered at n=2 and reported as an existence proof, not a rate.)
 - **Everything is hobby-scale** — cheap/tiny models under a hard budget guard (often < $5,
   tracked to the cent). That's the stated scope: mechanical reliability of small models, not
   frontier capability.
@@ -101,8 +103,9 @@ The credibility of this portfolio is in what it *refuses* to overclaim:
 - **`hush-gauge` is carded mid-flight** — the first in-progress card here, and its first decided
   measurement gates came back as **pre-committed nulls reported as headlines**: G1 and G2 both
   FAIL at all three scales (the probe reads speech, not secrecy), which the repo's kickoff calls a
-  passing v1. G3 has decided in the repo's still-open PR #10 and is carried as status only — stats
-  enter these tables from merged results, never from an open review. G4 (detachable) is
+  passing v1. G3 has decided and its PR #10 merged 2026-08-03; it is carried as status only until
+  the next carding pass — stats enter these tables from merged results, and now that they are
+  merged those numbers are due here (D11). G4 (detachable) is
   pre-registered and undecided. Each gate is frozen as code before its own stage runs, and the
   card claims nothing a decided gate hasn't earned.
 
@@ -120,9 +123,8 @@ guards — [the charter](METHODOLOGY.md) states all five once.
 
 ---
 
-*Repo visibility: **seven of the eight repos are public** — `blind-cite` is parked at M0 and kept
-private until the M1 decision lands. Every other card links out to the real repo; no code is
-copied into this folder. (The paper authors' own reference packages are used as cross-check
+*Repo visibility: **all eight repos are public** (as of 2026-08-03). Every card links out to the
+real repo; no code is copied into this folder. (The paper authors' own reference packages are used as cross-check
 oracles where one exists — not my work, so not carded.)*
 
 ---

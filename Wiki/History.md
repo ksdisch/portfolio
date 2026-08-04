@@ -98,8 +98,9 @@ from what belongs to me.
   ("the probe reads speech, not secrecy"), merged in hush-gauge PR #6 on 2026-08-02; every carded
   stat verified against `docs/M1-RESULTS.md` on that repo's `main` [Fact — projects/hush-gauge.md,
   README.md]
-- **Why held back:** M2/G3 also decided — FAIL at all three scales — but in hush-gauge's still-open
-  PR #10, so it is carried as status only until that PR merges — see D11 in `../Decisions.md`
+- **Why held back:** M2/G3 also decided — FAIL at all three scales — but in hush-gauge's PR #10,
+  still open *at this milestone*, so it was carried as status only — see D11 in `../Decisions.md`
+  [that PR merged later the same day, 2026-08-03; the stats carding is the next pass]
 - **Tradeoff:** the portfolio briefly shows a decided-but-uncarded M2, traded for keeping D4's
   verified-against-merged-results bar intact [Fact — D11 rationale]
 
@@ -114,6 +115,21 @@ from what belongs to me.
 - **Tradeoff:** the report deliberately changes no project repo (decision brief only, per the
   commissioning handoff), so the portfolio's own front matter stays stale until the report's #1
   item is triaged — flagged in GAPS-AND-NEXT rather than silently fixed [Fact — D12 rationale]
+
+### blind-cite's park ends; front matter refreshed for the public-and-M1-complete flip — 2026-08-03
+- **What:** the audit's #1 ranked item landed — `README.md`, `projects/blind-cite.md`,
+  `PROJECT.md`, `Sources.md` and `GAPS-AND-NEXT.md` refreshed across the **18 spots left for this
+  pass** — the audit enumerated 22 across seven files, and `53f2732` had already synced HANDOFF's
+  3 and Decisions' 1 — and GAPS' mid-audit state-change flag resolved [Fact — D13]
+- **Why it outranked everything:** the front page asserted seven-of-eight-public and "M1 decision
+  pending" while the repo itself was public with M1 measured — the exact defect class the charter
+  calls out, on the most visible pages here [Fact — audit report BC-1, graded critical]
+- **What changed since the audit:** blind-cite moved past the M1 *decision* the audit caught. At
+  `e057c6d` (its PR #9, after the audit's `1beb5ac` pin) M1 is **complete** — well-powered NULL at
+  both surfaces, blindness contrast rendered at n=2 [Fact — blind-cite `docs/M1-BRIEF.md`, D10]
+- **Tradeoff:** the repo proposes closing v1 at M1 but logs it *Proposed*; the card states the
+  close as the open call rather than pre-deciding Kyle's decision [Fact — blind-cite D11]
+
 
 ---
 

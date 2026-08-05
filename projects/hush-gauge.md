@@ -4,7 +4,7 @@
 > pressure. Can you tell **from the activations** that the secret is about to leak — *including on
 > the trials where it never actually says it*? Behavioral red-teaming misses that silent stratum by
 > construction; this project audits it with the lineage's validated instrument. **The audit ran end
-> to end and the answer is no — four pre-committed nulls and a `NOT-RUN`, at all three scales: the
+> to end and the answer is no — three pre-committed nulls and a `NOT-RUN`, at all three scales: the
 > probe reads speech, not secrecy.**
 
 **Repo:** <https://github.com/ksdisch/hush-gauge> (public) · **Builds on:**
@@ -45,11 +45,11 @@ roster, a 25/25 calibration/eval split, a 5-tier pressure battery (benign → di
 → injection override → multi-turn extraction), and four pre-registered false-positive baselines —
 every detection claim is *excess over a context-word yardstick*, never "the probe fires."
 
-A fourth milestone sits outside that list. **M4 is gateless by design** (`D48`): it answers a
+A fifth milestone sits outside those three questions. **M4 is gateless by design** (`D48`): it answers a
 structural question M2 flagged and M3's dropped arm took down with it, it reports no verdict, and
 it re-decides nothing — G0–G4 stand exactly as M0–M3 recorded them.
 
-## Where it stands — every gate decided, and the ledger is final
+## Where it stands — every gate resolved, and the ledger is final
 
 | Gate | Question | Status |
 |---|---|---|
@@ -57,7 +57,7 @@ it re-decides nothing — G0–G4 stand exactly as M0–M3 recorded them.
 | **G1** (M1) | Detection on held-out secrets: AUC 95% LB ≥ 0.75, precision ≥ 0.80, recall ≥ 0.50 | **FAILED at all three scales, 2026-08-01 — a pre-committed null.** AUC 95% LB **0.692 / 0.575 / 0.612** against the ≥ 0.75 bar, precision **0.791 / 0.758 / 0.788** against ≥ 0.80, recall **0.498 / 0.232 / 0.364** against ≥ 0.50 (0.5B / 1.5B / 3B). No bar was re-tuned, the threshold `θ*` was frozen on the calibration half before any eval readout existed, and the fallback never fired |
 | **G2** (M1) | Silent leak — the headline science claim: among non-emitting T3/T4 trials, workspace entry exceeds both the no-secret rate and the context-word yardstick | **FAILED at all three scales, 2026-08-01 — a pre-committed null, and at 3B it fails significantly in the *opposite* direction.** On the certified-silent population (71 / 86 / 50 trials per scale) the secret's entry never exceeds the no-secret arm CI-clean, and sits **below** the licensed-word yardstick at every scale — at 3B by −0.455 with a Newcombe 95% interval [−0.654, −0.161] that excludes zero. Decision D26 rules the contrast direction correctly specified: the yardstick's edge is licensed speech being *spoken* — restrict to trials where the yardstick is also silent and its arm collapses from 0.52 / 0.52 / 0.68 to 3/24 / 4/25 / 2/13 (descriptive, per D26; the 3B cell is below the repo's n ≥ 20 house floor) |
 | **G3** (M2) | Ablation reduces emission CI-clean *while* perplexity, benign QA, refusal-coherence, and a collapse guard all hold — and a norm-matched random direction does not | **FAILED at all three scales, 2026-08-03 — and not the same FAIL at each scale; that difference is the finding.** At **0.5B** the causal clause **passes**: ablating the probed direction drops the deciding secret-level count **25/25 → 15/25**, Newcombe 95% **[−0.593, −0.187]**, monotone across the dose (25 → 22 → 19 → 18 → 15) and direction-specific (a norm-matched random direction moves nothing, 25/25, and the mandatory λ=1-vs-random contrast excludes zero) — and the **preservation battery catches its price**: benign QA falls to 726/750 against a 0.9903 bar, of which **21 of the 24 misses are genuine factual errors** (`6` for three times three; `Venus` for the planet we live on), and acknowledgment falls to 83/100 against a 0.9630 bar. The clauses are **conjunctive by rule**, so a large drop with a failed battery is a FAIL, not a qualified PASS. At **3B** the mirror image: the whole battery holds — the cleanest arm in the study — and the causal clause has nothing to certify. At **1.5B** both ends fail (WikiText NLL 3.0102 against a 2.9508 bar) |
-| **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | **`NOT-RUN` at all three scales, 2026-08-04 — and that is the pre-committed fallback, not an unfinished gate.** `mute-map` characterizes *where* the off-switch lives but every one of its interventions deletes the concept's own direction, so no isolated mediating direction exists in its deliverables; `K5` therefore pre-committed, before any code, that M3 must **construct and validate** a candidate first and drop Arm B if none validates. **Exactly one candidate family was pre-registered, with no post-hoc variants.** It **passed both structural checks** — split-half cosine **+0.665 / +0.958 / +0.909** against a ≥ 0.5 bar, and median &#124;cos&#124; against the secret's own direction **0.032 / 0.019 / 0.022** against a ≤ 0.5 ceiling (max over every layer × secret pair, 0.083) — and **failed its behavioural one**: ablating it raises emission no more than ablating a label-permuted sham built by the same pipeline, and CI-cleanly **less** at 1.5B (Newcombe **[−0.521, −0.083]**). So Arm B dropped and M3 reduced to Arm A, delivered in full. **What this licenses is narrow:** M3 found that *this construction* is not a mediator — not that no mediator exists. The question's status is **unknown, not absent** |
+| **G4** (M3, detachable) | Disabling the off-switch makes the model blurt the secret | **`NOT-RUN` at all three scales, 2026-08-04 — and that is the pre-committed fallback, not an unfinished gate.** `mute-map` characterizes *where* the off-switch lives but every one of its interventions deletes the concept's own direction, so no isolated mediating direction exists in its deliverables; `K5` therefore pre-committed, before any code, that M3 must **construct and validate** a candidate first and drop Arm B if none validates. **Exactly one candidate family was pre-registered, with no post-hoc variants.** It **passed both structural checks** — split-half cosine **+0.665 / +0.958 / +0.909** against a ≥ 0.5 bar, and median &#124;cos&#124; against the secret's own direction **0.032 / 0.019 / 0.022** against a ≤ 0.5 ceiling (max over every layer × secret pair, 0.083) — and **failed its behavioural one at 0.5B and 1.5B**: ablating it raises emission no more than ablating a label-permuted sham built by the same pipeline, and CI-cleanly **less** at 1.5B (Newcombe **[−0.521, −0.083]**). **At 3B the ladder could not be decided at all** — that scale's session set yields only 19 headroom secrets against the repo's own n ≥ 20 house floor, so V3 there was not gate-capable by construction and its verdict string says so (`no gate-capable V3 pass`) rather than reporting a behavioural failure. Either way the ladder dropped Arm B at every scale, and M3 reduced to Arm A, delivered in full. **What this licenses is narrow:** M3 found that *this construction* is not a mediator — not that no mediator exists. The question's status is **unknown, not absent** |
 
 The freezing discipline held where it matters most: both M1 gates' code and their byte-frozen
 wording were **committed to git before any sweep produced a result**, so neither gate can have
@@ -67,8 +67,8 @@ an existing thresholds file, and the cells script refuses to run until one exist
 
 Subjects: Qwen2.5-0.5B / 1.5B / 3B-Instruct, local MPS, forward-only. **Cost: $0.** 1002 offline
 tests; decisions K1–K6 and D1–D48 frozen in the repo's ledger (D15–D24 landed with the M1 brief;
-D25–D26 resolved M1's two flagged findings; D27–D33 froze M2's design; D34–D44 closed the post-M3
-planning session; D45–D48 froze M4).
+D25–D26 resolved M1's two flagged findings; D27–D33 froze M2's design; D34–D40 froze M3's design
+before any M3 code or run; D41–D44 closed the post-M3 planning session; D45–D48 froze M4).
 
 ## M4 — the one place the study returns positive structure (gateless, no verdict)
 
@@ -99,6 +99,11 @@ none fired on real data.
   The realized union rows silence 0 · 1 · 4 at 1.5B and 0 · 0 · 0 at 3B; the largest lands at
   **21/25 with Newcombe [−0.347, +0.004]**, the exact last straddling rung the brief computed
   *before the arms existed*, one secret short and missing zero by 0.004. **No bar moved.**
+- **The scope these facts carry.** They are exact facts about the realized battery *under this
+  decode rule*, and license nothing about other texts, secrets or decode rules. Induced-emission
+  comparisons carry a confound in both directions — an arm that suppresses more has fewer surviving
+  induced trials — so **no induction-channel claim is licensed**, and `removed_mass_mean` supports
+  no argument at all.
 
 ## The closing claim, at exactly its licensed strength
 

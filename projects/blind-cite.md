@@ -34,6 +34,13 @@ The label rule is deliberately conservative and makes every reported rate a **fl
 that fills all four evidence slots with Y's tokens but mentions Y's name *anywhere*, even
 incidentally, scores `discriminated` rather than DG.
 
+**Which surface was pre-committed, and which was added.** The **stark** surface is the design
+pre-committed at M0 and run untouched. The **camouflaged** surface (JSON tool-result rendering,
+constant titles, k=4 off-theme filler docs) entered at M1 as a *labeled* arm tested **beside** it,
+never instead of it — logged as the repo's D6, not slipped in. M1C then pre-registered **both**
+surfaces at N=80 before any of its data existed, so the per-surface rows below are pre-committed
+rather than chosen after the fact.
+
 ## Headline result — **DG occurs at both surfaces, and my own null did not survive**
 
 The primary estimand is the DG rate at the adversarial cell (`absent × completing`), per surface,
@@ -179,4 +186,6 @@ different quantity."
       why you will *not* quote an engagement-conditioned rate.
 - [ ] Explain why the primary interval excluding zero while the paired one does not is two
       questions, not a contradiction.
+- [ ] Say which surface was pre-committed and which was a labeled addition (repo D6) — and why
+      running both is not moving the goalposts.
 - [ ] Answer "your null flipped — why should I trust the new number?" without getting defensive.

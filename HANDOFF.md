@@ -33,7 +33,7 @@ pack** on their default branch. The `hush-gauge` and `blind-cite` cards link the
 do not yet, which is the top next action.
 
 The audit report (`docs/audit-2026-08-03.md`) remains the authoritative findings surface for items
-not yet triaged into GAPS-AND-NEXT (D12) — but note it **predates both 2026-08-04 flips** above.
+not yet triaged into GAPS-AND-NEXT (D12) — but note it **predates both flips** above (blind-cite 2026-08-04, hush-gauge 2026-08-05).
 
 ## Immediate next move
 Link the remaining six cards to their repos' paper + presenter pack. Then re-snapshot the changed

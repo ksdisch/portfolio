@@ -19,7 +19,7 @@ kept honest so a skeptic sees I know exactly where the edges are.*
   `hush-gauge` and `blind-cite` cards link theirs; the other six do not yet.
 - The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) remains the
   authoritative findings surface for the items not yet triaged into this ledger. Note it predates
-  both 2026-08-04 flips above.
+  both flips above (blind-cite 2026-08-04, hush-gauge 2026-08-05).
 
 ---
 

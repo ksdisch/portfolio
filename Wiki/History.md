@@ -130,6 +130,34 @@ from what belongs to me.
 - **Tradeoff:** the repo proposes closing v1 at M1 but logs it *Proposed*; the card states the
   close as the open call rather than pre-deciding Kyle's decision [Fact — blind-cite D11]
 
+### Both flagship cards re-carded; blind-cite's headline reverses — 2026-08-05
+- **What:** `projects/blind-cite.md` and `projects/hush-gauge.md` rewritten from their repos'
+  `main`, with README, METHODOLOGY, GAPS-AND-NEXT and PROJECT.md repaired where they inherited
+  either stale story [Fact — D14]
+- **Why now:** both cards had fallen behind the work they describe, in opposite directions —
+  blind-cite's overstated the certainty of a null, hush-gauge's understated a finished project by
+  three milestones. Discovered while regenerating the `research-portfolio` hub course, which reads
+  these cards as source material [Fact — D14]
+- **blind-cite — the reversal:** the M1C extension (repo PR #12) ran a pre-registered,
+  power-sized, one-look extension to **N=80** and found DG at **both** surfaces — stark 3/80
+  [1.3%, 10.5%], camouflaged 7/80 [4.3%, 17.0%]. D13's "well-powered null" is **withdrawn**. The
+  measurement stands and its N=20 row is kept alongside forever; the inference does not
+  [Fact — blind-cite `docs/paper/blind-cite-paper.md` §5.3, `docs/M1C-BRIEF.md`]
+- **Why that is the strongest thing on the card:** the trigger was the project's own sizing
+  audit, not the observed rate — its pre-committed N had been derived from clean-trial *yield*,
+  never from power, so at N=20 even a perfect zero could not have resolved the 14% reference
+  magnitude from zero [Fact — blind-cite paper §5.6]
+- **hush-gauge — complete, not in flight:** carded M0–M4 with the full ledger, G0 PASS ×3,
+  G1/G2/G3 FAIL ×3, **G4 `NOT-RUN` ×3** — a passing outcome of K5's pre-committed validation
+  ladder rather than a gap — and M4 gateless. D11's carry-M2-as-status-only is discharged
+  [Fact — hush-gauge `docs/paper/hush-gauge-paper.md`, `docs/M4-RESULTS.md`]
+- **Also:** `ksdisch/hush-gauge`'s own README was one milestone behind and was fixed in that repo
+  under its own PR — the first time a carding pass has touched a project repo, and only because
+  the defect was upstream of the card [Fact — hush-gauge README]
+- **Tradeoff:** the reversal is reported *against the portfolio's own prior claim* rather than
+  quietly replaced — D13 is marked Superseded and GAPS names the withdrawal explicitly, so a
+  reader can see the correction happened rather than only its result [Fact — D14, GAPS-AND-NEXT]
+
 
 ---
 

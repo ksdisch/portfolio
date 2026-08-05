@@ -18,16 +18,25 @@ Public-facing portfolio that presents eight reproduce-and-measure AI-failure pro
 - `trajectory-otel` is scaffold-stage substrate, not carded until M0 exists (Fact: GAPS-AND-NEXT.md)
 
 ## Current status
-Active — built 2026-07-21; refreshed 2026-07-28; restructured into two lanes with `hush-gauge`
-carded in progress 2026-08-01; `hush-gauge`'s M1 results (G1/G2 pre-committed nulls) carded
-2026-08-03; `blind-cite`'s public-and-M1-complete flip carded 2026-08-03. All eight linked repos
-are public. The portfolio is complete as a shareable artifact; the open work is keeping cards in
-sync as the underlying projects advance — `hush-gauge` first among them.
+Active — built 2026-07-21; refreshed 2026-07-28; restructured into two lanes 2026-08-01;
+`hush-gauge`'s M1 and `blind-cite`'s public-and-M1-complete flip carded 2026-08-03.
+**Re-carded 2026-08-05 (Decision D14):** both flagship cards had fallen behind their own repos and
+are now current — `hush-gauge` is **complete (M0–M4)** with the full gate ledger including
+`G4 NOT-RUN`, and `blind-cite`'s "well-powered null" is **withdrawn**, replaced by its own
+pre-registered M1C extension finding DG at both surfaces. All eight linked repos are public and
+**all eight now ship a research paper and presenter pack** on their default branch. The portfolio
+is complete as a shareable artifact; **every card is in sync with its repo as of 2026-08-05**, and
+the open work is keeping it that way as the underlying projects advance.
 
 ## Next actions
-1. Card `blind-cite`'s v1 close when its D11 is decided (the repo proposes closing at M1 — M2 would suppress a rate already ~0 and M3 would ablate a phenomenon that occurred twice; the call is Kyle's and is logged Proposed, not decided).
-2. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N re-run, dim-stage band re-derivation).
-3. Card `hush-gauge`'s M2/G3 stats from `docs/M2-RESULTS.md` on its `main` — PR #10 **merged 2026-08-03** (G3 FAIL at all three scales), so D11's trigger has fired and the card's status-only carry should now become stats. M1's G1/G2 nulls were carded 2026-08-03. After M2 lands, the card follows the detachable M3/G4 if it runs. mute-map's S1/S2 stretches were declined for that repo and banked in the J-lens follow-on backlog.
+1. Link each remaining card to its repo's paper + presenter pack — six of eight cards
+   (`dim-stage`, `forge-gap`, `decay-pin`, `lossy-wall`, `ghost-patch`, `mute-map`) have merged
+   write-ups the card does not yet point at. `hush-gauge` and `blind-cite` were linked in D14.
+2. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
+   re-run, dim-stage band re-derivation, blind-cite extending its other two models to power).
+3. Re-snapshot the changed docs into the `research-portfolio-prep` NotebookLM notebook — D14 moved
+   six files, so the notebook's copies of the two cards, README, METHODOLOGY, GAPS-AND-NEXT and
+   Decisions are now stale by hash. That is a `portfolio-notebook-sync` drift-check run.
 
 ## Boundaries
 - Docs-only folder: markdown, no runnable code

@@ -1,62 +1,82 @@
 # HANDOFF.md
 
-_Last updated: 2026-08-04 (front-matter refresh, PR #10)_
+_Last updated: 2026-08-05 (re-carding pass, D14)_
 
 ## What was just done
-- **The audit's #1 item landed** — this repo's front matter refreshed for blind-cite's
-  public-and-M1-complete flip (PR #10, D13): README, the blind-cite card, PROJECT.md, Sources.md
-  and GAPS-AND-NEXT across the 18 spots left for this pass, GAPS' mid-audit state-change flag
-  resolved, and PR #9's F8/F4 review follow-ups folded in
-- **Full-portfolio audit delivered and merged** — `docs/audit-2026-08-03.md` (PR #9, merged
-  `6a918f2` after a five-round adversarial review): all eight carded repos plus the
-  `trajectory-otel` scaffold audited at pinned
-  `origin/main` snapshots by a 17-agent fan-out (per-repo auditor + adversarial verifier);
-  78 graded findings (6 critical), 48 charter-compliant addition ideas, ranked top-10.
-  37 serious findings verified — 35 CONFIRMED, 2 DOWNGRADED, 0 refuted; four re-checked by hand
-- **State change discovered and verified mid-audit:** `blind-cite` merged its PR #8 at 21:48 UTC,
-  resolved M1 as **Option C** (its D6), and **re-published itself** — all eight repos are now
-  public. Recorded as D12 (Decisions.md); the front-matter refresh that followed from it is the
-  first bullet above and is now done (D13)
-- Earlier the same day: hush-gauge M1 carded (G1/G2 pre-committed FAIL nulls; portfolio PR #8),
-  M2/G3 carried status-only per D11
+- **Both flagship cards re-carded from their repos' `main` (D14)** — they had fallen behind the
+  work they describe, in opposite directions:
+  - **`blind-cite`: the headline reversed.** D13's "well-powered null at both surfaces" is
+    **withdrawn**. Its M1C extension (repo PR #12) ran a pre-registered, power-sized, one-look
+    extension to **N=80** per gated cell per surface and found DG at **both**: stark **3/80,
+    Wilson [1.3%, 10.5%]**; camouflaged **7/80, [4.3%, 17.0%]**. The flagship blindness contrast
+    now rests on **ten** answers, all with faithfulness PASS 10/10 and citation PASS 10/10. The
+    *measurement* stands and its N=20 row is kept alongside forever; the *inference* does not.
+  - **`hush-gauge`: complete, not in flight.** Carded as **complete (M0–M4)** with the full
+    ledger — G0 **PASS** ×3, G1/G2/G3 **FAIL** ×3 (all pre-committed nulls), G4 **`NOT-RUN`** ×3
+    (dropped by K5's pre-committed validation ladder — a passing outcome, not a gap), M4 gateless.
+    D11's carry-M2-as-status-only is discharged.
+- **Front matter repaired** where it inherited either stale story: README's two lane-table rows,
+  intro and honesty bullets; METHODOLOGY's skeptic table (the "work in progress" row replaced by
+  a G4 row and a "your null flipped" row); GAPS-AND-NEXT's per-project rows and "Do before
+  sharing"; PROJECT.md status and next actions.
+- **Upstream fix, separate repo:** `ksdisch/hush-gauge`'s own README was one milestone behind
+  (M0–M3, no M4) and now closes on v1 — the gate ledger, an M4 block, the paper as the current
+  record, and a corrected test count (656 → 1002, verified by running the suite).
 
 ## Where things stand
 The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards.
-**All eight repos are public as of 2026-08-03**, and the front matter now says so: the audit's
-#1 item landed — README, the blind-cite card, PROJECT.md, Sources.md and GAPS-AND-NEXT were
-refreshed for blind-cite's public-and-M1-complete flip, and the state-change flag GAPS carried
-mid-audit is resolved. blind-cite has moved past the M1 *decision* the audit caught: at its
-`e057c6d` (PR #9, after the audit's `1beb5ac` snapshot) **M1 is complete — a well-powered null at
-both surfaces, with the flagship blindness contrast rendered at n=2**. The audit report remains
-the authoritative findings surface for items not yet triaged into GAPS-AND-NEXT (D12).
+All eight repos are public, and **as of 2026-08-05 every card is in sync with its repo** — the
+first time that has been true since `hush-gauge` was carded mid-flight on 2026-08-01.
 
-`hush-gauge` PR #10 **merged 2026-08-03**, so D11's trigger has fired: its card now reads merged
-and carries M2/G3 as status only, pending the stats pass that is the next session's job.
+A new fact worth carrying forward: **all eight repos now ship a research paper and a presenter
+pack** on their default branch. The `hush-gauge` and `blind-cite` cards link theirs; the other six
+do not yet, which is the top next action.
+
+The audit report (`docs/audit-2026-08-03.md`) remains the authoritative findings surface for items
+not yet triaged into GAPS-AND-NEXT (D12) — but note it **predates both 2026-08-04 flips** above.
 
 ## Immediate next move
-Card `hush-gauge`'s M2/G3 stats from `docs/M2-RESULTS.md` on its `main` (`a964878`), per D11 —
-the trigger condition is met and this is the one records gap now open. Everything else from the
-audit stays in `docs/audit-2026-08-03.md`, un-triaged — D12 reserves that triage to Kyle, and no
-session should treat any restatement of it as a plan of record.
+Link the remaining six cards to their repos' paper + presenter pack. Then re-snapshot the changed
+docs into the `research-portfolio-prep` NotebookLM notebook: D14 moved six files here, so the
+notebook's copies of both cards, README, METHODOLOGY, GAPS-AND-NEXT and Decisions are stale by
+hash. That is a `portfolio-notebook-sync` drift-check run, and it is separate from the
+`--add hush-gauge` onboarding that already happened on 2026-08-05.
 
 ## Open questions / blockers
-- hush-gauge M2/G3 stats not yet carded here — PR #10 merged, D11's trigger fired (Unresolved)
-- `blind-cite` v1 close — the repo's D11 proposes closing at M1 (M2 suppresses a rate already ~0;
-  M3 ablates a phenomenon that occurred twice). Logged **Proposed**, Kyle's call; the card states
-  it as open rather than pre-deciding it (Unresolved)
-- No sharing caveat outstanding — the front page and the repos now agree
+- Six cards do not yet link their repo's merged write-up (Unresolved — mechanical, not a judgment
+  call)
+- The notebook's copies of six portfolio docs are stale by hash after D14 (Unresolved — a drift
+  check, pre-authorized by nobody yet; Kyle's call)
+- `blind-cite` extended only `qwen-2.5-7b` to power; the other two models sit at 0/20 with a 16.1%
+  Wilson upper and must be read as *untested at N=80, not shown clean* (Unresolved — belongs to
+  that repo)
+- No sharing caveat outstanding — the front page and the repos agree
+
+## Files touched recently (2026-08-05)
+
+**Re-carding pass (D14):**
+- projects/blind-cite.md — rewritten for M0+M1+M1C; the reversal leads, the sizing audit gets its
+  own section, the talk-practice checklist rebuilt around defending it
+- projects/hush-gauge.md — rewritten for M0–M4 complete; G3 and G4 rows carry full stats, new M4
+  and closing-claim sections, new caveats (the sham's limits, the orthogonality bound, the
+  ALL-CAPS canary), new transferable-lesson section
+- README.md — intro, lane note, both table rows, honesty bullets
+- METHODOLOGY.md — skeptic table: nulls row narrowed, "work in progress" row replaced with a G4
+  row, "your null flipped" row added
+- GAPS-AND-NEXT.md — "Do before sharing" and both per-project rows
+- PROJECT.md — status and next actions
+- Decisions.md — D14 appended; D13 marked Superseded (by D14)
+- Wiki/History.md — milestone appended · HANDOFF.md — this refresh
+
+**In `ksdisch/hush-gauge` (separate repo, separate PR):**
+- README.md — v1 gate ledger, M4 status block, paper pointers, D1–D48, test count, M2/M3/M4
+  runners
 
 ## Files touched recently (2026-08-03)
 
-**Front-matter refresh pass (PR #10, D13):**
-- projects/blind-cite.md — rewritten for M0+M1 complete; parked-private frame removed
-- README.md — intro, lane note, blind-cite row, honesty bullet, footer
-- PROJECT.md — traceability line, status, next actions
-- Sources.md — blind-cite row + M1 provenance
-- GAPS-AND-NEXT.md — "Do before sharing" resolved, blind-cite row, visibility table
-- METHODOLOGY.md, projects/hush-gauge.md — hush-gauge PR #10 merge-status wording
-- docs/audit-2026-08-03.md — F4 path/link hygiene
-- Decisions.md — D13 appended · Wiki/History.md — milestone appended · HANDOFF.md — this refresh
+**Front-matter refresh pass (PR #10, D13 — now superseded by D14):**
+- projects/blind-cite.md, README.md, PROJECT.md, Sources.md, GAPS-AND-NEXT.md, METHODOLOGY.md,
+  projects/hush-gauge.md, docs/audit-2026-08-03.md, Decisions.md, Wiki/History.md, HANDOFF.md
 
 **Audit pass (PR #9, D12):**
 - docs/audit-2026-08-03.md — the audit report (new)

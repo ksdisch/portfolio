@@ -34,9 +34,10 @@ the open work is keeping it that way as the underlying projects advance.
    write-ups the card does not yet point at. `hush-gauge` and `blind-cite` were linked in D14.
 2. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
    re-run, dim-stage band re-derivation, blind-cite extending its other two models to power).
-3. Re-snapshot the changed docs into the `research-portfolio-prep` NotebookLM notebook — D14 moved
-   six files, so the notebook's copies of the two cards, README, METHODOLOGY, GAPS-AND-NEXT and
-   Decisions are now stale by hash. That is a `portfolio-notebook-sync` drift-check run.
+3. ✅ **Done 2026-08-05** — the `research-portfolio-prep` NotebookLM notebook was re-snapshotted
+   after D14 merged: seven `text` sources repaired (both cards, README, METHODOLOGY, GAPS-AND-NEXT,
+   Decisions, and blind-cite's own README, which had also moved). Post-repair drift check is clean,
+   0 changed across all hashable rows.
 
 ## Boundaries
 - Docs-only folder: markdown, no runnable code

@@ -36,17 +36,15 @@ The audit report (`docs/audit-2026-08-03.md`) remains the authoritative findings
 not yet triaged into GAPS-AND-NEXT (D12) — but note it **predates both flips** above (blind-cite 2026-08-04, hush-gauge 2026-08-05).
 
 ## Immediate next move
-Link the remaining six cards to their repos' paper + presenter pack. Then re-snapshot the changed
-docs into the `research-portfolio-prep` NotebookLM notebook: D14 moved six files here, so the
-notebook's copies of both cards, README, METHODOLOGY, GAPS-AND-NEXT and Decisions are stale by
-hash. That is a `portfolio-notebook-sync` drift-check run, and it is separate from the
-`--add hush-gauge` onboarding that already happened on 2026-08-05.
+Link the remaining six cards to their repos' paper + presenter pack — that is the one mechanical
+item left. The notebook re-snapshot that D14 made necessary is **already done** (2026-08-05, seven
+sources repaired, post-repair drift check clean).
 
 ## Open questions / blockers
 - Six cards do not yet link their repo's merged write-up (Unresolved — mechanical, not a judgment
   call)
-- The notebook's copies of six portfolio docs are stale by hash after D14 (Unresolved — a drift
-  check, pre-authorized by nobody yet; Kyle's call)
+- ✅ Resolved 2026-08-05 — the notebook's stale copies were repaired on Kyle's confirm (seven
+  sources: both cards, four front-matter docs, and blind-cite's README)
 - `blind-cite` extended only `qwen-2.5-7b` to power; the other two models sit at 0/20 with a 16.1%
   Wilson upper and must be read as *untested at N=80, not shown clean* (Unresolved — belongs to
   that repo)

@@ -1,8 +1,14 @@
 # HANDOFF.md
 
-_Last updated: 2026-08-05 (re-carding pass, D14)_
+_Last updated: 2026-08-05 (denominator fix, PR #13)_
 
 ## What was just done
+- **`forge-gap.md:47-48` denominator fix (PR #13, merged).** The card misattributed the 10%
+  wrong-record-retrieval figure to "llama-8b's misses" — corrected to the recorded 4/40 = 10% of
+  the validation arm's 40 trials (verified against `forge-gap`'s `origin/main`, D4). This card is
+  a tracked NotebookLM source (manifest row `915e89a9-2af8-4341-a68f-65c7d465a224`); the merge
+  makes that row `changed` in `~/Projects/NotebookLMs/research-portfolio-prep/MANIFEST.md`. Repair
+  is **pending Kyle's confirm** on the computed drift table — not yet done.
 - **Both flagship cards re-carded from their repos' `main` (D14)** — they had fallen behind the
   work they describe, in opposite directions:
   - **`blind-cite`: the headline reversed.** D13's "well-powered null at both surfaces" is

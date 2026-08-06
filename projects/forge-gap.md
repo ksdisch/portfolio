@@ -44,8 +44,8 @@ gaps too**, so the story is bracketed at both ends.
   is **injected** or **natural**. And since the target here is a technique with no paper behind it,
   there is no "paper's gap" to claim — this never rounds up to a natural reproduction of anything.
 - **Validation is a self-consistency check, not an answer key** — it reads only the run's own tool
-  results, so it can be *fooled* by a self-consistent-but-wrong retrieval (quantified: ~10% of
-  llama-8b's misses were exactly this).
+  results, so it can be *fooled* by a self-consistent-but-wrong retrieval (quantified: 4/40 = 10%
+  of the llama-8b validation arm's trials were exactly this).
 
 ## Run it
 ```bash

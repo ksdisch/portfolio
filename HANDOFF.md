@@ -1,8 +1,25 @@
 # HANDOFF.md
 
-_Last updated: 2026-08-07 (write-up links + re-verification pass, D15)_
+_Last updated: 2026-08-07 (write-up links D15; front-page polish D16)_
 
-## What was just done (2026-08-07)
+## What was just done (2026-08-07, second pass — D16)
+
+- **The six talk-practice checklists are off the public cards**, preserved verbatim in the private
+  `portfolio-prep/PRACTICE.md`. They were D5's own category still sitting in public — a list of
+  which objections I have rehearsed — and inconsistent besides (`mute-map` and `hush-gauge` never
+  had one). The cards keep "How I talk about this", which is an answer, not a to-do list.
+- **The index shows the chart it was promising.** `forge-gap`'s gap-closure figure is embedded
+  under its lead paragraph; the INJECTED disclosure is printed on the figure itself.
+- **The two oversized lane cells are compressed** (`hush-gauge` 1,494 → ~1,015 chars,
+  `blind-cite` 860 → ~859 with the detail moved to the card it links).
+- **An author/contact line** closes the index — a reader landing here directly had no route to a
+  human.
+- **`hush-gauge`'s carded "1002 offline tests" is corrected**: 1002 collected, **835 run in a
+  fresh clone**; 167 are gated on lens artifacts `.gitignore` never tracks. Found by that repo's
+  own PR review, fixed on both sides. Second carded count in one day that described my working
+  copy rather than the published repo — see `DS-2`.
+
+## What was just done (2026-08-07, first pass — D15)
 
 - **All eight cards now link their repo's write-up (D15).** The six that didn't — `dim-stage`,
   `forge-gap`, `decay-pin`, `lossy-wall`, `ghost-patch`, `mute-map` — got a `**Write-up:**` line

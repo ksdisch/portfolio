@@ -67,7 +67,8 @@ doc. The threshold freeze is enforced by code, not promise: the freeze script re
 an existing thresholds file, and the cells script refuses to run until one exists.
 
 Subjects: Qwen2.5-0.5B / 1.5B / 3B-Instruct, local MPS, forward-only. **Cost: $0.** 1002 offline
-tests; decisions K1–K6 and D1–D48 frozen in the repo's ledger (D15–D24 landed with the M1 brief;
+tests collected, of which **835 run in a fresh clone** — the other 167 are gated on lens
+artifacts `.gitignore` never tracks, and skip rather than fail; decisions K1–K6 and D1–D48 frozen in the repo's ledger (D15–D24 landed with the M1 brief;
 D25–D26 resolved M1's two flagged findings; D27–D33 froze M2's design; D34–D40 froze M3's design
 before any M3 code or run; D41–D44 closed the post-M3 planning session; D45–D48 froze M4).
 

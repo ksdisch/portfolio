@@ -34,6 +34,11 @@ left open. No project repo has moved since 2026-08-05. **One carded number was w
 correct all along). The card now says **88** — the count `dim-stage` PR #46 lands — which puts it
 knowingly *ahead* of that repo's published README until the PR merges.
 
+**Front-page polish 2026-08-07 (Decision D16):** talk-practice checklists moved to the private
+drill repo, `forge-gap`'s chart embedded on the index, the two oversized lane cells compressed onto
+their cards, an author/contact line added, and `hush-gauge`'s carded test count corrected to
+"1002 collected, 835 run in a fresh clone".
+
 ## Next actions
 1. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
    re-run, dim-stage band re-derivation, blind-cite extending its other two models to power).

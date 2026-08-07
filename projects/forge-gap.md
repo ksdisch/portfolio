@@ -68,10 +68,3 @@ controlled testbed, not a natural gap. To show the guardrails matter on *real* f
 switched to weaker models and found *natural* gaps — a model that never submits, a model that
 hallucinates — each closed by a different guardrail. So the artifact is legible in five seconds and
 still statistically honest under the hood."
-
-## Talk-practice checklist
-- [ ] Say "the gap is injected" *before* a skeptic asks — and explain why that's still useful.
-- [ ] Name the four guardrails and the failure class each one targets.
-- [ ] Explain the difference between the injected S4 gap and the natural mistral/llama gaps.
-- [ ] Explain why validation is a *self-consistency* check and how it can be fooled.
-- [ ] Read a Newcombe interval aloud and say what it would mean if it crossed zero.

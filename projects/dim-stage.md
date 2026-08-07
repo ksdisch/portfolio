@@ -87,11 +87,3 @@ readable at 0.5 to 3 billion parameters. I still measured the three downstream p
 that clearly survived was steering a thought *in* and having the model report it, on the 1.5B, with a
 clean dose–response. So: the method generalizes past agent harnesses to mechanistic interp, and the
 honest result is a measured null with one real positive signal."
-
-## Talk-practice checklist
-- [ ] Explain what a Jacobian lens *does* to a non-expert in two sentences.
-- [ ] State the M0 pass bar from memory and why 0/6 is a null (not "inconclusive").
-- [ ] Defend "pre-registered null is a real result," not a failed reproduction.
-- [ ] Explain the AGREE gate and why using Anthropic's code as an *oracle* is a strength, not borrowing.
-- [ ] Answer the band-transplant skeptic without notes.
-- [ ] Describe the 1.5B introspection dose–response and why it's the strongest signal.

@@ -19,9 +19,9 @@ New here? Read the **[Methodology & Honesty Charter](METHODOLOGY.md)** first —
 makes these one body of work. Then read the two projects below — one from each lane.
 
 **Every card links its project's write-up.** All eight repos ship a research paper and a presenter
-pack on their default branch, and seven of the eight also ship a plain-English 1:1 rewrite of the
-paper. Read the card for the result and the caveat; open the paper when you want the full argument
-with every number traced to a committed artifact.
+pack on their default branch (`lossy-wall` names its a presenter *brief*), and seven of the eight
+also ship a plain-English 1:1 rewrite of the paper. Read the card for the result and the caveat;
+open the paper when you want the full argument, with every number traced to a committed artifact.
 
 ---
 
@@ -40,6 +40,11 @@ guardrails take a cheap model from **67.5% → 100%** on a multi-step tool task.
 **injected** (a controlled fault-recovery testbed — stated plainly on the chart), and the project
 *also* finds **natural** gaps on weaker models. Agent reliability + ablation + verification, end
 to end.
+
+[![Closing the reliability gap with error-recovery: 67.5% to 100%, Newcombe 95% CI [+17.3, +48.0], gap is INJECTED](https://raw.githubusercontent.com/ksdisch/forge-gap/main/docs/figures/gap-closure.png)](projects/forge-gap.md)
+
+*`forge-gap`'s flagship chart — and the honesty contract in one image: the caption on the figure
+itself says the gap is **injected**, on the chart, before anyone asks.*
 
 Together they show the range: **one lead from each lane — model internals and agent reliability,
 one method.**
@@ -62,7 +67,7 @@ Every stat below is traced to its project's repo (verified, not taken from notes
 |---------|--------|-------------------|-----------------|--------|
 | ★ **[dim-stage](projects/dim-stage.md)** | Anthropic *Global Workspace* (transformer-circuits, 2026-07-06) | A "Jacobian lens" reads a sparse mid-layer *workspace* where computation is verbally reported & steerable | **Pre-registered NULL** — not readable in Qwen2.5 0.5B/1.5B/3B (0/6 distributions each); 3 downstream properties measured descriptively; lens validated bitwise vs Anthropic's reference | **Complete** (M0–M3 + 4 stretch stages) |
 | **[mute-map](projects/mute-map.md)** | *`dim-stage`'s own recorded result (S4b) — no external oracle* | Deleting one concept's lens direction in the late third of the workspace band makes the model unable to say that word | On the full 12 × 12 prime × probe matrix at 1.5B the diagonal names **0/34** vs pooled off-diagonal **363/374** (+0.971 [+0.867, +0.983]); close-out **M4**: the switch is **VOCAB-SPARING** at 1.5B/3B (0.718 / 0.750 of gated wider-vocabulary items survive all 12 deletions), **AS-SCORED ONLY** | **Complete** (M0–M4) |
-| **[hush-gauge](projects/hush-gauge.md)** | *Original audit — no outside claim; instrument inherited from `dim-stage`, phenomenon from `mute-map`* | Activations reveal a model is about to leak an in-context secret it was ordered to keep — even on trials where it never says it | **Five gates resolved: one PASS, three pre-committed nulls, and one dropped `NOT-RUN`.** G0 **PASS** ×3 (battery has dynamic range, exposure-matched). G1/G2 **FAIL** ×3 — the probe reads speech, not secrecy: recall 0.937 / 0.571 / 0.537 emitting vs 0.103 / 0.068 / 0.088 silent, and on certified-silent trials the secret sits *below* the licensed-word yardstick, significantly at 3B (−0.455 [−0.654, −0.161]). G3 **FAIL** ×3 — *and not the same FAIL*: at 0.5B the causal clause passes (25/25 → 15/25, Newcombe [−0.593, −0.187], random direction moving nothing) while the preservation battery catches 21 genuine factual errors on benign QA; at 3B the battery holds and there is nothing to certify. G4 **`NOT-RUN`** ×3 — the single pre-registered candidate passed both structural checks and failed its behavioural one where that check could gate (0.5B, 1.5B; 3B's cell sat under the n ≥ 20 house floor), so it dropped by its own ladder (K5's pre-committed fallback). M4, gateless: the late third's presence orders the effect, not the layer count. Closing claim at licensed strength: **not unified at these scales, with this instrument** | **Complete** (M0–M4; v1 closed 2026-08-05) |
+| **[hush-gauge](projects/hush-gauge.md)** | *Original audit — no outside claim; instrument inherited from `dim-stage`, phenomenon from `mute-map`* | Activations reveal a model is about to leak an in-context secret it was ordered to keep — even on trials where it never says it | **No — and the ledger closed without a single re-tuned bar.** Five gates: **G0 PASS** ×3, **G1/G2/G3 FAIL** ×3 (all pre-committed nulls), **G4 `NOT-RUN`** ×3 (dropped by its own pre-committed validation ladder — a passing outcome, not a gap). The probe reads **speech, not secrecy**: recall 0.937 / 0.571 / 0.537 while emitting vs 0.103 / 0.068 / 0.088 while silent, and on certified-silent trials the secret sits *below* the licensed-word yardstick — significantly at 3B (−0.455 [−0.654, −0.161]). Closing claim, at exactly its licensed strength: **not unified at these scales, with this instrument**. [The card carries the full gate ledger.](projects/hush-gauge.md) | **Complete** (M0–M4; v1 closed 2026-08-05) |
 
 ---
 
@@ -82,7 +87,7 @@ overturned the inference it had drawn from a null. Its card tells that story fir
 | **[decay-pin](projects/decay-pin.md)** | Governance Decay / Constraint Pinning (arXiv [2606.22528](https://arxiv.org/abs/2606.22528)) | An in-context safety rule silently decays when compaction evicts it; re-pinning restores compliance | Rule visible **0/20** → compaction **20/20** → re-pin **0/40**; gap Newcombe [+77.2, +100] on **all 3 models**; replicates on 2nd task family | **Complete** (v1 + v2) |
 | **[lossy-wall](projects/lossy-wall.md)** | Reclaim / Brittle Memory (arXiv [2606.25449](https://arxiv.org/abs/2606.25449)) | At matched budget, a note keeping a *wrong conclusion* but dropping its source makes the error uncorrectable — worse than empty memory | Lossy reclaim **≤ 1/290** (Wilson UB ≤ 0.10) vs source-first **240/240**; "worse than empty" **+58%** [+44.2, +67.5]; cross-check vs author's harness **AGREE** | **Complete** |
 | **[ghost-patch](projects/ghost-patch.md)** | Obey, Diverge, Collapse (arXiv [2607.04537](https://arxiv.org/abs/2607.04537)) | Code LLMs follow a wrong-location repair instruction, compound "ghost" errors, and land in an unrecoverable state | **Two NULLS reported as headlines**: awareness doesn't reproduce (0/6 models); single-pass obedience drop ≈ 0 (CIs cross zero). Back half measured where powered | **v1 Complete** ($1.42 / $5) |
-| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv [2607.09349](https://arxiv.org/abs/2607.09349)) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **A null that did not survive its own audit.** M1 read 0/20 at the stark surface and reported a null; a sizing audit found the N had been derived from clean-trial *yield*, never from power (0/20 → Wilson upper 16.1%, against a 14% reference). A pre-registered, one-look extension to **N=80** then found DG at **both** surfaces: stark **3/80 [1.3%, 10.5%]**, camouflaged **7/80 [4.3%, 17.0%]**. The measurement stands; the inference does not. On all **ten** DG answers the **flagship contrast rendered**: faithfulness PASS **10/10**, citation PASS **10/10**, ownership flags every one | **M0 + M1 + M1C complete** ($0.072 / $5) |
+| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv [2607.09349](https://arxiv.org/abs/2607.09349)) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **A null that did not survive its own audit.** M1 read 0/20 at the stark surface and called it a null; a sizing audit found the N had been derived from clean-trial *yield*, never from power. A pre-registered, one-look extension to **N=80** found DG at **both** surfaces — stark **3/80 [1.3%, 10.5%]**, camouflaged **7/80 [4.3%, 17.0%]**. The measurement stands; the inference does not. On all **ten** DG answers the flagship contrast rendered: faithfulness PASS **10/10**, citation PASS **10/10**, ownership flags every one. [The card tells the reversal first.](projects/blind-cite.md) | **M0 + M1 + M1C complete** ($0.072 / $5) |
 
 ---
 
@@ -138,6 +143,13 @@ guards — [the charter](METHODOLOGY.md) states all five once.
 *Repo visibility: **all eight repos are public** (re-verified 2026-08-07). Every card links out to
 the real repo and its write-up; no code is copied into this folder. (The paper authors' own reference
 packages are used as cross-check oracles where one exists — not my work, so not carded.)*
+
+---
+
+**Who built this:** Kyle Disch — data engineer in Chicago, reproducing recent AI-failure research
+after hours. [GitHub profile](https://github.com/ksdisch) · [LinkedIn](https://linkedin.com/in/ksdisch).
+Every number here traces to a public repo you can clone and run; if one doesn't, that's a bug and I
+want to hear about it.
 
 ---
 

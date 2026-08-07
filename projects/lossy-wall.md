@@ -65,9 +65,3 @@ stays fixable at the same budget. I rebuilt the harness independently, scored it
 pre-registered gates on the wall, on 'content not length,' and on 'worse than empty,' and then
 cross-checked one cell against the author's own code — we agreed to within one trial across hundreds.
 Where my third model tripped a trigger I swapped to a same-family larger one and labeled it plainly."
-
-## Talk-practice checklist
-- [ ] Explain "matched budget" and why it's the whole point (rules out "just kept more").
-- [ ] Explain the padded-note control (content vs. length) in one sentence.
-- [ ] Defend the qwen-7b→72b substitution as honest, not a fudge.
-- [ ] Say what the cross-check with the author's harness proves — and what it doesn't.

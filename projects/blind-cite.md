@@ -175,18 +175,3 @@ doesn't, and the paper says so about itself. And the artifact landed: ten answer
 passed, citation passed, and only ownership caught it. The lesson I actually take from it is that a
 null needs its own power argument — 'we hit our pre-committed N' isn't one if the N was sized for a
 different quantity."
-
-## Talk-practice checklist
-- [ ] Tell the reversal *first*, and say precisely what was withdrawn: the inference, not the
-      measurement.
-- [ ] Explain why a fabricated corpus makes attribution *exact* ground truth (vs an LLM judge).
-- [ ] State the sizing finding from memory: 0/20 → Wilson upper 16.1%, against a 14% reference.
-- [ ] Name the three guards that make an after-the-fact extension defensible, and say what the
-      trigger was (the audit, not the rate).
-- [ ] Own the stage-heterogeneity limitation unprompted — engagement 35% vs 55–65% — and explain
-      why you will *not* quote an engagement-conditioned rate.
-- [ ] Explain why the primary interval excluding zero while the paired one does not is two
-      questions, not a contradiction.
-- [ ] Say which surface was pre-committed and which was a labeled addition (repo D6) — and why
-      running both is not moving the goalposts.
-- [ ] Answer "your null flipped — why should I trust the new number?" without getting defensive.

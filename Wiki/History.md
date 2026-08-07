@@ -182,6 +182,21 @@ from what belongs to me.
   recorded as a decision]
 
 
+### Front page polished; the checklists go private — 2026-08-07
+- **Landed:** the six public cards' talk-practice checklists moved verbatim into the private
+  `portfolio-prep/PRACTICE.md`; `forge-gap`'s gap-closure figure embedded on the index; the
+  `hush-gauge` and `blind-cite` lane cells compressed onto their cards; an author/contact line
+  added — see D16 in `Decisions.md`
+- **Why:** the checklists were the same category D5 moved private a week earlier and had simply
+  been missed — publishing which objections one has rehearsed undercuts the calibrated confidence
+  the cards otherwise earn [Fact — D5, D16]
+- **Also:** `hush-gauge`'s carded "1002 offline tests" corrected to 1002 collected / 835 run in a
+  fresh clone — the second carded count that day found to describe the author's working copy
+  rather than the published repo, after `DS-2`'s 118-vs-86 [Fact — D16; hush-gauge PR #21 review]
+- **Tradeoff:** the checklists are preserved rather than deleted, which means the drill material
+  now lives in two repos' histories — the public one keeps them in its git log, as D5's own
+  moved files already do [Inference — the same tradeoff D5 recorded and accepted]
+
 ---
 
 ## Mining coverage

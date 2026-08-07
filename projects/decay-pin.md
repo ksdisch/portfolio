@@ -63,9 +63,3 @@ worse. Re-pinning the rule on every compaction pulls it back to a clean zero, st
 equivalent to never having lost it. I showed that on three models and two task families with Newcombe
 intervals, and in v2 I compared compaction strategies — head-tail preserves the rule for free, while
 LLM-summarize leaks it about 5% of the time. Cheap models, pre-registered gates, judge-free scoring."
-
-## Talk-practice checklist
-- [ ] Explain *why* the rule disappears (compaction eviction), not just that it does.
-- [ ] Say what "equivalent to the floor within a +10% margin" means and why it's the right test for the fix.
-- [ ] Defend claiming the *gap*, not the paper's point estimate.
-- [ ] Explain the v2 strategy finding (head-tail free; summarize's 5% leak as a tail risk).

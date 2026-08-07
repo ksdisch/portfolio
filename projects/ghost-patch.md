@@ -67,9 +67,3 @@ report those as the headline nulls. It's a pre-registered, judge-free measuremen
 real result — my read is that this failure mode needs a stronger model or the iterative-sabotage
 regime, not a single pass at the cheap tier. I still closed the chain descriptively and kept every
 underpowered label honest. Whole thing ran for $1.42."
-
-## Talk-practice checklist
-- [ ] Explain why a null here is *informative*, not a failed project.
-- [ ] Distinguish "blindness" from "blind obedience" (why NULL ① reframes the paper's story).
-- [ ] Read the obedience-drop CIs and explain why crossing zero = null.
-- [ ] Explain "underpowered by the funnel" — why N shrank and why you still reported descriptively.

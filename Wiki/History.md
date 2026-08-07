@@ -158,6 +158,24 @@ from what belongs to me.
   quietly replaced — D13 is marked Superseded and GAPS names the withdrawal explicitly, so a
   reader can see the correction happened rather than only its result [Fact — D14, GAPS-AND-NEXT]
 
+### Every card linked to its write-up; the CI-theater finding — 2026-08-07
+- **Landed:** a `**Write-up:**` line on the six cards that lacked one (`dim-stage`, `forge-gap`,
+  `decay-pin`, `lossy-wall`, `ghost-patch`, `mute-map`), the missing plain-English-rewrite link on
+  `blind-cite`, and hyperlinks on the four cited arXiv IDs — see D15 in `Decisions.md`
+- **Why:** it was the single mechanical item D14 left open — eight repos shipping a paper and a
+  presenter pack that seven-eighths of the index never pointed at [Fact — D14, GAPS-AND-NEXT]
+- **The re-verification result was a non-event, which is the point:** no project repo had moved on
+  `main` since 2026-08-05, so every carded number still held. The sync D14 established is the first
+  one to survive a later check unbroken [Fact — `git log origin/main` across all eight repos]
+- **What the pass did find is upstream:** `dim-stage`, `lossy-wall` and `ghost-patch` ship green CI
+  badges over workflows that execute zero tests — `uv run "$f"` against test files with no
+  `__main__` runner (0 of 11, 0 of 15, 0 of 12 files) — plus `hush-gauge` with no CI and
+  `blind-cite` with no LICENSE. Verified by running the workflow's own command [Fact — D15]
+- **Tradeoff:** the defect is disclosed in this repo's ledger rather than fixed in the three repos
+  that own it, which keeps D4's no-code-here boundary intact but leaves the vacuous badges live
+  until a session touches those repos [Inference — the boundary is D4; the deferral itself is not
+  recorded as a decision]
+
 
 ---
 

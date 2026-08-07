@@ -7,8 +7,14 @@
 > reproduced both the decay and the fix on cheap models, and put error bars on it.
 
 **Repo:** <https://github.com/ksdisch/decay-pin> (public) · **Reproduces:** *Governance Decay* +
-*Constraint Pinning* (arXiv **2606.22528**) · **Status:** Complete (v1 + v2) · **Method:**
-[charter](../METHODOLOGY.md)
+*Constraint Pinning* (arXiv **[2606.22528](https://arxiv.org/abs/2606.22528)**) ·
+**Status:** Complete (v1 + v2) · **Method:** [charter](../METHODOLOGY.md)
+
+**Write-up:** [paper](https://github.com/ksdisch/decay-pin/blob/main/docs/paper/decay-pin-paper.md)
+· [presenter pack](https://github.com/ksdisch/decay-pin/blob/main/docs/paper/decay-pin-presenter-pack.md)
+· [plain-English rewrite](https://github.com/ksdisch/decay-pin/blob/main/docs/papers/decay-pin-eli5.md)
+— written from the recorded results at v1 + v2. `ROADMAP.md` carries the per-stage detail and
+integrity counts.
 
 ## The claim (the paper's primitive)
 An in-context safety rule **silently decays** when ordinary context compaction evicts it from the

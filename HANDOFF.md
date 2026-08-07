@@ -1,8 +1,27 @@
 # HANDOFF.md
 
-_Last updated: 2026-08-05 (denominator fix, PR #13)_
+_Last updated: 2026-08-07 (write-up links + re-verification pass, D15)_
 
-## What was just done
+## What was just done (2026-08-07)
+
+- **All eight cards now link their repo's write-up (D15).** The six that didn't — `dim-stage`,
+  `forge-gap`, `decay-pin`, `lossy-wall`, `ghost-patch`, `mute-map` — got a `**Write-up:**` line
+  matching the shape `hush-gauge` and `blind-cite` already used: paper · presenter pack (·
+  presenter *brief* for lossy-wall, which names it that) · plain-English rewrite. `blind-cite`'s
+  card gained the rewrite link it was missing. **`hush-gauge` is the only repo with no
+  plain-English rewrite** — its line stays at paper + presenter pack.
+- **Every added URL was checked live**, not pattern-constructed: 20 GitHub blob URLs and all four
+  cited arXiv IDs returned HTTP 200. The arXiv IDs are now hyperlinked on both the four cards and
+  the README's Lane-2 table rows (they were bare text before, so a skeptic had to copy-paste).
+- **Re-verification pass: nothing else went stale.** No project repo has moved on `main` since
+  2026-08-05, so every carded number still holds — the D14 sync is intact. The most recent upstream
+  work (paper-eli5 rewrites, glossed HTML, MIT licenses, CI workflows) is additive documentation,
+  not new results.
+- **Three upstream defects found and disclosed, not fixed here.** `dim-stage`, `lossy-wall` and
+  `ghost-patch` ship green CI badges over workflows that run **zero tests**; `hush-gauge` has no CI;
+  `blind-cite` has no LICENSE. See "Open questions" below.
+
+## What was done before that (2026-08-05)
 - **`forge-gap.md:47-48` denominator fix (PR #13, merged).** The card misattributed the 10%
   wrong-record-retrieval figure to "llama-8b's misses" — corrected to the recorded 4/40 = 10% of
   the validation arm's 40 trials (verified against `forge-gap`'s `origin/main`, D4). This card is
@@ -31,30 +50,51 @@ _Last updated: 2026-08-05 (denominator fix, PR #13)_
 
 ## Where things stand
 The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards.
-All eight repos are public, and **as of 2026-08-05 every card is in sync with its repo** — the
-first time that has been true since `hush-gauge` was carded mid-flight on 2026-08-01.
-
-A new fact worth carrying forward: **all eight repos now ship a research paper and a presenter
-pack** on their default branch. The `hush-gauge` and `blind-cite` cards link theirs; the other six
-do not yet, which is the top next action.
+All eight repos are public, and **as of 2026-08-07 every card is in sync with its repo and links
+its write-up** — the mechanical backlog D14 left behind is empty.
 
 The audit report (`docs/audit-2026-08-03.md`) remains the authoritative findings surface for items
-not yet triaged into GAPS-AND-NEXT (D12) — but note it **predates both flips** above (blind-cite 2026-08-04, hush-gauge 2026-08-05).
+not yet triaged into GAPS-AND-NEXT (D12) — but it **predates both flips** (blind-cite 2026-08-04,
+hush-gauge 2026-08-05) **and its per-item statuses are not maintained**. Its top-10 #3 is now stale
+in the opposite direction: `uv run pytest` in `dim-stage` collects **118**, so the card's "118
+analytic tests" is correct as written. Treat the report as a dated snapshot, not a live checklist.
 
 ## Immediate next move
-Link the remaining six cards to their repos' paper + presenter pack — that is the one mechanical
-item left. The notebook re-snapshot that D14 made necessary is **already done** (2026-08-05, seven
-sources repaired, post-repair drift check clean).
+Nothing is mechanically outstanding in this repo. The two live threads are (a) the
+`research-portfolio-prep` notebook needs a re-snapshot — D15 moved five tracked source rows
+(README, PROJECT, GAPS-AND-NEXT, Decisions, and six project cards), and (b) the upstream CI/license
+defects below, which belong to the project repos.
 
 ## Open questions / blockers
-- Six cards do not yet link their repo's merged write-up (Unresolved — mechanical, not a judgment
-  call)
+- **Upstream CI theater (Unresolved — belongs to three project repos).** `dim-stage`,
+  `lossy-wall` and `ghost-patch` run `uv run "$f"` over their `test_*.py` files in CI. None of
+  those files has a `__main__` runner (0 of 11, 0 of 15, 0 of 12), so each file imports, exits 0,
+  and **no test executes** — under a green badge the README points at. Verified by running it:
+  `uv run test_stats.py` → exit 0, no output; `uv run pytest -q test_stats.py` → 6 passed. Fix is
+  one word (`uv run pytest "$f"`, the shape `mute-map` already uses) plus a collected-count assert.
+  `decay-pin` uses the same loop but all 13 of its test files *do* have runners, so its CI is real.
+- **`hush-gauge` has no CI workflow** and **`blind-cite` ships no LICENSE** (Unresolved — the other
+  seven repos have both).
 - ✅ Resolved 2026-08-05 — the notebook's stale copies were repaired on Kyle's confirm (seven
-  sources: both cards, four front-matter docs, and blind-cite's README)
+  sources: both cards, four front-matter docs, and blind-cite's README). **Re-opened by D15** —
+  five of those rows moved again on 2026-08-07.
 - `blind-cite` extended only `qwen-2.5-7b` to power; the other two models sit at 0/20 with a 16.1%
   Wilson upper and must be read as *untested at N=80, not shown clean* (Unresolved — belongs to
   that repo)
 - No sharing caveat outstanding — the front page and the repos agree
+
+## Files touched recently (2026-08-07)
+
+**Write-up-link + re-verification pass (D15):**
+- projects/dim-stage.md, forge-gap.md, decay-pin.md, lossy-wall.md, ghost-patch.md, mute-map.md —
+  `**Write-up:**` line added; the four with arXiv IDs also got them hyperlinked
+- projects/blind-cite.md — plain-English rewrite link added beside the existing paper/pack links
+- README.md — a "every card links its write-up" paragraph under the charter pointer; four arXiv IDs
+  hyperlinked in the Lane-2 table; visibility footer re-dated to the 2026-08-07 verification
+- GAPS-AND-NEXT.md — "Do before sharing" updated; the CI-theater finding and the audit report's
+  unmaintained-status caveat added
+- PROJECT.md — status and next actions · Decisions.md — D15 appended
+- Wiki/History.md — milestone appended · HANDOFF.md — this refresh
 
 ## Files touched recently (2026-08-05)
 

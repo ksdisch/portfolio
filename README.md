@@ -18,6 +18,11 @@ any of them.
 New here? Read the **[Methodology & Honesty Charter](METHODOLOGY.md)** first — it's the spine that
 makes these one body of work. Then read the two projects below — one from each lane.
 
+**Every card links its project's write-up.** All eight repos ship a research paper and a presenter
+pack on their default branch, and seven of the eight also ship a plain-English 1:1 rewrite of the
+paper. Read the card for the result and the caveat; open the paper when you want the full argument
+with every number traced to a committed artifact.
+
 ---
 
 ## Read these two first
@@ -74,10 +79,10 @@ overturned the inference it had drawn from a null. Its card tells that story fir
 | Project | Reproduces | Claim in one line | Headline result | Status |
 |---------|-----------|-------------------|-----------------|--------|
 | ★ **[forge-gap](projects/forge-gap.md)** | "Forge"-style harness-reliability guardrails *(a technique, no arXiv)* | Generic guardrails make a cheap model reliable on multi-step tool tasks; an ablation rig measures each one's contribution | **67.5% → 100%**, gap **+32.5pp** (Newcombe 95% [+17.3, +48.0], N=40) — gap **INJECTED**; also **natural** gaps on weak models (+45pp, +75pp) | **Complete** (11 stages) |
-| **[decay-pin](projects/decay-pin.md)** | Governance Decay / Constraint Pinning (arXiv 2606.22528) | An in-context safety rule silently decays when compaction evicts it; re-pinning restores compliance | Rule visible **0/20** → compaction **20/20** → re-pin **0/40**; gap Newcombe [+77.2, +100] on **all 3 models**; replicates on 2nd task family | **Complete** (v1 + v2) |
-| **[lossy-wall](projects/lossy-wall.md)** | Reclaim / Brittle Memory (arXiv 2606.25449) | At matched budget, a note keeping a *wrong conclusion* but dropping its source makes the error uncorrectable — worse than empty memory | Lossy reclaim **≤ 1/290** (Wilson UB ≤ 0.10) vs source-first **240/240**; "worse than empty" **+58%** [+44.2, +67.5]; cross-check vs author's harness **AGREE** | **Complete** |
-| **[ghost-patch](projects/ghost-patch.md)** | Obey, Diverge, Collapse (arXiv 2607.04537) | Code LLMs follow a wrong-location repair instruction, compound "ghost" errors, and land in an unrecoverable state | **Two NULLS reported as headlines**: awareness doesn't reproduce (0/6 models); single-pass obedience drop ≈ 0 (CIs cross zero). Back half measured where powered | **v1 Complete** ($1.42 / $5) |
-| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv 2607.09349) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **A null that did not survive its own audit.** M1 read 0/20 at the stark surface and reported a null; a sizing audit found the N had been derived from clean-trial *yield*, never from power (0/20 → Wilson upper 16.1%, against a 14% reference). A pre-registered, one-look extension to **N=80** then found DG at **both** surfaces: stark **3/80 [1.3%, 10.5%]**, camouflaged **7/80 [4.3%, 17.0%]**. The measurement stands; the inference does not. On all **ten** DG answers the **flagship contrast rendered**: faithfulness PASS **10/10**, citation PASS **10/10**, ownership flags every one | **M0 + M1 + M1C complete** ($0.072 / $5) |
+| **[decay-pin](projects/decay-pin.md)** | Governance Decay / Constraint Pinning (arXiv [2606.22528](https://arxiv.org/abs/2606.22528)) | An in-context safety rule silently decays when compaction evicts it; re-pinning restores compliance | Rule visible **0/20** → compaction **20/20** → re-pin **0/40**; gap Newcombe [+77.2, +100] on **all 3 models**; replicates on 2nd task family | **Complete** (v1 + v2) |
+| **[lossy-wall](projects/lossy-wall.md)** | Reclaim / Brittle Memory (arXiv [2606.25449](https://arxiv.org/abs/2606.25449)) | At matched budget, a note keeping a *wrong conclusion* but dropping its source makes the error uncorrectable — worse than empty memory | Lossy reclaim **≤ 1/290** (Wilson UB ≤ 0.10) vs source-first **240/240**; "worse than empty" **+58%** [+44.2, +67.5]; cross-check vs author's harness **AGREE** | **Complete** |
+| **[ghost-patch](projects/ghost-patch.md)** | Obey, Diverge, Collapse (arXiv [2607.04537](https://arxiv.org/abs/2607.04537)) | Code LLMs follow a wrong-location repair instruction, compound "ghost" errors, and land in an unrecoverable state | **Two NULLS reported as headlines**: awareness doesn't reproduce (0/6 models); single-pass obedience drop ≈ 0 (CIs cross zero). Back half measured where powered | **v1 Complete** ($1.42 / $5) |
+| **[blind-cite](projects/blind-cite.md)** | Deceptive grounding (arXiv [2607.09349](https://arxiv.org/abs/2607.09349)) | A RAG answer can pass every faithfulness/citation check yet attribute entity **Y's** evidence to **X** | **A null that did not survive its own audit.** M1 read 0/20 at the stark surface and reported a null; a sizing audit found the N had been derived from clean-trial *yield*, never from power (0/20 → Wilson upper 16.1%, against a 14% reference). A pre-registered, one-look extension to **N=80** then found DG at **both** surfaces: stark **3/80 [1.3%, 10.5%]**, camouflaged **7/80 [4.3%, 17.0%]**. The measurement stands; the inference does not. On all **ten** DG answers the **flagship contrast rendered**: faithfulness PASS **10/10**, citation PASS **10/10**, ownership flags every one | **M0 + M1 + M1C complete** ($0.072 / $5) |
 
 ---
 
@@ -130,9 +135,9 @@ guards — [the charter](METHODOLOGY.md) states all five once.
 
 ---
 
-*Repo visibility: **all eight repos are public** (as of 2026-08-03). Every card links out to the
-real repo; no code is copied into this folder. (The paper authors' own reference packages are used as cross-check
-oracles where one exists — not my work, so not carded.)*
+*Repo visibility: **all eight repos are public** (re-verified 2026-08-07). Every card links out to
+the real repo and its write-up; no code is copied into this folder. (The paper authors' own reference
+packages are used as cross-check oracles where one exists — not my work, so not carded.)*
 
 ---
 

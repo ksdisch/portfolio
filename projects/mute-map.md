@@ -11,6 +11,11 @@
 [`dim-stage`](dim-stage.md) · **Status:** **Complete (M0–M4; close-out landed 2026-07-29)** ·
 **Method:** [charter](../METHODOLOGY.md)
 
+**Write-up:** [paper](https://github.com/ksdisch/mute-map/blob/main/docs/paper/mute-map-paper.md)
+· [presenter pack](https://github.com/ksdisch/mute-map/blob/main/docs/paper/mute-map-presenter-pack.md)
+· [plain-English rewrite](https://github.com/ksdisch/mute-map/blob/main/docs/paper/mute-map-paper-eli5.md)
+— written from the recorded results at M0–M4, with six figures.
+
 ## The honest framing (read this first)
 
 This is **not** a paper reproduction. `forge-gap` also reproduces a technique with no arXiv paper, but

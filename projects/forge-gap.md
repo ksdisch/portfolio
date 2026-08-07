@@ -11,6 +11,12 @@
 harness-reliability guardrail primitives *(a technique, **no arXiv paper**)* · **Status:** Complete
 (11 stages, S0–S11) · **Method:** [charter](../METHODOLOGY.md)
 
+**Write-up:** [paper](https://github.com/ksdisch/forge-gap/blob/main/docs/paper/forge-gap-paper.md)
+· [presenter pack](https://github.com/ksdisch/forge-gap/blob/main/docs/paper/forge-gap-presenter-pack.md)
+· [plain-English rewrite](https://github.com/ksdisch/forge-gap/blob/main/docs/papers/forge-gap-eli5.md)
+— written from the recorded results across all eleven stages. The repo's `README.md` §12 is the
+one-page version of the same story.
+
 ## The claim (the primitive)
 Specific, generic guardrails — **error-recovery** (retry a transient tool fault), **retry-nudge**
 (re-prompt a malformed call), **submit-nudge** (force a final answer), and **validation** (check the

@@ -15,11 +15,24 @@ kept honest so a skeptic sees I know exactly where the edges are.*
   surfaces. Carded 2026-08-05 (D14).
 - ✅ **`hush-gauge` is complete** (M0–M4, 2026-08-05) and carded in full, including `G4 NOT-RUN`
   (D14). Its card and this file no longer carry it as in-flight.
-- ✅ **All eight repos ship a research paper and a presenter pack** on their default branch. The
-  `hush-gauge` and `blind-cite` cards link theirs; the other six do not yet.
+- ✅ **All eight repos ship a research paper and a presenter pack** on their default branch, and
+  **all eight cards now link theirs** (2026-08-07, D15) — seven also link a plain-English 1:1
+  rewrite; `hush-gauge` is the one repo without one.
+- ⚠️ **Three repos ship a green CI badge over a workflow that runs zero tests** (found 2026-08-07):
+  `dim-stage`, `lossy-wall` and `ghost-patch` loop `uv run "$f"` over `test_*.py` files that have
+  no `__main__` runner, so every file imports, exits 0, and no test executes. Verified by running
+  it (`uv run test_stats.py` → exit 0, silent; `uv run pytest -q test_stats.py` → 6 passed).
+  `decay-pin` uses the same loop but its files *do* have runners, so its CI is real; `forge-gap`,
+  `mute-map` and `blind-cite` invoke pytest properly. **`hush-gauge` has no CI workflow at all**
+  and **`blind-cite` ships no LICENSE**. These belong to those repos, not this one — but a vacuous
+  green badge is the worst possible artifact in a portfolio whose brand is verification, so it is
+  named here rather than left to the audit report.
 - The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) remains the
   authoritative findings surface for the items not yet triaged into this ledger. Note it predates
-  both flips above (blind-cite 2026-08-04, hush-gauge 2026-08-05).
+  both flips above (blind-cite 2026-08-04, hush-gauge 2026-08-05) and **its per-item statuses are
+  not maintained** — its top-10 #3 ("118 analytic tests" → 86 in dim-stage) is now stale in the
+  other direction: `uv run pytest` collects **118**, so the carded number is correct as written.
+  Read the report as a dated snapshot, not a live checklist.
 
 ---
 

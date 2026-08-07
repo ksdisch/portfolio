@@ -25,19 +25,25 @@ are now current — `hush-gauge` is **complete (M0–M4)** with the full gate le
 `G4 NOT-RUN`, and `blind-cite`'s "well-powered null" is **withdrawn**, replaced by its own
 pre-registered M1C extension finding DG at both surfaces. All eight linked repos are public and
 **all eight now ship a research paper and presenter pack** on their default branch. The portfolio
-is complete as a shareable artifact; **every card is in sync with its repo as of 2026-08-07**, and
-the open work is keeping it that way as the underlying projects advance.
+is complete as a shareable artifact, and the open work is keeping it current as the underlying
+projects advance.
 **Write-ups linked 2026-08-07 (Decision D15):** all eight cards now point at their repo's paper +
 presenter pack (+ plain-English rewrite where one exists), closing the last mechanical item D14
-left open. No project repo has moved since 2026-08-05, so every carded number still holds.
+left open. No project repo has moved since 2026-08-05. **One carded number was wrong regardless:**
+`dim-stage`'s "118 analytic tests" is 86 in a clean clone (the 2026-08-03 audit's `DS-2`, correct
+all along) and the card now says 86 — which puts it knowingly *ahead* of `dim-stage`'s own README
+until that repo's PR #46 lands.
 
 ## Next actions
 1. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
    re-run, dim-stage band re-derivation, blind-cite extending its other two models to power).
-2. **Upstream, not carded:** three repos ship a green CI badge over a workflow that executes zero
-   tests (`dim-stage`, `lossy-wall`, `ghost-patch` — the `uv run "$f"` template), `hush-gauge` has
-   no CI at all, and `blind-cite` ships no LICENSE. Found 2026-08-07; belongs to those repos, and
-   the badge defect contradicts the portfolio's own verification brand (Unresolved).
+2. **Upstream fixes in flight (found 2026-08-07).** Three repos shipped a green CI badge over a
+   workflow that executes zero tests — `dim-stage` (PR #46), `lossy-wall` (PR #44),
+   `ghost-patch` (PR #26) — a defect that contradicts the portfolio's own verification brand.
+   `dim-stage` PR #46 also carries the upstream half of `DS-2`: its README's "118 analytic tests"
+   → 86, and a `norecursedirs` pin so the count means *this project's* tests whether or not the
+   reference clone is present. **Until #46 merges, the card is knowingly ahead of its repo.**
+   Still unstarted: `hush-gauge` has no CI at all, `blind-cite` ships no LICENSE (Unresolved).
 3. ⚠️ **Re-snapshot the `research-portfolio-prep` NotebookLM notebook — open again.** D15 moved
    **ten** tracked rows: README, GAPS-AND-NEXT, Decisions, and all seven project cards it touched.
    (`PROJECT.md` is *not* a tracked row — it is on the manifest's deliberate-exclusion list.)

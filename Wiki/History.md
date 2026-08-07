@@ -170,8 +170,8 @@ from what belongs to me.
   `dim-stage`'s card advertised "118 analytic tests" where a clean clone collects 86. The audit's
   `DS-2` had said exactly that and was right; a first pass at re-verifying it reproduced 118 from
   the `.gitignore`d `refs/jacobian-lens/` clone in the local working copy and briefly published a
-  retraction, which PR #15's adversarial review caught as finding F1 (critical) before merge
-  [Fact — D15; review mailbox `2026-08-07-docs-link-writeups-and-refresh.md`]
+  retraction, which PR #15's adversarial review caught as a critical finding before merge
+  [Fact — D15; PR #15 review thread]
 - **What the pass did find is upstream:** `dim-stage`, `lossy-wall` and `ghost-patch` ship green CI
   badges over workflows that execute zero tests — `uv run "$f"` against test files with no
   `__main__` runner (0 of 11, 0 of 15, 0 of 12 files) — plus `hush-gauge` with no CI and

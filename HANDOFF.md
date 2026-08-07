@@ -13,8 +13,10 @@ _Last updated: 2026-08-07 (write-up links + re-verification pass, D15)_
 - **Every added URL was checked live**, not pattern-constructed: 20 GitHub blob URLs and all four
   cited arXiv IDs returned HTTP 200. The arXiv IDs are now hyperlinked on both the four cards and
   the README's Lane-2 table rows (they were bare text before, so a skeptic had to copy-paste).
-- **Re-verification pass: nothing else went stale.** No project repo has moved on `main` since
-  2026-08-05, so every carded number still holds — the D14 sync is intact. The most recent upstream
+- **Re-verification pass: nothing went stale under our feet, but one number was wrong all along.**
+  No project repo has moved on `main` since 2026-08-05. **`dim-stage`'s card advertised "118
+  analytic tests" where a clean clone collects 86** — the 2026-08-03 audit's `DS-2` said so and was
+  right. Card corrected to 86; see "Open questions" for the upstream half. The most recent upstream
   work (paper-eli5 rewrites, glossed HTML, MIT licenses, CI workflows) is additive documentation,
   not new results.
 - **Three upstream defects found and disclosed, not fixed here.** `dim-stage`, `lossy-wall` and
@@ -50,14 +52,16 @@ _Last updated: 2026-08-07 (write-up links + re-verification pass, D15)_
 
 ## Where things stand
 The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards.
-All eight repos are public, and **as of 2026-08-07 every card is in sync with its repo and links
-its write-up** — the mechanical backlog D14 left behind is empty.
+All eight repos are public and **every card links its write-up** — the mechanical backlog D14 left
+behind is empty. One card is **not** in sync with its repo: `dim-stage`'s now says 86 analytic
+tests (the true count) while the repo's own `README.md` still says 118. `dim-stage` PR #46 fixes
+the upstream half; until it merges, that one row is knowingly ahead of its source.
 
 The audit report (`docs/audit-2026-08-03.md`) remains the authoritative findings surface for items
 not yet triaged into GAPS-AND-NEXT (D12) — but it **predates both flips** (blind-cite 2026-08-04,
-hush-gauge 2026-08-05) **and its per-item statuses are not maintained**. Its top-10 #3 is now stale
-in the opposite direction: `uv run pytest` in `dim-stage` collects **118**, so the card's "118
-analytic tests" is correct as written. Treat the report as a dated snapshot, not a live checklist.
+hush-gauge 2026-08-05) **and its per-item statuses are not maintained** — read it as a dated
+snapshot, not a live checklist, and re-verify any finding against a **clean checkout** before
+acting on it. Its top-10 #3 (`DS-2`) is live and was fixed here on 2026-08-07.
 
 ## Immediate next move
 Nothing is mechanically outstanding in this repo. The two live threads are (a) the
@@ -70,13 +74,19 @@ exclusion list (`MANIFEST.md`), along with `HANDOFF.md`, `Sources.md` and `Wiki/
 upstream CI/license defects below, which belong to the project repos.
 
 ## Open questions / blockers
-- **Upstream CI theater (Unresolved — belongs to three project repos).** `dim-stage`,
-  `lossy-wall` and `ghost-patch` run `uv run "$f"` over their `test_*.py` files in CI. None of
-  those files has a `__main__` runner (0 of 11, 0 of 15, 0 of 12), so each file imports, exits 0,
-  and **no test executes** — under a green badge the README points at. Verified by running it:
-  `uv run test_stats.py` → exit 0, no output; `uv run pytest -q test_stats.py` → 6 passed. Fix is
-  one word (`uv run pytest "$f"`, the shape `mute-map` already uses) plus a collected-count assert.
-  `decay-pin` uses the same loop but all 13 of its test files *do* have runners, so its CI is real.
+- **Upstream CI theater — fixes open, not yet merged.** `dim-stage`, `lossy-wall` and
+  `ghost-patch` ran `uv run "$f"` over their `test_*.py` files in CI. None of those files has a
+  `__main__` runner (0 of 11, 0 of 15, 0 of 12), so each file imported, exited 0, and **no test
+  executed** — under a green badge the README points at. Verified by running it: `uv run
+  test_stats.py` → exit 0, no output; `uv run pytest -q test_stats.py` → 6 passed. Fixed in
+  `dim-stage` PR #46, `lossy-wall` PR #44, `ghost-patch` PR #26 — pytest invoked per file (the
+  shape `mute-map` already uses) plus a collected-count floor so the vacuous mode is unreachable
+  rather than merely repaired. `decay-pin` uses the same loop but all 13 of its test files *do*
+  have runners, so its CI was always real.
+- **`DS-2`'s upstream half (Unresolved until `dim-stage` PR #46 merges).** That repo's `README.md`
+  still advertises 118 analytic tests. #46 corrects it to 86 and adds `norecursedirs = ["refs"]`
+  so the count means *this project's* tests whether or not the reference clone is present — which
+  is the root cause, not just the symptom.
 - **`hush-gauge` has no CI workflow** and **`blind-cite` ships no LICENSE** (Unresolved — the other
   seven repos have both).
 - ⚠️ **Notebook drift, re-opened by D15 (Unresolved).** The 2026-08-05 repair (seven sources: both

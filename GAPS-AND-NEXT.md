@@ -26,16 +26,23 @@ kept honest so a skeptic sees I know exactly where the edges are.*
   `mute-map` and `blind-cite` invoke pytest properly. **`hush-gauge` has no CI workflow at all**
   and **`blind-cite` ships no LICENSE**. These belong to those repos, not this one — but a vacuous
   green badge is the worst possible artifact in a portfolio whose brand is verification, so it is
-  named here rather than left to the audit report.
+  named here rather than left to the audit report. **Fixes are open, not yet merged:** `dim-stage`
+  PR #46, `lossy-wall` PR #44, `ghost-patch` PR #26 (pytest invoked, plus a collected-count floor
+  so the vacuous mode is unreachable rather than merely repaired), `hush-gauge` PR #21 (its first
+  CI, 1002 tests), `blind-cite` PR #20 (MIT).
 - ⚠️ **The audit's `DS-2` is live, and the fix landed here on 2026-08-07.** Its top-10 #3 said
   `dim-stage`'s carded "118 analytic tests" doesn't trace and the real number is 86. **It was
   right**, and a first pass at re-verifying it got the answer backwards: `uv run pytest` in a
   working copy that has the `.gitignore`d `refs/jacobian-lens/` reference clone in it collects
   **118**, of which **32 are Anthropic's tests, not this project's**. A clean clone — which is what
-  CI and any reader gets — collects **86** (`--ignore=refs` reproduces it exactly). The card now
-  says 86. The lesson is the portfolio's own: **a number measured in a dirty tree is not a
-  measurement**, and the same discipline the projects apply to their data applies to the index that
-  describes them. `dim-stage`'s own `README.md` still advertises 118 — that fix belongs to that repo.
+  CI and any reader gets — collected **86** (`--ignore=refs` reproduced it exactly). The lesson is
+  the portfolio's own: **a number measured in a dirty tree is not a measurement**, and the same
+  discipline the projects apply to their data applies to the index that describes them.
+  **The card now says 88, not 86**, because the upstream fix moves the number once more:
+  `dim-stage` PR #46 pins collection to this project's own tests *and* splits two reference-clone
+  assertions into their own `skipif`-gated tests, which collection still counts. The merged README
+  will read 88 — 88 passing with the reference clone, 86 passing plus 2 skipped without it. Until
+  that PR merges, the card is knowingly ahead of the repo's published README.
 - The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) remains the
   authoritative findings surface for the items not yet triaged into this ledger. Note it predates
   both flips above (blind-cite 2026-08-04, hush-gauge 2026-08-05) and **its per-item statuses are

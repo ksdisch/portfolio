@@ -54,8 +54,8 @@ _Last updated: 2026-08-07 (write-up links + re-verification pass, D15)_
 The public portfolio is the two-lane index, the charter, GAPS-AND-NEXT, and eight project cards.
 All eight repos are public and **every card links its write-up** — the mechanical backlog D14 left
 behind is empty. One card is **not** in sync with its repo: `dim-stage`'s now says 86 analytic
-tests (the true count) while the repo's own `README.md` still says 118. `dim-stage` PR #46 fixes
-the upstream half; until it merges, that one row is knowingly ahead of its source.
+tests — the count `dim-stage` PR #46 lands — while the repo's own published `README.md` still says
+118. Until #46 merges, that one row is knowingly ahead of its source.
 
 The audit report (`docs/audit-2026-08-03.md`) remains the authoritative findings surface for items
 not yet triaged into GAPS-AND-NEXT (D12) — but it **predates both flips** (blind-cite 2026-08-04,
@@ -79,14 +79,20 @@ upstream CI/license defects below, which belong to the project repos.
   `__main__` runner (0 of 11, 0 of 15, 0 of 12), so each file imported, exited 0, and **no test
   executed** — under a green badge the README points at. Verified by running it: `uv run
   test_stats.py` → exit 0, no output; `uv run pytest -q test_stats.py` → 6 passed. Fixed in
-  `dim-stage` PR #46, `lossy-wall` PR #44, `ghost-patch` PR #26 — pytest invoked per file (the
+  `dim-stage` PR #46, `lossy-wall` PR #44, `ghost-patch` PR #26 — pytest is the thing invoked (the
   shape `mute-map` already uses) plus a collected-count floor so the vacuous mode is unreachable
-  rather than merely repaired. `decay-pin` uses the same loop but all 13 of its test files *do*
-  have runners, so its CI was always real.
+  rather than merely repaired. `ghost-patch` is the one exception to "per file": its workflow
+  `continue`s past `test_sandbox.py` by name, because that suite runs real Docker containers and
+  GitHub's runner bind-mounts `/work` unreadable to the container user — the floor still counts its
+  6 tests, since collection doesn't need Docker. `decay-pin` uses the same loop but all 13 of its
+  test files *do* have runners, so its CI was always real.
 - **`DS-2`'s upstream half (Unresolved until `dim-stage` PR #46 merges).** That repo's `README.md`
-  still advertises 118 analytic tests. #46 corrects it to 86 and adds `norecursedirs = ["refs"]`
-  so the count means *this project's* tests whether or not the reference clone is present — which
-  is the root cause, not just the symptom.
+  still advertises 118 analytic tests. #46 adds `norecursedirs = ["refs"]` so the count means *this
+  project's* tests whether or not the reference clone is present — the root cause, not just the
+  symptom — and lands on **88**, not 86: the same PR splits two reference-clone assertions into
+  their own `skipif`-gated tests, which collection still counts. 88 pass with the clone; 86 pass
+  and 2 skip without it. **The card says 88 to match what #46 merges**, so it is ahead of the
+  repo's published README only until that PR lands.
 - **`hush-gauge` has no CI workflow** and **`blind-cite` ships no LICENSE** (Unresolved — the other
   seven repos have both).
 - ⚠️ **Notebook drift, re-opened by D15 (Unresolved).** The 2026-08-05 repair (seven sources: both
@@ -102,7 +108,8 @@ upstream CI/license defects below, which belong to the project repos.
 
 **Write-up-link + re-verification pass (D15):**
 - projects/dim-stage.md, forge-gap.md, decay-pin.md, lossy-wall.md, ghost-patch.md, mute-map.md —
-  `**Write-up:**` line added; the four with arXiv IDs also got them hyperlinked
+  `**Write-up:**` line added; the arXiv IDs hyperlinked where the project has one. `dim-stage.md`
+  also had its advertised test count corrected (118 → 88) — the 2026-08-03 audit's `DS-2`
 - projects/blind-cite.md — plain-English rewrite link added beside the existing paper/pack links
 - README.md — a "every card links its write-up" paragraph under the charter pointer; four arXiv IDs
   hyperlinked in the Lane-2 table; visibility footer re-dated to the 2026-08-07 verification

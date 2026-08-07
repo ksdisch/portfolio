@@ -30,9 +30,9 @@ projects advance.
 **Write-ups linked 2026-08-07 (Decision D15):** all eight cards now point at their repo's paper +
 presenter pack (+ plain-English rewrite where one exists), closing the last mechanical item D14
 left open. No project repo has moved since 2026-08-05. **One carded number was wrong regardless:**
-`dim-stage`'s "118 analytic tests" is 86 in a clean clone (the 2026-08-03 audit's `DS-2`, correct
-all along) and the card now says 86 — which puts it knowingly *ahead* of `dim-stage`'s own README
-until that repo's PR #46 lands.
+`dim-stage`'s "118 analytic tests" counted 32 of Anthropic's (the 2026-08-03 audit's `DS-2`,
+correct all along). The card now says **88** — the count `dim-stage` PR #46 lands — which puts it
+knowingly *ahead* of that repo's published README until the PR merges.
 
 ## Next actions
 1. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
@@ -40,9 +40,11 @@ until that repo's PR #46 lands.
 2. **Upstream fixes in flight (found 2026-08-07).** Three repos shipped a green CI badge over a
    workflow that executes zero tests — `dim-stage` (PR #46), `lossy-wall` (PR #44),
    `ghost-patch` (PR #26) — a defect that contradicts the portfolio's own verification brand.
-   `dim-stage` PR #46 also carries the upstream half of `DS-2`: its README's "118 analytic tests"
-   → 86, and a `norecursedirs` pin so the count means *this project's* tests whether or not the
-   reference clone is present. **Until #46 merges, the card is knowingly ahead of its repo.**
+   `dim-stage` PR #46 also carries the upstream half of `DS-2`: a `norecursedirs` pin so the count
+   means *this project's* tests whether or not the reference clone is present, landing its README
+   on **88** (88 pass with the clone; 86 pass and 2 skip without it, after two reference-clone
+   assertions became their own skipif-gated tests). **The card says 88 to match, so it is knowingly
+   ahead of the repo's published README until #46 merges.**
    Still unstarted: `hush-gauge` has no CI at all, `blind-cite` ships no LICENSE (Unresolved).
 3. ⚠️ **Re-snapshot the `research-portfolio-prep` NotebookLM notebook — open again.** D15 moved
    **ten** tracked rows: README, GAPS-AND-NEXT, Decisions, and all seven project cards it touched.

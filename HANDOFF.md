@@ -61,9 +61,13 @@ analytic tests" is correct as written. Treat the report as a dated snapshot, not
 
 ## Immediate next move
 Nothing is mechanically outstanding in this repo. The two live threads are (a) the
-`research-portfolio-prep` notebook needs a re-snapshot — D15 moved five tracked source rows
-(README, PROJECT, GAPS-AND-NEXT, Decisions, and six project cards), and (b) the upstream CI/license
-defects below, which belong to the project repos.
+`research-portfolio-prep` notebook needs a re-snapshot — **D15 moved ten tracked source rows**:
+`README.md`, `GAPS-AND-NEXT.md`, `Decisions.md`, and **all seven** project cards it touched
+(`dim-stage`, `forge-gap`, `decay-pin`, `lossy-wall`, `ghost-patch`, `mute-map`, `blind-cite`).
+`METHODOLOGY.md`, `projects/hush-gauge.md` and `blind-cite/README.md` are unchanged by D15, and
+**`PROJECT.md` is not a tracked row at all** — it is on the manifest's explicit *"do not re-add"*
+exclusion list (`MANIFEST.md`), along with `HANDOFF.md`, `Sources.md` and `Wiki/`. And (b) the
+upstream CI/license defects below, which belong to the project repos.
 
 ## Open questions / blockers
 - **Upstream CI theater (Unresolved — belongs to three project repos).** `dim-stage`,
@@ -75,9 +79,10 @@ defects below, which belong to the project repos.
   `decay-pin` uses the same loop but all 13 of its test files *do* have runners, so its CI is real.
 - **`hush-gauge` has no CI workflow** and **`blind-cite` ships no LICENSE** (Unresolved — the other
   seven repos have both).
-- ✅ Resolved 2026-08-05 — the notebook's stale copies were repaired on Kyle's confirm (seven
-  sources: both cards, four front-matter docs, and blind-cite's README). **Re-opened by D15** —
-  five of those rows moved again on 2026-08-07.
+- ⚠️ **Notebook drift, re-opened by D15 (Unresolved).** The 2026-08-05 repair (seven sources: both
+  cards, four front-matter docs, and blind-cite's README) held until 2026-08-07, when D15 moved
+  **ten** tracked rows — see "Immediate next move" for the exact list. Four of the seven repaired
+  on 2026-08-05 are among them (README, GAPS-AND-NEXT, Decisions, the blind-cite card).
 - `blind-cite` extended only `qwen-2.5-7b` to power; the other two models sit at 0/20 with a 16.1%
   Wilson upper and must be read as *untested at N=80, not shown clean* (Unresolved — belongs to
   that repo)

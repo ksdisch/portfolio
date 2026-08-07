@@ -38,11 +38,11 @@ left open. No project repo has moved since 2026-08-05, so every carded number st
    tests (`dim-stage`, `lossy-wall`, `ghost-patch` — the `uv run "$f"` template), `hush-gauge` has
    no CI at all, and `blind-cite` ships no LICENSE. Found 2026-08-07; belongs to those repos, and
    the badge defect contradicts the portfolio's own verification brand (Unresolved).
-3. ✅ **Done 2026-08-05** — the `research-portfolio-prep` NotebookLM notebook was re-snapshotted
-   after D14 merged: seven `text` sources repaired (both cards, README, METHODOLOGY, GAPS-AND-NEXT,
-   Decisions, and blind-cite's own README, which had also moved). Post-repair drift check is clean,
-   0 changed across all hashable rows. **D15 moves five more of those rows** — the notebook needs a
-   re-snapshot again.
+3. ⚠️ **Re-snapshot the `research-portfolio-prep` NotebookLM notebook — open again.** D15 moved
+   **ten** tracked rows: README, GAPS-AND-NEXT, Decisions, and all seven project cards it touched.
+   (`PROJECT.md` is *not* a tracked row — it is on the manifest's deliberate-exclusion list.)
+   *History:* the notebook was last repaired 2026-08-05 after D14 — seven `text` sources, post-repair
+   drift check clean at 0 changed. That repair is what D15 has now partly undone.
 
 ## Boundaries
 - Docs-only folder: markdown, no runnable code

@@ -164,9 +164,14 @@ from what belongs to me.
   `blind-cite`, and hyperlinks on the four cited arXiv IDs — see D15 in `Decisions.md`
 - **Why:** it was the single mechanical item D14 left open — eight repos shipping a paper and a
   presenter pack that seven-eighths of the index never pointed at [Fact — D14, GAPS-AND-NEXT]
-- **The re-verification result was a non-event, which is the point:** no project repo had moved on
-  `main` since 2026-08-05, so every carded number still held. The sync D14 established is the first
-  one to survive a later check unbroken [Fact — `git log origin/main` across all eight repos]
+- **No project repo had moved on `main` since 2026-08-05**, so nothing went stale under the index's
+  feet [Fact — `git log origin/main` across all eight repos]
+- **One carded number was wrong anyway, and had been since before the 2026-08-03 audit:**
+  `dim-stage`'s card advertised "118 analytic tests" where a clean clone collects 86. The audit's
+  `DS-2` had said exactly that and was right; a first pass at re-verifying it reproduced 118 from
+  the `.gitignore`d `refs/jacobian-lens/` clone in the local working copy and briefly published a
+  retraction, which PR #15's adversarial review caught as finding F1 (critical) before merge
+  [Fact — D15; review mailbox `2026-08-07-docs-link-writeups-and-refresh.md`]
 - **What the pass did find is upstream:** `dim-stage`, `lossy-wall` and `ghost-patch` ship green CI
   badges over workflows that execute zero tests — `uv run "$f"` against test files with no
   `__main__` runner (0 of 11, 0 of 15, 0 of 12 files) — plus `hush-gauge` with no CI and

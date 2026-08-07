@@ -72,7 +72,7 @@ escalating to a rented RTX 4090 for the 3B lens; **~$0.83 total GPU spend.**
 
 ## Run it
 ```bash
-uv run pytest        # 118 analytic tests, no model fits required
+uv run pytest        # 86 analytic tests, no model fits required
 # then fit a lens and measure (each runner dry-runs its gate before spending):
 uv run fitter.py --model-id Qwen/Qwen2.5-0.5B-Instruct --out lenses/qwen2.5-0.5b-instruct-n100.pt
 ```

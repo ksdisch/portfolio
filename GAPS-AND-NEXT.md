@@ -27,12 +27,20 @@ kept honest so a skeptic sees I know exactly where the edges are.*
   and **`blind-cite` ships no LICENSE**. These belong to those repos, not this one — but a vacuous
   green badge is the worst possible artifact in a portfolio whose brand is verification, so it is
   named here rather than left to the audit report.
+- ⚠️ **The audit's `DS-2` is live, and the fix landed here on 2026-08-07.** Its top-10 #3 said
+  `dim-stage`'s carded "118 analytic tests" doesn't trace and the real number is 86. **It was
+  right**, and a first pass at re-verifying it got the answer backwards: `uv run pytest` in a
+  working copy that has the `.gitignore`d `refs/jacobian-lens/` reference clone in it collects
+  **118**, of which **32 are Anthropic's tests, not this project's**. A clean clone — which is what
+  CI and any reader gets — collects **86** (`--ignore=refs` reproduces it exactly). The card now
+  says 86. The lesson is the portfolio's own: **a number measured in a dirty tree is not a
+  measurement**, and the same discipline the projects apply to their data applies to the index that
+  describes them. `dim-stage`'s own `README.md` still advertises 118 — that fix belongs to that repo.
 - The audit report ([docs/audit-2026-08-03.md](docs/audit-2026-08-03.md)) remains the
   authoritative findings surface for the items not yet triaged into this ledger. Note it predates
   both flips above (blind-cite 2026-08-04, hush-gauge 2026-08-05) and **its per-item statuses are
-  not maintained** — its top-10 #3 ("118 analytic tests" → 86 in dim-stage) is now stale in the
-  other direction: `uv run pytest` collects **118**, so the carded number is correct as written.
-  Read the report as a dated snapshot, not a live checklist.
+  not maintained** — read it as a dated snapshot, not a live checklist, and re-verify any finding
+  against a clean checkout before acting on it.
 
 ---
 

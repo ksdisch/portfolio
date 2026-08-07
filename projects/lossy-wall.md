@@ -8,9 +8,15 @@
 > against the author's own harness.
 
 **Repo:** <https://github.com/ksdisch/lossy-wall> (public) · **Reproduces:** *"Reclaim Evaluation: A
-Lossy Memory Is Worse Than an Empty One"* / Brittle Memory (arXiv **2606.25449**) · **Status:**
-Complete · **Method:** [charter](../METHODOLOGY.md)  ·  cross-checked against the author's released
+Lossy Memory Is Worse Than an Empty One"* / Brittle Memory
+(arXiv **[2606.25449](https://arxiv.org/abs/2606.25449)**) · **Status:** Complete · **Method:** [charter](../METHODOLOGY.md)  ·  cross-checked against the author's released
 harness (`collapseindex/reclaim-eval`, the paper author's package — not my code).
+
+**Write-up:** [paper](https://github.com/ksdisch/lossy-wall/blob/main/docs/paper/lossy-wall-paper.md)
+· [presenter brief](https://github.com/ksdisch/lossy-wall/blob/main/docs/paper/lossy-wall-presenter-brief.md)
+· [plain-English rewrite](https://github.com/ksdisch/lossy-wall/blob/main/docs/papers/lossy-wall-eli5.md)
+— every statistic traced to the committed record. `ROADMAP.md` M3 carries the full labelled
+comparison against the paper's own numbers.
 
 ## The claim (the paper's primitive)
 At a **matched memory budget**, a note that keeps a *wrong conclusion* but drops its *recomputable

@@ -10,12 +10,13 @@
 > check passed all ten.
 
 **Repo:** [ksdisch/blind-cite](https://github.com/ksdisch/blind-cite) · **Reproduces:** *Deceptive
-grounding* (arXiv **2607.09349**) · **Status:** **M0 + M1 + M1C complete; measurement phase closed
-2026-08-04** — DG occurs at both surfaces (stark **3/80**, camouflaged **7/80**); the N=20 null did
+grounding* (arXiv **[2607.09349](https://arxiv.org/abs/2607.09349)**) · **Status:** **M0 + M1 + M1C
+complete; measurement phase closed 2026-08-04** — DG occurs at both surfaces (stark **3/80**, camouflaged **7/80**); the N=20 null did
 not survive its own pre-registered extension · **Method:** [charter](../METHODOLOGY.md)
 
 **Write-up:** [paper](https://github.com/ksdisch/blind-cite/blob/main/docs/paper/blind-cite-paper.md)
 · [presenter pack](https://github.com/ksdisch/blind-cite/blob/main/docs/paper/blind-cite-presenter-pack.md)
+· [plain-English rewrite](https://github.com/ksdisch/blind-cite/blob/main/docs/papers/deceptive-grounding-measurable-without-judge-eli5.md)
 — the paper reports the reversal against itself in the same detail as the positive result.
 
 ## The claim (the paper's primitive)

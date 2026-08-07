@@ -25,19 +25,24 @@ are now current — `hush-gauge` is **complete (M0–M4)** with the full gate le
 `G4 NOT-RUN`, and `blind-cite`'s "well-powered null" is **withdrawn**, replaced by its own
 pre-registered M1C extension finding DG at both surfaces. All eight linked repos are public and
 **all eight now ship a research paper and presenter pack** on their default branch. The portfolio
-is complete as a shareable artifact; **every card is in sync with its repo as of 2026-08-05**, and
+is complete as a shareable artifact; **every card is in sync with its repo as of 2026-08-07**, and
 the open work is keeping it that way as the underlying projects advance.
+**Write-ups linked 2026-08-07 (Decision D15):** all eight cards now point at their repo's paper +
+presenter pack (+ plain-English rewrite where one exists), closing the last mechanical item D14
+left open. No project repo has moved since 2026-08-05, so every carded number still holds.
 
 ## Next actions
-1. Link each remaining card to its repo's paper + presenter pack — six of eight cards
-   (`dim-stage`, `forge-gap`, `decay-pin`, `lossy-wall`, `ghost-patch`, `mute-map`) have merged
-   write-ups the card does not yet point at. `hush-gauge` and `blind-cite` were linked in D14.
-2. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
+1. Refresh cards as per-project next steps in GAPS-AND-NEXT.md land (e.g., ghost-patch higher-N
    re-run, dim-stage band re-derivation, blind-cite extending its other two models to power).
-3. ✅ **Done 2026-08-05** — the `research-portfolio-prep` NotebookLM notebook was re-snapshotted
-   after D14 merged: seven `text` sources repaired (both cards, README, METHODOLOGY, GAPS-AND-NEXT,
-   Decisions, and blind-cite's own README, which had also moved). Post-repair drift check is clean,
-   0 changed across all hashable rows.
+2. **Upstream, not carded:** three repos ship a green CI badge over a workflow that executes zero
+   tests (`dim-stage`, `lossy-wall`, `ghost-patch` — the `uv run "$f"` template), `hush-gauge` has
+   no CI at all, and `blind-cite` ships no LICENSE. Found 2026-08-07; belongs to those repos, and
+   the badge defect contradicts the portfolio's own verification brand (Unresolved).
+3. ⚠️ **Re-snapshot the `research-portfolio-prep` NotebookLM notebook — open again.** D15 moved
+   **ten** tracked rows: README, GAPS-AND-NEXT, Decisions, and all seven project cards it touched.
+   (`PROJECT.md` is *not* a tracked row — it is on the manifest's deliberate-exclusion list.)
+   *History:* the notebook was last repaired 2026-08-05 after D14 — seven `text` sources, post-repair
+   drift check clean at 0 changed. That repair is what D15 has now partly undone.
 
 ## Boundaries
 - Docs-only folder: markdown, no runnable code

@@ -7,8 +7,14 @@
 > nulls, honestly, rather than forcing a positive story.
 
 **Repo:** <https://github.com/ksdisch/ghost-patch> (public) · **Reproduces:** *"Obey, Diverge,
-Collapse"* (arXiv **2607.04537**) · **Status:** v1 Complete (M4 closed) · **Spend:** **$1.4244 / $5
-guard** · **Method:** [charter](../METHODOLOGY.md)
+Collapse"* (arXiv **[2607.04537](https://arxiv.org/abs/2607.04537)**) · **Status:** v1 Complete
+(M4 closed) · **Spend:** **$1.4244 / $5 guard** · **Method:** [charter](../METHODOLOGY.md)
+
+**Write-up:** [paper](https://github.com/ksdisch/ghost-patch/blob/main/docs/paper/ghost-patch-paper.md)
+· [presenter pack](https://github.com/ksdisch/ghost-patch/blob/main/docs/paper/ghost-patch-presenter-pack.md)
+· [plain-English rewrite](https://github.com/ksdisch/ghost-patch/blob/main/docs/papers/ghost-patch-eli5.md)
+— every number lifted verbatim from the repo's committed records. `docs/M0-BRIEF.md` …
+`docs/M4-BRIEF.md` are the source of truth for each link in the chain.
 
 ## The claim (the paper's primitive)
 Code LLMs *recognize* a wrong-location repair instruction as wrong, **obey it anyway**, **compound**

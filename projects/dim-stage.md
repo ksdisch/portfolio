@@ -13,6 +13,12 @@ Representations Form a Global Workspace in Language Models,"* [transformer-circu
 (2026-07-06 — **no arXiv id**) · **Status:** Complete (M0–M3 + 4 stretch stages) · **Method:**
 [charter](../METHODOLOGY.md)
 
+**Write-up:** [paper](https://github.com/ksdisch/dim-stage/blob/main/docs/paper/dim-stage-paper.md)
+· [presenter pack](https://github.com/ksdisch/dim-stage/blob/main/docs/paper/dim-stage-presenter-pack.md)
+· [plain-English rewrite](https://github.com/ksdisch/dim-stage/blob/main/docs/paper/global-workspace-readable-small-language-models-eli5.md)
+— written from the recorded results at M0–M3 plus the four stretch stages.
+`docs/M0-BRIEF.md` … `docs/M3-BRIEF.md` are normative for what each milestone found.
+
 ## The claim (the paper's primitive)
 A per-layer linear **Jacobian lens** maps a model's hidden activations into the final layer's
 vocabulary coordinates, revealing a **sparse mid-layer "workspace"** where computations are *verbally
@@ -66,7 +72,7 @@ escalating to a rented RTX 4090 for the 3B lens; **~$0.83 total GPU spend.**
 
 ## Run it
 ```bash
-uv run pytest        # 118 analytic tests, no model fits required
+uv run pytest        # 86 analytic tests, no model fits required
 # then fit a lens and measure (each runner dry-runs its gate before spending):
 uv run fitter.py --model-id Qwen/Qwen2.5-0.5B-Instruct --out lenses/qwen2.5-0.5b-instruct-n100.pt
 ```
